@@ -1836,170 +1836,140 @@
         <!-- ═══════════════════════════════════════════
          SECTION 9: APPOINTMENT REMINDER SYSTEM
         ═══════════════════════════════════════════ -->
-        <section class="w-full bg-white py-24 px-4 relative overflow-hidden">
-
-            <!-- Decorative notification rings -->
-            <div class="absolute top-12 right-12 w-48 h-48 rounded-full border-2 border-[#8CA365]/10 animate-ping-slow pointer-events-none hidden lg:block"></div>
-            <div class="absolute top-12 right-12 w-32 h-32 rounded-full border-2 border-[#8CA365]/15 pointer-events-none hidden lg:block" style="top:3.5rem;right:3.5rem;margin:2rem"></div>
-            <div class="absolute bottom-12 left-8 w-36 h-36 rounded-full border-2 border-[#8CA365]/10 pointer-events-none hidden lg:block"></div>
+        <section class="w-full bg-[#F8F9FA] py-24 px-4 relative overflow-hidden border-y border-gray-100">
 
             <div class="max-w-7xl mx-auto relative z-10">
 
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
+                <!-- Section Header — centred -->
+                <div class="text-center mb-16 reveal">
+                    <span class="inline-flex items-center gap-2 bg-amber-50 text-amber-600 text-xs font-bold px-4 py-2 rounded-full border border-amber-200 uppercase tracking-widest mb-5">
+                        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/></svg>
+                        Automated Reminder System
+                    </span>
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-[#34414A] leading-tight mb-4 max-w-3xl mx-auto">
+                        Reduce No-Shows by Up to <span class="text-[#8CA365]">80%</span> — Our Automated Appointment Reminder System
+                    </h2>
+                    <p class="text-gray-500 text-base max-w-xl mx-auto leading-relaxed">
+                        Every confirmed booking triggers a smart reminder sequence. Clients confirm, show up, and fill your calendar — automatically.
+                    </p>
+                </div>
 
-                    <!-- LEFT: Content -->
-                    <div class="reveal">
-                        <span class="inline-flex items-center gap-2 bg-amber-50 text-amber-600 text-xs font-bold px-4 py-2 rounded-full border border-amber-200 uppercase tracking-widest mb-6">
-                            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/></svg>
-                            Automated Reminder System
-                        </span>
+                <!-- Main Grid: 3 feature cards top + mock notification below -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-5 mb-10 reveal reveal-delay-1">
 
-                        <h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-[#34414A] leading-tight mb-5">
-                            Reduce No-Shows by Up to <span class="text-[#8CA365]">80%</span> — Our Automated Appointment Reminder System
-                        </h2>
-                        <p class="text-gray-500 text-lg leading-relaxed mb-8">
-                            Every confirmed booking triggers an automatic reminder sequence. Your clients remember, confirm, and show up — without any manual follow-up from your team.
-                        </p>
+                    <!-- Feature 1 -->
+                    <div class="bg-white rounded-2xl p-7 border border-gray-200 shadow-sm hover:shadow-md hover:border-blue-200 transition-all duration-300 group">
+                        <div class="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center mb-5 group-hover:bg-blue-100 transition-colors">
+                            <svg class="w-6 h-6 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
+                        </div>
+                        <h3 class="text-base font-bold text-[#34414A] mb-2 leading-snug">Text &amp; email reminders sent automatically before every appointment</h3>
+                        <p class="text-sm text-gray-500 leading-relaxed mb-3">Instant confirmation on booking, then automated SMS + email reminders fire on your chosen schedule — zero manual effort from your team.</p>
+                        <span class="text-[10px] font-bold text-blue-400 uppercase tracking-widest">appointment reminder answering service</span>
+                    </div>
 
-                        <!-- 3 Feature rows -->
-                        <div class="flex flex-col gap-5">
+                    <!-- Feature 2 -->
+                    <div class="bg-white rounded-2xl p-7 border border-gray-200 shadow-sm hover:shadow-md hover:border-amber-200 transition-all duration-300 group">
+                        <div class="w-12 h-12 rounded-xl bg-amber-50 flex items-center justify-center mb-5 group-hover:bg-amber-100 transition-colors">
+                            <svg class="w-6 h-6 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                        </div>
+                        <h3 class="text-base font-bold text-[#34414A] mb-2 leading-snug">Custom reminder timing — 24 hours, 2 hours, or your preferred schedule</h3>
+                        <p class="text-sm text-gray-500 leading-relaxed mb-3">Medical practices, law firms, salons, and contractors all have different timing needs. We configure your reminder cadence to match exactly.</p>
+                        <span class="text-[10px] font-bold text-amber-500 uppercase tracking-widest">automated appointment reminder service</span>
+                    </div>
 
-                            <!-- H3 Feature 1 -->
-                            <div class="flex items-start gap-4 p-5 rounded-2xl bg-gray-50 border border-gray-100 hover:border-[#8CA365]/30 hover:bg-[#8CA365]/5 transition-all duration-300 group">
-                                <div class="w-10 h-10 rounded-xl bg-blue-50 flex items-center justify-center shrink-0 group-hover:bg-blue-100 transition-colors">
-                                    <svg class="w-5 h-5 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
+                    <!-- Feature 3 -->
+                    <div class="bg-white rounded-2xl p-7 border border-gray-200 shadow-sm hover:shadow-md hover:border-[#8CA365]/40 transition-all duration-300 group">
+                        <div class="w-12 h-12 rounded-xl bg-[#8CA365]/10 flex items-center justify-center mb-5 group-hover:bg-[#8CA365]/20 transition-colors">
+                            <svg class="w-6 h-6 text-[#8CA365]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+                        </div>
+                        <h3 class="text-base font-bold text-[#34414A] mb-2 leading-snug">Two-way confirmation — callers can confirm, reschedule, or cancel via text reply</h3>
+                        <p class="text-sm text-gray-500 leading-relaxed mb-3">Clients reply "C" to confirm, "R" to reschedule, "X" to cancel. Cancellations reopen the slot instantly for the next caller.</p>
+                        <span class="text-[10px] font-bold text-[#8CA365] uppercase tracking-widest">two-way appointment confirmation</span>
+                    </div>
+
+                </div>
+
+                <!-- Bottom: Notification mockup strip -->
+                <div class="bg-white rounded-2xl border border-gray-200 shadow-sm p-8 reveal reveal-delay-2">
+                    <div class="flex flex-col lg:flex-row items-start lg:items-center gap-8">
+
+                        <!-- Left label -->
+                        <div class="shrink-0 lg:w-48">
+                            <div class="inline-flex items-center gap-2 bg-[#8CA365] text-white text-xs font-bold px-3 py-1.5 rounded-full mb-3">
+                                <span class="w-2 h-2 rounded-full bg-white animate-pulse"></span>
+                                Live sequence
+                            </div>
+                            <p class="text-xl font-black text-[#34414A]">↓80%</p>
+                            <p class="text-sm text-gray-400">Average no-show reduction</p>
+                        </div>
+
+                        <!-- Notification timeline -->
+                        <div class="flex-1 flex flex-col sm:flex-row gap-3 w-full">
+
+                            <!-- Step 1: Booking confirmed -->
+                            <div class="flex-1 bg-blue-50 border border-blue-100 rounded-xl p-4 relative">
+                                <div class="absolute -top-2 left-4 bg-blue-500 text-white text-[9px] font-black px-2 py-0.5 rounded-full uppercase">Step 1 · Instant</div>
+                                <div class="flex items-center gap-2 mb-2 mt-1">
+                                    <svg class="w-4 h-4 text-blue-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                                    <span class="text-xs font-bold text-blue-700">Booking Confirmed</span>
                                 </div>
-                                <div>
-                                    <h3 class="text-base font-bold text-[#34414A] mb-1">Text and email reminders sent automatically before every appointment</h3>
-                                    <p class="text-sm text-gray-500 leading-relaxed">The moment a booking is confirmed, your client receives an instant confirmation. Then a reminder fires automatically — via SMS and email — so they never forget.</p>
-                                    <span class="mt-2 inline-block text-[10px] font-bold text-blue-500 uppercase tracking-widest">appointment reminder answering service</span>
-                                </div>
+                                <p class="text-[11px] text-blue-600/80 leading-relaxed">"Hi Sarah! Appt with Dr. Patel confirmed — Thu 2:30 PM. Reply C/R/X."</p>
                             </div>
 
-                            <!-- H3 Feature 2 -->
-                            <div class="flex items-start gap-4 p-5 rounded-2xl bg-gray-50 border border-gray-100 hover:border-[#8CA365]/30 hover:bg-[#8CA365]/5 transition-all duration-300 group">
-                                <div class="w-10 h-10 rounded-xl bg-amber-50 flex items-center justify-center shrink-0 group-hover:bg-amber-100 transition-colors">
-                                    <svg class="w-5 h-5 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-                                </div>
-                                <div>
-                                    <h3 class="text-base font-bold text-[#34414A] mb-1">Custom reminder timing — 24 hours, 2 hours, or your preferred schedule</h3>
-                                    <p class="text-sm text-gray-500 leading-relaxed">Set reminders to fire at exactly the right time for your business. 48-hour notice for medical practices, 2-hour for service calls, same-day for events — fully configurable.</p>
-                                    <span class="mt-2 inline-block text-[10px] font-bold text-amber-500 uppercase tracking-widest">automated appointment reminder service</span>
-                                </div>
+                            <!-- Arrow -->
+                            <div class="hidden sm:flex items-center text-gray-300">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
                             </div>
 
-                            <!-- H3 Feature 3 -->
-                            <div class="flex items-start gap-4 p-5 rounded-2xl bg-gray-50 border border-gray-100 hover:border-[#8CA365]/30 hover:bg-[#8CA365]/5 transition-all duration-300 group">
-                                <div class="w-10 h-10 rounded-xl bg-[#8CA365]/10 flex items-center justify-center shrink-0 group-hover:bg-[#8CA365]/20 transition-colors">
-                                    <svg class="w-5 h-5 text-[#8CA365]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+                            <!-- Step 2: 24h reminder -->
+                            <div class="flex-1 bg-amber-50 border border-amber-100 rounded-xl p-4 relative">
+                                <div class="absolute -top-2 left-4 bg-amber-500 text-white text-[9px] font-black px-2 py-0.5 rounded-full uppercase">Step 2 · 24hrs before</div>
+                                <div class="flex items-center gap-2 mb-2 mt-1">
+                                    <svg class="w-4 h-4 text-amber-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                                    <span class="text-xs font-bold text-amber-700">⏰ Reminder Sent</span>
                                 </div>
-                                <div>
-                                    <h3 class="text-base font-bold text-[#34414A] mb-1">Two-way confirmation — callers can confirm, reschedule, or cancel via text reply</h3>
-                                    <p class="text-sm text-gray-500 leading-relaxed">Clients reply directly to the reminder text — "C" to confirm, "R" to reschedule, "X" to cancel. Cancellations reopen the slot instantly so you can fill it with the next caller. Zero phone tag required.</p>
-                                    <span class="mt-2 inline-block text-[10px] font-bold text-[#8CA365] uppercase tracking-widest">two-way appointment confirmation</span>
+                                <p class="text-[11px] text-amber-600/80 leading-relaxed">"Reminder: Appt tomorrow 2:30 PM. Reply C to confirm."</p>
+                            </div>
+
+                            <!-- Arrow -->
+                            <div class="hidden sm:flex items-center text-gray-300">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                            </div>
+
+                            <!-- Step 3: Client replies -->
+                            <div class="flex-1 bg-gray-50 border border-gray-200 rounded-xl p-4 relative">
+                                <div class="absolute -top-2 left-4 bg-gray-600 text-white text-[9px] font-black px-2 py-0.5 rounded-full uppercase">Step 3 · Client replies</div>
+                                <div class="flex items-center gap-2 mb-2 mt-1">
+                                    <svg class="w-4 h-4 text-gray-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/></svg>
+                                    <span class="text-xs font-bold text-gray-600">Sarah replies "C"</span>
                                 </div>
+                                <p class="text-[11px] text-gray-500 leading-relaxed">"C" — confirmed via two-way SMS reply</p>
+                            </div>
+
+                            <!-- Arrow -->
+                            <div class="hidden sm:flex items-center text-gray-300">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                            </div>
+
+                            <!-- Step 4: Confirmed -->
+                            <div class="flex-1 bg-[#8CA365]/10 border border-[#8CA365]/30 rounded-xl p-4 relative">
+                                <div class="absolute -top-2 left-4 bg-[#8CA365] text-white text-[9px] font-black px-2 py-0.5 rounded-full uppercase">Step 4 · Done</div>
+                                <div class="flex items-center gap-2 mb-2 mt-1">
+                                    <svg class="w-4 h-4 text-[#8CA365] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                                    <span class="text-xs font-bold text-[#8CA365]">✓ Confirmed!</span>
+                                </div>
+                                <p class="text-[11px] text-[#8CA365]/80 leading-relaxed">No-show prevented. Slot secured. Zero manual work.</p>
                             </div>
 
                         </div>
                     </div>
-
-                    <!-- RIGHT: Visual reminder mockup -->
-                    <div class="reveal reveal-delay-1 flex flex-col gap-4 relative">
-
-                        <!-- Mock phone notification stack -->
-                        <div class="relative mx-auto w-full max-w-sm">
-
-                            <!-- Stat badge -->
-                            <div class="absolute -top-4 -right-4 z-20 bg-[#8CA365] text-white rounded-2xl px-4 py-3 shadow-xl shadow-[#8CA365]/30 text-center">
-                                <p class="text-2xl font-black leading-none">↓80%</p>
-                                <p class="text-[10px] font-bold uppercase tracking-wide opacity-90">No-Shows</p>
-                            </div>
-
-                            <!-- Notification Card 1: Booking Confirmed -->
-                            <div class="bg-white rounded-2xl border border-gray-200 shadow-lg p-5 mb-3 relative overflow-hidden">
-                                <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-400 to-blue-600"></div>
-                                <div class="flex items-start gap-3">
-                                    <div class="w-10 h-10 rounded-xl bg-blue-50 flex items-center justify-center shrink-0">
-                                        <svg class="w-5 h-5 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                                    </div>
-                                    <div class="flex-1">
-                                        <div class="flex items-center justify-between mb-1">
-                                            <span class="text-xs font-black text-[#34414A] uppercase tracking-wide">Booking Confirmed ✓</span>
-                                            <span class="text-[10px] text-gray-400">Just now</span>
-                                        </div>
-                                        <p class="text-sm text-gray-600">Hi Sarah! Your appointment with <strong>Dr. Patel</strong> is confirmed for <strong>Thursday, 2:30 PM</strong>.</p>
-                                        <p class="text-[11px] text-gray-400 mt-1">Reply C to confirm · R to reschedule · X to cancel</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Notification Card 2: 24h Reminder -->
-                            <div class="bg-white rounded-2xl border border-gray-200 shadow-lg p-5 mb-3 relative overflow-hidden ml-4">
-                                <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-amber-400 to-orange-500"></div>
-                                <div class="flex items-start gap-3">
-                                    <div class="w-10 h-10 rounded-xl bg-amber-50 flex items-center justify-center shrink-0">
-                                        <svg class="w-5 h-5 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-                                    </div>
-                                    <div class="flex-1">
-                                        <div class="flex items-center justify-between mb-1">
-                                            <span class="text-xs font-black text-[#34414A] uppercase tracking-wide">⏰ 24-Hour Reminder</span>
-                                            <span class="text-[10px] text-gray-400">Tomorrow</span>
-                                        </div>
-                                        <p class="text-sm text-gray-600">Reminder: Your appointment is <strong>tomorrow at 2:30 PM</strong>. Reply <strong>C</strong> to confirm.</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Notification Card 3: Client Confirmed -->
-                            <div class="bg-white rounded-2xl border border-[#8CA365]/30 shadow-lg p-5 relative overflow-hidden">
-                                <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#8CA365] to-[#a8c47c]"></div>
-                                <div class="flex items-start gap-3">
-                                    <div class="w-10 h-10 rounded-xl bg-[#8CA365]/10 flex items-center justify-center shrink-0">
-                                        <svg class="w-5 h-5 text-[#8CA365]" fill="currentColor" viewBox="0 0 24 24"><path d="M18 2a3 3 0 013 3v14a3 3 0 01-3 3H6a3 3 0 01-3-3V5a3 3 0 013-3h12zm-1 8H7v2h10v-2zm-4 4H7v2h6v-2zM9 6H7v2h2V6z"/></svg>
-                                    </div>
-                                    <div class="flex-1">
-                                        <div class="flex items-center justify-between mb-1">
-                                            <span class="text-xs font-black text-[#8CA365] uppercase tracking-wide">✓ Client Confirmed!</span>
-                                            <span class="text-[10px] text-gray-400">Sarah replied "C"</span>
-                                        </div>
-                                        <p class="text-sm text-gray-600">Sarah has confirmed her 2:30 PM appointment. <strong>No action needed.</strong></p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Pulsing dot indicator -->
-                            <div class="flex items-center justify-center gap-2 mt-5">
-                                <span class="w-2 h-2 rounded-full bg-[#8CA365] animate-pulse"></span>
-                                <span class="text-[11px] text-gray-400 font-medium">Reminder sequence running automatically</span>
-                                <span class="w-2 h-2 rounded-full bg-[#8CA365] animate-pulse" style="animation-delay:0.5s"></span>
-                            </div>
-
-                        </div>
-
-                        <!-- Stats row under mockup -->
-                        <div class="grid grid-cols-3 gap-3 mt-2">
-                            <div class="bg-gray-50 border border-gray-100 rounded-xl p-4 text-center">
-                                <p class="text-xl font-black text-[#34414A]">↓80%</p>
-                                <p class="text-[10px] text-gray-400 font-medium mt-0.5">No-show rate</p>
-                            </div>
-                            <div class="bg-gray-50 border border-gray-100 rounded-xl p-4 text-center">
-                                <p class="text-xl font-black text-[#8CA365]">2-way</p>
-                                <p class="text-[10px] text-gray-400 font-medium mt-0.5">SMS reply</p>
-                            </div>
-                            <div class="bg-gray-50 border border-gray-100 rounded-xl p-4 text-center">
-                                <p class="text-xl font-black text-[#34414A]">Auto</p>
-                                <p class="text-[10px] text-gray-400 font-medium mt-0.5">Zero manual work</p>
-                            </div>
-                        </div>
-
-                    </div>
-
                 </div>
 
             </div>
         </section>
 
         <!-- ═══════════════════════════════════════════
+         MEDICAL SPECIALTIES SERVED        <!-- ═══════════════════════════════════════════
          MEDICAL SPECIALTIES SERVED — VERTICAL SEO SILO
         ═══════════════════════════════════════════ -->
         <section class="w-full bg-[#34414A] py-24 px-4 relative overflow-hidden">
