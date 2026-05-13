@@ -105,6 +105,20 @@
             @apply opacity-100;
             animation: shimmer 1.2s linear infinite;
         }
+
+        /* Booking Animation */
+        @keyframes dashFlow {
+            0% { opacity: 0; transform: translateX(0); }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { opacity: 0; transform: translateX(48px); }
+        }
+        @keyframes pulseSuccess {
+            0% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.05); opacity: 0.8; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+        .animate-success { animation: pulseSuccess 2s infinite; }
     </style>
 </head>
 
@@ -196,7 +210,7 @@
         <!-- ═══════════════════════════════════════════
          HERO SECTION
         ═══════════════════════════════════════════ -->
-        <section class="bg-white min-h-[85vh] flex items-center relative overflow-hidden pt-24 lg:pt-0">
+        <section class="bg-white min-h-[90vh] flex items-center relative overflow-hidden pt-24 lg:pt-0">
             <div class="absolute inset-0 pointer-events-none">
                 <div class="absolute inset-0"
                     style="background-image: radial-gradient(#cbd5e1 2px, transparent 2px); background-size: 32px 32px;">
@@ -206,61 +220,111 @@
 
             <div class="max-w-7xl mx-auto px-4 py-20 lg:py-0 w-full relative z-10">
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+                    
+                    <!-- Left Column: Content -->
                     <div class="lg:col-span-7 flex flex-col reveal">
                         <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-[#34414A] leading-tight mb-6 tracking-tight">
-                            Appointment Scheduling Service — Live Receptionists Booking Directly Into Your Calendar 24/7
+                            Appointment Scheduling Answering Service — Live Receptionists Who Book, Confirm & Sync to Your Calendar 24/7
                         </h1>
                         <h3 class="text-xl text-gray-600 leading-relaxed mb-10 max-w-2xl">
-                            Our US-based receptionists handle every call and book appointments directly into your CRM or scheduling software, so you can focus on your work while we fill your calendar.
+                            A real receptionist answers every call, books directly into your calendar, sends automatic confirmations, and syncs with Calendly, Acuity, Google Calendar, and 1,000+ scheduling tools — all in one call.
                         </h3>
-                        <div class="flex flex-wrap gap-3 mb-10">
-                            <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md bg-green-50 text-green-700 font-semibold text-sm border border-green-200">
-                                Direct Calendar Booking
-                            </span>
-                            <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md bg-slate-100 text-slate-700 font-semibold text-sm border border-slate-200">
-                                24/7 Availability
-                            </span>
-                            <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md bg-slate-100 text-slate-700 font-semibold text-sm border border-slate-200">
-                                CRM Integration
-                            </span>
-                            <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md bg-slate-100 text-slate-700 font-semibold text-sm border border-slate-200">
-                                Bilingual Support
-                            </span>
+                        
+                        <!-- Trust Bullets -->
+                        <div class="flex flex-col gap-4 mb-10">
+                            <div class="flex items-center gap-3">
+                                <span class="text-xl">📅</span>
+                                <span class="text-gray-700 font-semibold">Real-time calendar sync</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <span class="text-xl">🔔</span>
+                                <span class="text-gray-700 font-semibold">Auto appointment reminders</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <span class="text-xl">🌐</span>
+                                <span class="text-gray-700 font-semibold">1,000+ integrations</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <span class="text-xl">🇺🇸</span>
+                                <span class="text-gray-700 font-semibold">US-led receptionists</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <span class="text-xl">✅</span>
+                                <span class="text-gray-700 font-semibold">No missed bookings</span>
+                            </div>
                         </div>
+
+                        <!-- Dual CTAs -->
                         <div class="flex flex-col sm:flex-row gap-4">
                             <a href="#hero-form" class="flex justify-center items-center bg-[#8CA365] hover:bg-[#7a8f57] text-white font-bold text-lg py-4 px-8 rounded-xl shadow-lg transition-transform hover:-translate-y-1">
                                 Start Free 7-Day Trial
                             </a>
-                            <a href="book-demo.html" class="flex justify-center items-center bg-white hover:bg-slate-50 border-2 border-slate-200 text-slate-700 font-bold text-lg py-4 px-8 rounded-xl transition-all">
-                                Book a Demo
+                            <a href="#integrations" class="flex justify-center items-center bg-white hover:bg-slate-50 border-2 border-slate-200 text-slate-700 font-bold text-lg py-4 px-8 rounded-xl transition-all">
+                                See Our Integrations
                             </a>
                         </div>
                     </div>
 
+                    <!-- Right Column: Live Booking Animation Mockup -->
                     <div class="lg:col-span-5 flex justify-center lg:justify-end w-full reveal reveal-delay-2">
-                        <div class="w-full max-w-md bg-white p-6 md:p-8 rounded-3xl shadow-xl border border-gray-100 relative z-20">
-                            <h4 class="text-2xl font-black text-[#34414A] mb-2 tracking-tight">Request Free Trial</h4>
-                            <p class="text-sm text-gray-500 mb-5">Fill your calendar with live-booked appointments.</p>
-                            <form id="hero-form" action="#" method="POST" class="grid grid-cols-1 gap-4">
-                                <div>
-                                    <label for="fullName" class="block text-sm font-semibold text-gray-700 mb-1">Full Name</label>
-                                    <input type="text" id="fullName" name="fullName" placeholder="John Doe" class="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-2.5 text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#8CA365] transition-all" required>
+                        <div class="w-full max-w-lg bg-slate-900 rounded-[2rem] p-4 shadow-2xl relative border-4 border-slate-800">
+                            <!-- Dashboard Header -->
+                            <div class="flex items-center justify-between mb-6 px-2">
+                                <div class="flex gap-1.5">
+                                    <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                                    <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                                    <div class="w-3 h-3 rounded-full bg-green-500"></div>
                                 </div>
-                                <div>
-                                    <label for="email" class="block text-sm font-semibold text-gray-700 mb-1">Work Email</label>
-                                    <input type="email" id="email" name="email" placeholder="john@company.com" class="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-2.5 text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#8CA365] transition-all" required>
+                                <div class="text-[10px] text-slate-500 font-mono">LIVE_SCHEDULING_CORE_v2.4</div>
+                            </div>
+
+                            <!-- Calendar Visual -->
+                            <div class="bg-slate-800 rounded-2xl p-6 relative overflow-hidden">
+                                <div class="flex items-center gap-4 mb-6">
+                                    <div class="w-10 h-10 rounded-full bg-[#8CA365] flex items-center justify-center text-white">
+                                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
+                                    </div>
+                                    <div>
+                                        <div class="text-white font-bold text-sm">Incoming Call Answering...</div>
+                                        <div class="text-slate-400 text-xs">Live Receptionist Connected</div>
+                                    </div>
                                 </div>
-                                <div>
-                                    <label for="phone" class="block text-sm font-semibold text-gray-700 mb-1">Phone Number</label>
-                                    <input type="tel" id="phone" name="phone" placeholder="(555) 000-0000" class="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-2.5 text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#8CA365] transition-all" required>
+
+                                <!-- Booking Step-by-Step -->
+                                <div class="space-y-3 relative z-10">
+                                    <div class="bg-slate-900/50 p-3 rounded-lg border border-slate-700 flex items-center justify-between animate-fadeIn">
+                                        <span class="text-xs text-slate-300">Identifying Patient/Client...</span>
+                                        <span class="text-[10px] text-green-400 font-mono">VERIFIED</span>
+                                    </div>
+                                    <div class="bg-slate-900/50 p-3 rounded-lg border border-slate-700 flex items-center justify-between animate-fadeIn" style="animation-delay: 1s;">
+                                        <span class="text-xs text-slate-300">Checking Calendar Availability...</span>
+                                        <span class="text-[10px] text-blue-400 font-mono">OPEN SLOT: 2:00 PM</span>
+                                    </div>
+                                    <div class="bg-white p-4 rounded-xl shadow-lg border-2 border-[#8CA365] transform scale-105 animate-success" style="animation-delay: 2s;">
+                                        <div class="flex items-center justify-between mb-2">
+                                            <span class="text-[10px] font-bold text-[#8CA365] uppercase">New Appointment Booked</span>
+                                            <span class="text-[10px] text-gray-400">Just Now</span>
+                                        </div>
+                                        <div class="text-navy font-bold text-sm mb-1">New Patient: Sarah Jenkins</div>
+                                        <div class="text-gray-500 text-xs italic">Consultation • Today @ 2:00 PM</div>
+                                        <div class="mt-2 pt-2 border-t border-gray-100 flex items-center gap-2">
+                                            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Google_Calendar_icon_%282020%29.svg" class="w-3 h-3" alt="Google Cal">
+                                            <span class="text-[9px] text-gray-400">Synced to Google Calendar</span>
+                                        </div>
+                                    </div>
                                 </div>
-                                <button type="submit" class="w-full bg-[#8CA365] hover:bg-[#7a8f57] text-white font-bold text-lg py-3 rounded-xl shadow-lg transition-transform hover:-translate-y-1 mt-4">
-                                    Get Started Free
-                                </button>
-                                <p class="text-[10px] text-gray-400 mt-2 text-center">
-                                    Secure booking. No credit card required. 24-hour setup.
-                                </p>
-                            </form>
+
+                                <!-- Background pulses -->
+                                <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-[#8CA365] opacity-10 blur-3xl"></div>
+                            </div>
+
+                            <!-- Integration Strip -->
+                            <div class="mt-6 flex items-center justify-center gap-6 opacity-40 grayscale">
+                                <div class="text-white text-[10px] font-bold">CALENDLY</div>
+                                <div class="text-white text-[10px] font-bold">ACUITY</div>
+                                <div class="text-white text-[10px] font-bold">ZOCDOC</div>
+                                <div class="text-white text-[10px] font-bold">PABLY</div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -270,42 +334,225 @@
         <!-- ═══════════════════════════════════════════
          TRUST BAR
         ═══════════════════════════════════════════ -->
-        <section class="w-full bg-white border-t border-b border-gray-200 py-6 md:py-8 shadow-sm relative z-20 reveal reveal-delay-1">
+        <section
+            class="w-full bg-white border-t border-b border-gray-200 py-6 md:py-8 shadow-sm relative z-20 reveal reveal-delay-2">
             <div class="max-w-7xl mx-auto px-4 lg:px-8">
-                <div class="flex flex-wrap justify-center md:justify-between items-center gap-y-8 md:gap-y-0 md:divide-x md:divide-gray-200">
+                <div
+                    class="flex flex-wrap justify-center md:justify-between items-center gap-y-8 md:gap-y-0 md:divide-x md:divide-gray-200">
                     <div class="flex items-center justify-center gap-3 px-4 xl:px-6 w-full sm:w-1/2 md:w-auto">
                         <div class="flex items-center gap-1.5">
                             <svg class="w-5 h-5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4" />
-                                <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853" />
-                                <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05" />
-                                <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335" />
+                                <path
+                                    d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"
+                                    fill="#4285F4" />
+                                <path
+                                    d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"
+                                    fill="#34A853" />
+                                <path
+                                    d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"
+                                    fill="#FBBC05" />
+                                <path
+                                    d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"
+                                    fill="#EA4335" />
                             </svg>
                             <div class="flex text-yellow-400">
-                                <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-                                <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-                                <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-                                <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-                                <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                                    <path
+                                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                    </path>
+                                </svg>
+                                <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                                    <path
+                                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                    </path>
+                                </svg>
+                                <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                                    <path
+                                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                    </path>
+                                </svg>
+                                <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                                    <path
+                                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                    </path>
+                                </svg>
+                                <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                                    <path
+                                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                    </path>
+                                </svg>
                             </div>
                         </div>
-                        <span class="text-xs lg:text-sm font-bold text-gray-600 uppercase tracking-wide">4.9/5 Rating</span>
+                        <span
+                            class="text-xs lg:text-sm font-bold text-gray-600 uppercase tracking-wide whitespace-nowrap">4.9/5
+                            Rating</span>
                     </div>
+
                     <div class="flex items-center justify-center gap-3 px-4 xl:px-6 w-full sm:w-1/2 md:w-auto">
-                        <svg class="text-[#8CA365] w-6 h-6 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                        <svg class="text-[#8CA365] w-6 h-6 shrink-0" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                         </svg>
-                        <span class="text-xs lg:text-sm font-bold text-gray-600 uppercase tracking-wide">HIPAA Certified</span>
+                        <span
+                            class="text-xs lg:text-sm font-bold text-gray-600 uppercase tracking-wide whitespace-nowrap">HIPAA
+                            Certified</span>
                     </div>
+
                     <div class="flex items-center justify-center gap-3 px-4 xl:px-6 w-full sm:w-1/2 md:w-auto">
                         <span class="text-2xl leading-none">🇺🇸</span>
-                        <span class="text-xs lg:text-sm font-bold text-gray-600 uppercase tracking-wide">100% US-Based</span>
+                        <span
+                            class="text-xs lg:text-sm font-bold text-gray-600 uppercase tracking-wide whitespace-nowrap">100%
+                            US-Based</span>
                     </div>
+
                     <div class="flex items-center justify-center gap-3 px-4 xl:px-6 w-full sm:w-1/2 md:w-auto">
                         <svg class="grayscale opacity-70 w-6 h-6 shrink-0" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14.5v-9l6 4.5-6 4.5z" />
+                            <path
+                                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14.5v-9l6 4.5-6 4.5z" />
                         </svg>
-                        <span class="text-xs lg:text-sm font-bold text-gray-600 uppercase tracking-wide">A+ Accredited</span>
+                        <span
+                            class="text-xs lg:text-sm font-bold text-gray-600 uppercase tracking-wide whitespace-nowrap">A+
+                            Accredited</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════════
+         INTEGRATIONS SECTION
+        ═══════════════════════════════════════════ -->
+        <section class="bg-white py-24 px-4 relative overflow-hidden" id="integrations">
+            <!-- Background Detail -->
+            <div
+                class="bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px] opacity-50 absolute inset-0 -z-10">
+            </div>
+
+            <div class="max-w-7xl mx-auto">
+                <h2 class="text-3xl md:text-5xl font-bold text-[#34414A] text-center mb-6 max-w-4xl mx-auto">
+                    Works With the Tools You Already Use — 1,000+ Integrations
+                </h2>
+                <p class="text-lg text-gray-600 text-center mb-16 max-w-2xl mx-auto">
+                    Stop wasting time on manual data entry. Our receptionists instantly log calls, push leads, and book
+                    appointments directly into your existing tech stack.
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+                    <!-- Card 1: CRM -->
+                    <div
+                        class="bg-white/80 backdrop-blur-md rounded-3xl p-8 border border-gray-200 shadow-sm hover:shadow-xl hover:border-[#8CA365] transition-all duration-300 group flex flex-col">
+                        <div
+                            class="h-32 bg-slate-50 rounded-2xl mb-6 flex items-center justify-center gap-4 relative overflow-hidden">
+                            <div
+                                class="absolute inset-0 bg-[#8CA365]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl">
+                            </div>
+                            <div
+                                class="w-10 h-10 bg-[#34414A] rounded-full flex items-center justify-center z-10 shadow-md">
+                                <svg class="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                </svg>
+                            </div>
+                            <div class="w-12 h-0 border-t-2 border-dashed border-gray-300 relative z-0">
+                                <div
+                                    class="absolute -top-1 left-0 w-2 h-2 bg-[#8CA365] rounded-full opacity-0 group-hover:animate-[dashFlow_1.5s_linear_infinite]">
+                                </div>
+                            </div>
+                            <div class="flex -space-x-3 z-10">
+                                <div
+                                    class="w-10 h-10 rounded-full bg-white border border-gray-100 shadow-sm flex items-center justify-center text-[10px] font-bold text-blue-500">
+                                    SF</div>
+                                <div
+                                    class="w-10 h-10 rounded-full bg-white border border-gray-100 shadow-sm flex items-center justify-center text-[10px] font-bold text-orange-500">
+                                    HS</div>
+                                <div
+                                    class="w-10 h-10 rounded-full bg-white border border-gray-100 shadow-sm flex items-center justify-center text-[10px] font-bold text-green-500">
+                                    ZH</div>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-bold text-[#34414A] mb-3">CRM Integrations</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-6 flex-grow">
+                            Never lose a lead in the shuffle. We push new caller data, notes, and call outcomes directly
+                            into your CRM the second the call ends.
+                        </p>
+                    </div>
+
+                    <!-- Card 2: Scheduling -->
+                    <div
+                        class="bg-white/80 backdrop-blur-md rounded-3xl p-8 border border-gray-200 shadow-sm hover:shadow-xl hover:border-[#8CA365] transition-all duration-300 group flex flex-col">
+                        <div
+                            class="h-32 bg-slate-50 rounded-2xl mb-6 flex items-center justify-center gap-4 relative overflow-hidden">
+                            <div
+                                class="absolute inset-0 bg-[#8CA365]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl">
+                            </div>
+                            <div
+                                class="w-10 h-10 bg-[#34414A] rounded-full flex items-center justify-center z-10 shadow-md">
+                                <svg class="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                </svg>
+                            </div>
+                            <div class="w-12 h-0 border-t-2 border-dashed border-gray-300 relative z-0">
+                                <div
+                                    class="absolute -top-1 left-0 w-2 h-2 bg-[#8CA365] rounded-full opacity-0 group-hover:animate-[dashFlow_1.5s_linear_infinite]">
+                                </div>
+                            </div>
+                            <div class="flex -space-x-3 z-10">
+                                <div
+                                    class="w-10 h-10 rounded-full bg-white border border-gray-100 shadow-sm flex items-center justify-center text-[10px] font-bold text-blue-600">
+                                    CAL</div>
+                                <div
+                                    class="w-10 h-10 rounded-full bg-white border border-gray-100 shadow-sm flex items-center justify-center text-[10px] font-bold text-gray-800">
+                                    AC</div>
+                                <div
+                                    class="w-10 h-10 rounded-full bg-white border border-gray-100 shadow-sm flex items-center justify-center text-[10px] font-bold text-red-500">
+                                    GC</div>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-bold text-[#34414A] mb-3">Scheduling Tools</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-6 flex-grow">
+                            Wake up to a full calendar. We securely access your real-time availability and book appointments
+                            directly on your schedule.
+                        </p>
+                    </div>
+
+                    <!-- Card 3: Helpdesk -->
+                    <div
+                        class="bg-white/80 backdrop-blur-md rounded-3xl p-8 border border-gray-200 shadow-sm hover:shadow-xl hover:border-[#8CA365] transition-all duration-300 group flex flex-col">
+                        <div
+                            class="h-32 bg-slate-50 rounded-2xl mb-6 flex items-center justify-center gap-4 relative overflow-hidden">
+                            <div
+                                class="absolute inset-0 bg-[#8CA365]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl">
+                            </div>
+                            <div
+                                class="w-10 h-10 bg-[#34414A] rounded-full flex items-center justify-center z-10 shadow-md">
+                                <svg class="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                </svg>
+                            </div>
+                            <div class="w-12 h-0 border-t-2 border-dashed border-gray-300 relative z-0">
+                                <div
+                                    class="absolute -top-1 left-0 w-2 h-2 bg-[#8CA365] rounded-full opacity-0 group-hover:animate-[dashFlow_1.5s_linear_infinite]">
+                                </div>
+                            </div>
+                            <div class="flex -space-x-3 z-10">
+                                <div
+                                    class="w-10 h-10 rounded-full bg-white border border-gray-100 shadow-sm flex items-center justify-center text-[10px] font-bold text-green-600">
+                                    ZD</div>
+                                <div
+                                    class="w-10 h-10 rounded-full bg-white border border-gray-100 shadow-sm flex items-center justify-center text-[10px] font-bold text-blue-400">
+                                    FD</div>
+                                <div
+                                    class="w-10 h-10 rounded-full bg-white border border-gray-100 shadow-sm flex items-center justify-center text-[10px] font-bold text-navy">
+                                    LPA</div>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-bold text-[#34414A] mb-3">Helpdesk & Support</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-6 flex-grow">
+                            Extend your support team without the headcount. We log tickets, escalate urgent issues, and
+                            provide seamless Tier-1 customer care.
+                        </p>
                     </div>
                 </div>
             </div>
