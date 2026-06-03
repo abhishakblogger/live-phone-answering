@@ -419,9 +419,16 @@
      ABOUT US HERO SECTION
     ═══════════════════════════════════════════ -->
     <main class="w-full">
-        <section class="bg-[#1a232c] min-h-[85vh] flex items-center relative overflow-hidden">
-            <!-- Radial Gradient -->
-            <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-[#8CA365]/10 via-[#1a232c]/0 to-[#1a232c]/0"></div>
+        <section class="min-h-[85vh] flex items-center relative overflow-hidden bg-[#0f2925]">
+            <!-- Premium Colorful Mesh Gradient Background -->
+            <div class="absolute inset-0 z-0 overflow-hidden">
+                <!-- Glowing Orb 1 (Brand Green) -->
+                <div class="absolute -top-32 -left-32 w-[600px] h-[600px] bg-[#8CA365]/40 rounded-full blur-[120px] animate-pulse pointer-events-none"></div>
+                <!-- Glowing Orb 2 (Bright Mint) -->
+                <div class="absolute bottom-0 -right-20 w-[700px] h-[700px] bg-[#00cc7a]/20 rounded-full blur-[150px] pointer-events-none"></div>
+                <!-- Glowing Orb 3 (Deep Teal) -->
+                <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-[#215153]/60 rounded-full blur-[120px] pointer-events-none"></div>
+            </div>
             
             <div class="max-w-7xl mx-auto px-4 py-20 lg:py-0 w-full relative z-10">
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
@@ -566,7 +573,16 @@
         <!-- ═══════════════════════════════════════════
          BY THE NUMBERS SECTION
         ═══════════════════════════════════════════ -->
-        <section class="bg-[#1a232c] py-14 sm:py-24 px-4 relative overflow-hidden">
+        <section class="bg-[#0f2925] py-14 sm:py-24 px-4 relative overflow-hidden">
+            <!-- Premium Colorful Mesh Gradient Background -->
+            <div class="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+                <!-- Glowing Orb 1 (Brand Green) -->
+                <div class="absolute -top-32 -left-32 w-[600px] h-[600px] bg-[#8CA365]/40 rounded-full blur-[120px] animate-pulse pointer-events-none"></div>
+                <!-- Glowing Orb 2 (Bright Mint) -->
+                <div class="absolute bottom-0 -right-20 w-[700px] h-[700px] bg-[#00cc7a]/20 rounded-full blur-[150px] pointer-events-none"></div>
+                <!-- Glowing Orb 3 (Deep Teal) -->
+                <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-[#215153]/60 rounded-full blur-[120px] pointer-events-none"></div>
+            </div>
             <!-- Tech-inspired grid pattern overlay -->
             <div class="pointer-events-none absolute inset-0 opacity-40" style="background-image: radial-gradient(circle, rgba(255,255,255,0.06) 1px, transparent 1px); background-size: 28px 28px;"></div>
             <!-- Radial glow -->
@@ -810,61 +826,52 @@
                     </p>
                 </div>
 
-                <!-- The 3-Column Trust Grid -->
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10">
+                <!-- The 2-Column Trust Section -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 
-                    <!-- Card 1: HIPAA -->
-                    <div class="bg-white rounded-3xl p-8 lg:p-10 border-2 border-gray-100 shadow-sm hover:shadow-xl hover:border-[#8CA365] transition-all duration-300 relative group flex flex-col items-center text-center">
-                        <div class="relative w-24 h-24 mb-8 flex items-center justify-center">
-                            <div class="absolute inset-0 bg-green-400 opacity-0 group-hover:opacity-20 blur-xl rounded-full transition-opacity duration-500"></div>
-                            <!-- Placeholder SVG for HIPAA -->
-                            <svg class="w-20 h-20 relative z-10 text-[#8CA365]" fill="currentColor" viewBox="0 0 24 24" aria-label="HIPAA Certified Live Phone Answering Service">
-                                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
-                                <path d="M11 9h2v3h3v2h-3v3h-2v-3H8v-2h3V9z"/>
-                            </svg>
-                        </div>
-                        <span class="block text-xl font-bold text-[#34414A] mb-4">
-                            HIPAA Certified — Protecting Every Medical and Healthcare Call
-                        </span>
-                        <p class="text-gray-600 text-sm leading-relaxed">
-                            We don't just display the badge; we live the protocol. Every receptionist undergoes comprehensive, federally mandated HIPAA training to ensure strict compliance in handling sensitive patient intake, medical dispatching, and secure message routing.
-                        </p>
+                    <!-- Left: Dynamic Image -->
+                    <div class="relative w-full aspect-square md:aspect-[4/3] lg:aspect-square bg-slate-50 rounded-[2.5rem] border border-gray-100 shadow-inner overflow-hidden flex items-center justify-center p-8 group">
+                        <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-blue-100/40 via-transparent to-transparent opacity-70"></div>
+                        <img id="cert-display-img" src="images/cert-hipaa.png" alt="Certification Illustration" class="relative z-10 w-full h-full object-contain object-center transition-all duration-500 transform group-hover:scale-105">
                     </div>
 
-                    <!-- Card 2: BBB -->
-                    <a href="https://www.bbb.org" target="_blank" rel="noopener noreferrer" class="bg-white rounded-3xl p-8 lg:p-10 border-2 border-gray-100 shadow-sm hover:shadow-xl hover:border-blue-400 transition-all duration-300 relative group flex flex-col items-center text-center cursor-pointer block">
-                        <div class="relative w-24 h-24 mb-8 flex items-center justify-center">
-                            <div class="absolute inset-0 bg-blue-500 opacity-0 group-hover:opacity-20 blur-xl rounded-full transition-opacity duration-500"></div>
-                            <!-- Placeholder SVG for BBB -->
-                            <svg class="w-20 h-20 relative z-10 text-blue-600" fill="currentColor" viewBox="0 0 24 24" aria-label="BBB Accredited Live Phone Answering Business">
-                                <path d="M12 2L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-3zm-2 16l-4-4 1.41-1.41L10 15.17l6.59-6.59L18 10l-8 8z"/>
-                            </svg>
-                        </div>
-                        <span class="block text-xl font-bold text-[#34414A] mb-4 group-hover:text-blue-600 transition-colors">
-                            BBB Accredited Business — Verified Trust and Transparency
-                        </span>
-                        <p class="text-gray-600 text-sm leading-relaxed">
-                            Our accreditation and top-tier rating with the Better Business Bureau reflect our unwavering commitment to transparent billing, ethical operations, and exceptional client satisfaction. We believe in doing business the right way.
-                        </p>
-                    </a>
+                    <!-- Right: Interactive List -->
+                    <div class="flex flex-col gap-4">
 
-                    <!-- Card 3: Data Security -->
-                    <div class="bg-white rounded-3xl p-8 lg:p-10 border-2 border-gray-100 shadow-sm hover:shadow-xl hover:border-slate-800 transition-all duration-300 relative group flex flex-col items-center text-center">
-                        <div class="relative w-24 h-24 mb-8 flex items-center justify-center">
-                            <div class="absolute inset-0 bg-slate-800 opacity-0 group-hover:opacity-10 blur-xl rounded-full transition-opacity duration-500"></div>
-                            <!-- Placeholder SVG for Data Security -->
-                            <svg class="w-20 h-20 relative z-10 text-slate-800" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-label="Cyber Security/Encryption Shield">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
-                            </svg>
+                        <!-- Item 1: HIPAA -->
+                        <div class="cert-tab cursor-pointer bg-white rounded-2xl p-6 border-2 border-[#8CA365] shadow-md transition-all duration-300 relative group flex items-start gap-5 opacity-100" data-img="images/cert-hipaa.png" data-color="border-[#8CA365]" data-text="text-green" data-bg="bg-green">
+                            <div class="shrink-0 bg-green-50 text-green p-3 rounded-xl group-hover:bg-green group-hover:text-white transition-colors">
+                                <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/><path d="M11 9h2v3h3v2h-3v3h-2v-3H8v-2h3V9z"/></svg>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold text-[#34414A] mb-2 group-hover:text-green transition-colors">HIPAA Certified</h4>
+                                <p class="text-gray-500 text-sm leading-relaxed">Protecting Every Medical and Healthcare Call. Every receptionist undergoes comprehensive, federally mandated HIPAA training to ensure strict compliance in handling sensitive patient intake.</p>
+                            </div>
                         </div>
-                        <span class="block text-xl font-bold text-[#34414A] mb-4">
-                            Our Data Security & Privacy Commitment
-                        </span>
-                        <p class="text-gray-600 text-sm leading-relaxed">
-                            Beyond standard certifications, we safeguard your operations using bank-level 256-bit encryption, strict internal access controls, and secure CRM API integrations. Your proprietary business information and client lists are never shared, sold, or compromised.
-                        </p>
+
+                        <!-- Item 2: BBB -->
+                        <div class="cert-tab cursor-pointer bg-white rounded-2xl p-6 border-2 border-transparent hover:border-gray-200 transition-all duration-300 relative group flex items-start gap-5 opacity-60 hover:opacity-100" data-img="images/cert-bbb.png" data-color="border-blue-500" data-text="text-blue-500" data-bg="bg-blue-500">
+                            <div class="shrink-0 bg-blue-50 text-blue-500 p-3 rounded-xl group-hover:bg-blue-500 group-hover:text-white transition-colors">
+                                <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-3zm-2 16l-4-4 1.41-1.41L10 15.17l6.59-6.59L18 10l-8 8z"/></svg>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold text-[#34414A] mb-2 group-hover:text-blue-500 transition-colors">BBB Accredited Business</h4>
+                                <p class="text-gray-500 text-sm leading-relaxed">Verified Trust and Transparency. Our accreditation and top-tier rating with the Better Business Bureau reflect our unwavering commitment to transparent billing and ethical operations.</p>
+                            </div>
+                        </div>
+
+                        <!-- Item 3: Data Security -->
+                        <div class="cert-tab cursor-pointer bg-white rounded-2xl p-6 border-2 border-transparent hover:border-gray-200 transition-all duration-300 relative group flex items-start gap-5 opacity-60 hover:opacity-100" data-img="images/cert-security.png" data-color="border-slate-800" data-text="text-slate-800" data-bg="bg-slate-800">
+                            <div class="shrink-0 bg-slate-100 text-slate-800 p-3 rounded-xl group-hover:bg-slate-800 group-hover:text-white transition-colors">
+                                <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold text-[#34414A] mb-2 group-hover:text-slate-800 transition-colors">Data Security & Privacy</h4>
+                                <p class="text-gray-500 text-sm leading-relaxed">Beyond standard certifications, we safeguard your operations using bank-level 256-bit encryption, strict internal access controls, and secure CRM API integrations.</p>
+                            </div>
+                        </div>
+
                     </div>
-
                 </div>
 
                 <!-- Schema Markup Block -->
@@ -1394,7 +1401,16 @@
         <!-- ═══════════════════════════════════════════
          FINAL TRUST CTA SECTION
         ═══════════════════════════════════════════ -->
-        <section class="bg-[#1a232c] py-24 px-4 lg:px-8 relative overflow-hidden">
+        <section class="bg-[#0f2925] py-24 px-4 lg:px-8 relative overflow-hidden">
+            <!-- Premium Colorful Mesh Gradient Background -->
+            <div class="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+                <!-- Glowing Orb 1 (Brand Green) -->
+                <div class="absolute -top-32 -left-32 w-[600px] h-[600px] bg-[#8CA365]/40 rounded-full blur-[120px] animate-pulse pointer-events-none"></div>
+                <!-- Glowing Orb 2 (Bright Mint) -->
+                <div class="absolute bottom-0 -right-20 w-[700px] h-[700px] bg-[#00cc7a]/20 rounded-full blur-[150px] pointer-events-none"></div>
+                <!-- Glowing Orb 3 (Deep Teal) -->
+                <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-[#215153]/60 rounded-full blur-[120px] pointer-events-none"></div>
+            </div>
             <!-- Glowing Accent -->
             <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-[#8CA365] rounded-full mix-blend-screen filter blur-[200px] opacity-20 pointer-events-none"></div>
             
@@ -1817,6 +1833,30 @@
         }, { passive: true });
 
         btt.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+        // ─── Certifications Image Swap ───
+        const certTabs = document.querySelectorAll('.cert-tab');
+        const certImg = document.getElementById('cert-display-img');
+        
+        certTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                // Remove active styling from all tabs
+                certTabs.forEach(t => {
+                    t.classList.remove('shadow-md', 'opacity-100', t.getAttribute('data-color'));
+                    t.classList.add('border-transparent', 'opacity-60');
+                });
+                
+                // Add active styling to clicked tab
+                tab.classList.remove('border-transparent', 'opacity-60');
+                tab.classList.add('shadow-md', 'opacity-100', tab.getAttribute('data-color'));
+                
+                // Swap image with fade effect
+                certImg.style.opacity = '0';
+                setTimeout(() => {
+                    certImg.src = tab.getAttribute('data-img');
+                    certImg.style.opacity = '1';
+                }, 200);
+            });
+        });
     </script>
 </body>
 
