@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .reveal {
+    @apply opacity-0 translate-y-8 transition-all duration-700 ease-out;
+  }
+  .reveal.active {
+    @apply opacity-100 translate-y-0;
+  }
+  .reveal-delay-1 { transition-delay: 100ms; }
+  .reveal-delay-2 { transition-delay: 200ms; }
+  .reveal-delay-3 { transition-delay: 300ms; }
+  .reveal-delay-4 { transition-delay: 400ms; }
+  .reveal-delay-5 { transition-delay: 500ms; }
+
+  .ind-tab.active {
+    @apply bg-navy text-white border-navy shadow-lg;
+  }
+
+  .faq-item.open .faq-a {
+    max-height: 400px !important;
+  }
+  .faq-item.open .faq-icon-wrap {
+    @apply bg-green text-white rotate-45;
+  }
+  .faq-item.open {
+    @apply border-green shadow-md;
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, #00B67A 0%, #00D4AA 55%, #009966 100%);
+  }
+
+  .btn-shimmer::before {
+    content: '';
+    @apply absolute inset-0 opacity-0 transition-opacity duration-500;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.18), transparent);
+    background-size: 200% 100%;
+  }
+  .btn-shimmer:hover::before {
+    @apply opacity-100;
+    animation: shimmer 1.2s linear infinite;
+  }
+
+  .no-scroll::-webkit-scrollbar { display: none; }
+  .no-scroll { -ms-overflow-style: none; scrollbar-width: none; }
+}
+
+@keyframes blobMorph {
+  0%, 100% { border-radius: 42% 58% 55% 45% / 56% 42% 58% 44%; }
+  25% { border-radius: 55% 45% 42% 58% / 44% 56% 44% 56%; }
+  50% { border-radius: 45% 55% 58% 42% / 58% 44% 42% 58%; }
+  75% { border-radius: 58% 42% 45% 55% / 42% 58% 56% 44%; }
+}
+
+@keyframes blobFadeUp {
+  from { opacity: 0; transform: translateY(28px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes blobFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes scroll-marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: scroll-marquee 30s linear infinite;
+}
+
+@keyframes dashFlow {
+  0% { opacity: 0; transform: translateX(0); }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { opacity: 0; transform: translateX(48px); }
+}

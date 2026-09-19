@@ -6,3 +6,9 @@
 Thumbs.db
 *.zip
 
+node_modules/
+.next/
+out/
+build/
+.env*.local
+next-env.d.ts
