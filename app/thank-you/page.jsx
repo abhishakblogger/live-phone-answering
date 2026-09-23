@@ -4,6 +4,22 @@ export const metadata = {
   title: "Thank You | Live Phone Answering Services",
   description: "Live Phone Answering helps businesses stay reachable, capture more leads, and deliver professional customer support with trusted live phone answering services.",
   alternates: { canonical: "/thank-you" },
+  openGraph: {
+    type: 'website',
+    siteName: 'LivePhoneAnswering',
+    locale: 'en_US',
+    images: [{ url: '/images/Phone Answering Services.webp', width: 1122, height: 1402, alt: 'Live Phone Answering Service' }],
+    title: "Thank You | Live Phone Answering Services",
+    description: "Live Phone Answering helps businesses stay reachable, capture more leads, and deliver professional customer support with trusted live phone answering services.",
+    url: "/thank-you",
+  },
+  twitter: {
+    card: 'summary_large_image',
+    images: ['/images/Phone Answering Services.webp'],
+    title: "Thank You | Live Phone Answering Services",
+    description: "Live Phone Answering helps businesses stay reachable, capture more leads, and deliver professional customer support with trusted live phone answering services.",
+  },
+  robots: { index: false, follow: true },
 }
 
 export default function ThankYouPage() {

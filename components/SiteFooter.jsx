@@ -21,7 +21,12 @@ export default function SiteFooter() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           <div>
             <div className="mb-6">
-              <img src="/images/LPA_Footer_logo.png" alt="Live Phone Answering" className="h-30 w-auto" />
+              <img src="/images/LPA_Footer_logo.webp" alt="Live Phone Answering" className="h-30 w-auto"
+            width={1200}
+            height={758}
+            loading="lazy"
+            decoding="async"
+          />
             </div>
 
             <div className="inline-flex items-center gap-2 bg-white/5 border border-white/10 rounded-full px-4 py-2 text-sm text-slate-300 backdrop-blur-sm mb-6">

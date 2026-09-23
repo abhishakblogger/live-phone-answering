@@ -1,9 +1,24 @@
 import Link from 'next/link'
 
 export const metadata = {
-  title: "Live Phone Answering Services — Virtual Receptionist & More | LivePhoneAnswering.com",
-  description: "Explore our full range of live phone answering services including virtual receptionist, medical answering, appointment scheduling, after-hours, and bilingual answering for US businesses.",
+  title: "Our Services | Live Phone Answering",
+  description: "Virtual receptionist, medical answering, appointment scheduling, after-hours and bilingual answering services for US businesses. Explore the full range.",
   alternates: { canonical: "/services" },
+  openGraph: {
+    type: 'website',
+    siteName: 'LivePhoneAnswering',
+    locale: 'en_US',
+    images: [{ url: '/images/Phone Answering Services.webp', width: 1122, height: 1402, alt: 'Live Phone Answering Service' }],
+    title: "Our Services | Live Phone Answering",
+    description: "Virtual receptionist, medical answering, appointment scheduling, after-hours and bilingual answering services for US businesses. Explore the full range.",
+    url: "/services",
+  },
+  twitter: {
+    card: 'summary_large_image',
+    images: ['/images/Phone Answering Services.webp'],
+    title: "Our Services | Live Phone Answering",
+    description: "Virtual receptionist, medical answering, appointment scheduling, after-hours and bilingual answering services for US businesses. Explore the full range.",
+  },
 }
 
 export default function ServicesPage() {

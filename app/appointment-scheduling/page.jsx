@@ -2,8 +2,23 @@ import Link from 'next/link'
 
 export const metadata = {
   title: "Appointment Scheduling Service | Live Phone Answering",
-  description: "Live receptionists book appointments directly into your calendar 24/7. Syncs with Calendly, Acuity, Google Calendar & 1,000+ scheduling tools. Get started today.",
+  description: "Live receptionists book appointments straight into your calendar 24/7. Syncs with Calendly, Acuity, Google Calendar and 1,000+ tools.",
   alternates: { canonical: "/appointment-scheduling" },
+  openGraph: {
+    type: 'website',
+    siteName: 'LivePhoneAnswering',
+    locale: 'en_US',
+    images: [{ url: '/images/Phone Answering Services.webp', width: 1122, height: 1402, alt: 'Live Phone Answering Service' }],
+    title: "Appointment Scheduling Service | Live Phone Answering",
+    description: "Live receptionists book appointments directly into your calendar 24/7. Syncs with Calendly, Acuity, Google Calendar & 1,000+ scheduling tools. Get started today.",
+    url: "/appointment-scheduling",
+  },
+  twitter: {
+    card: 'summary_large_image',
+    images: ['/images/Phone Answering Services.webp'],
+    title: "Appointment Scheduling Service | Live Phone Answering",
+    description: "Live receptionists book appointments directly into your calendar 24/7. Syncs with Calendly, Acuity, Google Calendar & 1,000+ scheduling tools. Get started today.",
+  },
 }
 
 const pageSchema = [
@@ -781,7 +796,7 @@ export default function AppointmentSchedulingPage() {
                     alt="Live receptionist booking appointments into Calendly, Acuity, and Google Calendar in real time"
                     className="w-full rounded-2xl shadow-[0_20px_60px_-15px_rgba(0,0,0,0.18)] relative z-10"
                     loading="lazy"
-                    src="/images/scheduling-receptionist.png"
+                    src="/images/scheduling-receptionist.webp"
                   />
                   {/* Floating badge */}
                   <div

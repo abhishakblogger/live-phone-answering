@@ -4,6 +4,21 @@ export const metadata = {
   title: "Medical Answering Service | Live Phone Answering",
   description: "Professional HIPAA-compliant medical answering service. Secure, 24/7 call handling for healthcare providers, clinics, and practices.",
   alternates: { canonical: "/medical-answering-service" },
+  openGraph: {
+    type: 'website',
+    siteName: 'LivePhoneAnswering',
+    locale: 'en_US',
+    images: [{ url: '/images/Phone Answering Services.webp', width: 1122, height: 1402, alt: 'Live Phone Answering Service' }],
+    title: "Medical Answering Service | Live Phone Answering",
+    description: "Professional HIPAA-compliant medical answering service. Secure, 24/7 call handling for healthcare providers, clinics, and practices.",
+    url: "/medical-answering-service",
+  },
+  twitter: {
+    card: 'summary_large_image',
+    images: ['/images/Phone Answering Services.webp'],
+    title: "Medical Answering Service | Live Phone Answering",
+    description: "Professional HIPAA-compliant medical answering service. Secure, 24/7 call handling for healthcare providers, clinics, and practices.",
+  },
 }
 
 const pageSchema = [

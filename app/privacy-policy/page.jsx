@@ -1,8 +1,23 @@
 
 export const metadata = {
-  title: "Live Phone Answering Service for US Businesses | LivePhoneAnswering.com",
-  description: "Professional live phone answering service for US businesses. Real human receptionists answer every call 24/7 in your company's name.",
+  title: "Privacy Policy | Live Phone Answering",
+  description: "How Live Phone Answering collects, uses and protects your information, and the choices you have about your data.",
   alternates: { canonical: "/privacy-policy" },
+  openGraph: {
+    type: 'website',
+    siteName: 'LivePhoneAnswering',
+    locale: 'en_US',
+    images: [{ url: '/images/Phone Answering Services.webp', width: 1122, height: 1402, alt: 'Live Phone Answering Service' }],
+    title: "Privacy Policy | Live Phone Answering",
+    description: "How Live Phone Answering collects, uses and protects your information, and the choices you have about your data.",
+    url: "/privacy-policy",
+  },
+  twitter: {
+    card: 'summary_large_image',
+    images: ['/images/Phone Answering Services.webp'],
+    title: "Privacy Policy | Live Phone Answering",
+    description: "How Live Phone Answering collects, uses and protects your information, and the choices you have about your data.",
+  },
 }
 
 export default function PrivacyPolicyPage() {

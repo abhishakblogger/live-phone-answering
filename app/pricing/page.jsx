@@ -1,9 +1,24 @@
 import Link from 'next/link'
 
 export const metadata = {
-  title: "Live Phone Answering Pricing — Flat Rate, No Per-Minute Fees | LivePhoneAnswering.com",
-  description: "Live phone answering plans starting at $199/month for 100 minutes. Choose Starter, Growth (250 min), or Business (500 min) — no setup fees, no long-term contracts. Extra minutes just $1.99/min.",
+  title: "Pricing — Flat-Rate Plans from $199/mo | Live Phone Answering",
+  description: "Live answering plans from $199/month for 100 minutes. Starter, Growth and Business tiers — no setup fees, no contracts, extra minutes at $1.99/min.",
   alternates: { canonical: "/pricing" },
+  openGraph: {
+    type: 'website',
+    siteName: 'LivePhoneAnswering',
+    locale: 'en_US',
+    images: [{ url: '/images/Phone Answering Services.webp', width: 1122, height: 1402, alt: 'Live Phone Answering Service' }],
+    title: "Pricing — Flat-Rate Plans from $199/mo | Live Phone Answering",
+    description: "Live answering plans from $199/month for 100 minutes. Starter, Growth and Business tiers — no setup fees, no contracts, extra minutes at $1.99/min.",
+    url: "/pricing",
+  },
+  twitter: {
+    card: 'summary_large_image',
+    images: ['/images/Phone Answering Services.webp'],
+    title: "Pricing — Flat-Rate Plans from $199/mo | Live Phone Answering",
+    description: "Live answering plans from $199/month for 100 minutes. Starter, Growth and Business tiers — no setup fees, no contracts, extra minutes at $1.99/min.",
+  },
 }
 
 export default function PricingPage() {

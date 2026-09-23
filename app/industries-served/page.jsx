@@ -1,9 +1,24 @@
 import Link from 'next/link'
 
 export const metadata = {
-  title: "Industries We Serve — Live Phone Answering for Every Business | LivePhoneAnswering.com",
-  description: "Live Phone Answering serves 50+ industries including healthcare, legal, home services, real estate, and more. See how we integrate with your exact workflow.",
+  title: "Industries We Serve | Live Phone Answering",
+  description: "We serve 50+ industries including healthcare, legal, home services and real estate. See how live answering fits your exact workflow.",
   alternates: { canonical: "/industries-served" },
+  openGraph: {
+    type: 'website',
+    siteName: 'LivePhoneAnswering',
+    locale: 'en_US',
+    images: [{ url: '/images/Phone Answering Services.webp', width: 1122, height: 1402, alt: 'Live Phone Answering Service' }],
+    title: "Industries We Serve | Live Phone Answering",
+    description: "We serve 50+ industries including healthcare, legal, home services and real estate. See how live answering fits your exact workflow.",
+    url: "/industries-served",
+  },
+  twitter: {
+    card: 'summary_large_image',
+    images: ['/images/Phone Answering Services.webp'],
+    title: "Industries We Serve | Live Phone Answering",
+    description: "We serve 50+ industries including healthcare, legal, home services and real estate. See how live answering fits your exact workflow.",
+  },
 }
 
 export default function IndustriesServedPage() {

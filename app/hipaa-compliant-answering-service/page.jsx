@@ -4,6 +4,21 @@ export const metadata = {
   title: "HIPAA Compliant Answering Service | Live Phone Answering",
   description: "Professional HIPAA compliant answering service. Secure, 24/7 live receptionists trained in healthcare compliance and patient privacy.",
   alternates: { canonical: "/hipaa-compliant-answering-service" },
+  openGraph: {
+    type: 'website',
+    siteName: 'LivePhoneAnswering',
+    locale: 'en_US',
+    images: [{ url: '/images/Phone Answering Services.webp', width: 1122, height: 1402, alt: 'Live Phone Answering Service' }],
+    title: "HIPAA Compliant Answering Service | Live Phone Answering",
+    description: "Professional HIPAA compliant answering service. Secure, 24/7 live receptionists trained in healthcare compliance and patient privacy.",
+    url: "/hipaa-compliant-answering-service",
+  },
+  twitter: {
+    card: 'summary_large_image',
+    images: ['/images/Phone Answering Services.webp'],
+    title: "HIPAA Compliant Answering Service | Live Phone Answering",
+    description: "Professional HIPAA compliant answering service. Secure, 24/7 live receptionists trained in healthcare compliance and patient privacy.",
+  },
 }
 
 const pageSchema = [
@@ -16,26 +31,22 @@ const pageSchema = [
       {
         "@type": "HowToStep",
         "name": "Sign your HIPAA Business Associate Agreement",
-        "text": "We send a standardized, HHS-compliant BAA for your administrator to e-sign, establishing our liability and securing your practice.",
-        "image": "https://example.com/step1-baa.jpg"
+        "text": "We send a standardized, HHS-compliant BAA for your administrator to e-sign, establishing our liability and securing your practice."
       },
       {
         "@type": "HowToStep",
         "name": "Configure your HIPAA-compliant call script",
-        "text": "We work with your team to build a customized script that covers new patient intakes and physician escalations.",
-        "image": "https://example.com/step2-script.jpg"
+        "text": "We work with your team to build a customized script that covers new patient intakes and physician escalations."
       },
       {
         "@type": "HowToStep",
         "name": "Receptionists begin answering patient calls live",
-        "text": "Your patients are immediately greeted by empathetic, fully certified medical receptionists.",
-        "image": "https://example.com/step3-live.jpg"
+        "text": "Your patients are immediately greeted by empathetic, fully certified medical receptionists."
       },
       {
         "@type": "HowToStep",
         "name": "Receive secure, encrypted message summaries",
-        "text": "Detailed call notes are delivered instantly through our 256-bit encrypted provider portal and secure mobile app.",
-        "image": "https://example.com/step4-delivery.jpg"
+        "text": "Detailed call notes are delivered instantly through our 256-bit encrypted provider portal and secure mobile app."
       }
     ]
   },
@@ -2001,8 +2012,12 @@ export default function HipaaCompliantAnsweringServicePage() {
                       <img
                         alt="Sarah Jenkins - Head of Medical Training"
                         className="w-full h-full object-cover"
-                        src="/images/sarah-jenkins.png"
-                      />
+                        src="/images/sarah-jenkins.webp"
+            width={1024}
+            height={1024}
+            loading="eager"
+            fetchPriority="high"
+          />
                     </div>
                     <div>
                       <span className="block text-white font-bold" itemProp="name">
@@ -2163,8 +2178,12 @@ export default function HipaaCompliantAnsweringServicePage() {
                   <img
                     alt="HIPAA Compliance Certification Seal"
                     className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
-                    src="/images/hipaa_compliance_badge_1778606013153.png"
-                  />
+                    src="/images/hipaa_compliance_badge_1778606013153.webp"
+            width={1024}
+            height={1024}
+            loading="lazy"
+            decoding="async"
+          />
                 </div>
                 <div className="relative z-10">
                   <span className="block text-xl font-bold text-[#34414A] mb-3 leading-snug">
@@ -2208,8 +2227,12 @@ export default function HipaaCompliantAnsweringServicePage() {
                   <img
                     alt="BBB Accreditation Seal"
                     className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
-                    src="/images/bbb_accreditation_badge_1778606027764.png"
-                  />
+                    src="/images/bbb_accreditation_badge_1778606027764.webp"
+            width={1024}
+            height={1024}
+            loading="lazy"
+            decoding="async"
+          />
                 </div>
                 <div className="relative z-10">
                   <span className="block text-xl font-bold text-[#34414A] mb-3 leading-snug">

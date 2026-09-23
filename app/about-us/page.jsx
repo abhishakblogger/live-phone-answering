@@ -4,6 +4,21 @@ export const metadata = {
   title: "About Us | Live Phone Answering",
   description: "Learn more about Live Phone Answering, our mission, our US-based team, and how we help businesses grow with 24/7 professional answering services.",
   alternates: { canonical: "/about-us" },
+  openGraph: {
+    type: 'website',
+    siteName: 'LivePhoneAnswering',
+    locale: 'en_US',
+    images: [{ url: '/images/Phone Answering Services.webp', width: 1122, height: 1402, alt: 'Live Phone Answering Service' }],
+    title: "About Us | Live Phone Answering",
+    description: "Learn more about Live Phone Answering, our mission, our US-based team, and how we help businesses grow with 24/7 professional answering services.",
+    url: "/about-us",
+  },
+  twitter: {
+    card: 'summary_large_image',
+    images: ['/images/Phone Answering Services.webp'],
+    title: "About Us | Live Phone Answering",
+    description: "Learn more about Live Phone Answering, our mission, our US-based team, and how we help businesses grow with 24/7 professional answering services.",
+  },
 }
 
 const pageSchema = {
@@ -169,16 +184,24 @@ export default function AboutUsPage() {
               </div>
               {/* Main Image (Background/Large) */}
               <img
-                src="/images/office-receptionists.png"
+                src="/images/office-receptionists.webp"
                 alt="Live Phone Answering Team in Office"
                 className="absolute right-0 top-10 w-4/5 h-[400px] lg:h-[450px] object-cover rounded-3xl shadow-xl border-2 border-gray-100 z-10 transition-transform duration-700 hover:-translate-y-2"
-              />
+            width={1024}
+            height={1024}
+            loading="eager"
+            fetchPriority="high"
+          />
               {/* Secondary Image (Foreground/Overlapping) */}
               <img
-                src="/images/zoom-gallery-view.png"
+                src="/images/zoom-gallery-view.webp"
                 alt="Remote Agents Video Call"
                 className="absolute left-0 bottom-8 w-3/5 h-[220px] lg:h-[250px] object-cover rounded-2xl shadow-lg border-2 border-white z-20 transform -rotate-3 hover:rotate-0 transition-transform duration-500"
-              />
+            width={1024}
+            height={1024}
+            loading="lazy"
+            decoding="async"
+          />
               {/* Trust Badge (Floating) - matching homepage badge style */}
               <div
                 className="absolute right-0 sm:-right-2 top-28 bg-white/90 backdrop-blur-sm rounded-xl shadow-md px-3 py-2 flex items-center gap-2 animate-fadeUp z-30 border border-[#8CA365]/20"
@@ -256,10 +279,14 @@ export default function AboutUsPage() {
                   </div>
                   {/* Portrait Image */}
                   <img
-                    src="/images/about-live-phone-answering.png"
+                    src="/images/about-live-phone-answering.webp"
                     alt="About Live Phone Answering"
                     className="w-full aspect-[4/5] object-cover rounded-2xl shadow-xl z-10"
-                  />
+            width={1122}
+            height={1402}
+            loading="lazy"
+            decoding="async"
+          />
                 </div>
               </div>
               {/* Right Column (The Narrative - span 7) */}
@@ -607,10 +634,14 @@ export default function AboutUsPage() {
                 </div>
                 <img
                   id="cert-display-img"
-                  src="/images/cert-hipaa.png"
+                  src="/images/cert-hipaa.webp"
                   alt="Certification Illustration"
                   className="relative z-10 w-full h-full object-contain object-center transition-all duration-500 transform group-hover:scale-105"
-                />
+            width={1200}
+            height={1200}
+            loading="lazy"
+            decoding="async"
+          />
               </div>
               {/* Right: Interactive List */}
               <div className="flex flex-col gap-4">
@@ -740,10 +771,14 @@ export default function AboutUsPage() {
                 className="relative w-full rounded-3xl overflow-hidden group flex items-center justify-center p-1 bg-gradient-to-br from-gray-100 to-gray-50 border border-gray-200 shadow-sm transition-all duration-500 hover:shadow-md"
               >
                 <img
-                  src="/images/customer-support-operations.png"
+                  src="/images/customer-support-operations.webp"
                   alt="Customer Support Operations"
                   className="w-full h-auto object-cover rounded-3xl shadow-lg border border-white/50 group-hover:scale-[1.02] group-hover:shadow-xl transition-all duration-700"
-                />
+            width={1200}
+            height={1200}
+            loading="lazy"
+            decoding="async"
+          />
               </div>
               {/* Right Column (The Sequential Nodes) */}
               <div className="relative flex flex-col gap-10">

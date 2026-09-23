@@ -1,8 +1,23 @@
 
 export const metadata = {
-  title: "Contact Us — Get Started with Live Phone Answering Today | LivePhoneAnswering.com",
-  description: "Ready to get started? Contact Live Phone Answering to set up your dedicated receptionist. Call (857) 453-1055 or fill out our form — we respond within 1 business hour.",
+  title: "Contact Us | Live Phone Answering",
+  description: "Contact Live Phone Answering to set up your dedicated receptionist. Call (857) 453-1055 or send the form — we reply within 1 business hour.",
   alternates: { canonical: "/contact-us" },
+  openGraph: {
+    type: 'website',
+    siteName: 'LivePhoneAnswering',
+    locale: 'en_US',
+    images: [{ url: '/images/Phone Answering Services.webp', width: 1122, height: 1402, alt: 'Live Phone Answering Service' }],
+    title: "Contact Us | Live Phone Answering",
+    description: "Contact Live Phone Answering to set up your dedicated receptionist. Call (857) 453-1055 or send the form — we reply within 1 business hour.",
+    url: "/contact-us",
+  },
+  twitter: {
+    card: 'summary_large_image',
+    images: ['/images/Phone Answering Services.webp'],
+    title: "Contact Us | Live Phone Answering",
+    description: "Contact Live Phone Answering to set up your dedicated receptionist. Call (857) 453-1055 or send the form — we reply within 1 business hour.",
+  },
 }
 
 export default function ContactUsPage() {

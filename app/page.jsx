@@ -3,6 +3,21 @@ export const metadata = {
   title: "Live Phone Answering Services | Generate Leads While You Sleep",
   description: "Live Phone Answering helps businesses stay reachable, capture more leads, and deliver professional customer support with trusted live phone answering services.",
   alternates: { canonical: "/" },
+  openGraph: {
+    type: 'website',
+    siteName: 'LivePhoneAnswering',
+    locale: 'en_US',
+    images: [{ url: '/images/Phone Answering Services.webp', width: 1122, height: 1402, alt: 'Live Phone Answering Service' }],
+    title: "Live Phone Answering Services | Generate Leads While You Sleep",
+    description: "Live Phone Answering helps businesses stay reachable, capture more leads, and deliver professional customer support with trusted live phone answering services.",
+    url: "/",
+  },
+  twitter: {
+    card: 'summary_large_image',
+    images: ['/images/Phone Answering Services.webp'],
+    title: "Live Phone Answering Services | Generate Leads While You Sleep",
+    description: "Live Phone Answering helps businesses stay reachable, capture more leads, and deliver professional customer support with trusted live phone answering services.",
+  },
 }
 
 export default function HomePage() {
@@ -230,10 +245,14 @@ export default function HomePage() {
             </div>
             {/* Main Image */}
             <img
-              src="/images/Phone%20Answering%20Services.png"
+              src="/images/Phone%20Answering%20Services.webp"
               alt="Live Phone Answering Service - Business Open 24/7"
               className="w-[90%] sm:w-full sm:max-w-lg lg:max-w-[520px] mx-auto h-auto relative z-10 rounded-b-3xl transition-transform duration-700 hover:-translate-y-3 drop-shadow-[0_20px_40px_rgba(41,86,87,0.15)]"
-            />
+            width={1122}
+            height={1402}
+            loading="eager"
+            fetchPriority="high"
+          />
           </div>
         </div>
       </section>
@@ -658,10 +677,14 @@ export default function HomePage() {
                   className="w-14 h-14 bg-white/10 rounded-2xl flex items-center justify-center mb-8 border border-white/20"
                 >
                   <img
-                    src="/icons/never-miss-new-leads.ico"
+                    src="/icons/never-miss-new-leads.webp"
                     alt="Never Miss a Customer Call Icon"
                     className="w-12 h-12 object-contain"
-                  />
+            width={256}
+            height={256}
+            loading="lazy"
+            decoding="async"
+          />
                 </div>
                 <div>
                   <h3 className="text-2xl font-bold text-white mb-3">
@@ -682,10 +705,14 @@ export default function HomePage() {
                   className="w-14 h-14 bg-white/60 rounded-2xl flex items-center justify-center mb-8 shadow-sm backdrop-blur-sm border border-white/50"
                 >
                   <img
-                    src="/icons/improve-customer-experience.ico"
+                    src="/icons/improve-customer-experience.webp"
                     alt="Deliver Faster, Friendlier Customer Service Icon"
                     className="w-12 h-12 object-contain"
-                  />
+            width={256}
+            height={256}
+            loading="lazy"
+            decoding="async"
+          />
                 </div>
                 <div>
                   <h3 className="text-2xl font-bold text-[#34414A] mb-3">
@@ -705,10 +732,14 @@ export default function HomePage() {
                 className="w-14 h-14 bg-white rounded-2xl flex items-center justify-center mb-8 shadow-sm border border-slate-100"
               >
                 <img
-                  src="/icons/book-more-appointments.ico"
+                  src="/icons/book-more-appointments.webp"
                   alt="Save Time for Core Business Tasks Icon"
                   className="w-12 h-12 object-contain"
-                />
+            width={256}
+            height={256}
+            loading="lazy"
+            decoding="async"
+          />
               </div>
               <h3 className="text-xl font-bold text-[#34414A] mb-3">
                 Save Time for Core Business Tasks
@@ -725,10 +756,14 @@ export default function HomePage() {
                 className="w-14 h-14 bg-white rounded-2xl flex items-center justify-center mb-8 shadow-sm border border-slate-100"
               >
                 <img
-                  src="/icons/save-time-for-your-team.ico"
+                  src="/icons/save-time-for-your-team.webp"
                   alt="Cut Costs Without Losing Coverage Icon"
                   className="w-12 h-12 object-contain"
-                />
+            width={256}
+            height={256}
+            loading="lazy"
+            decoding="async"
+          />
               </div>
               <h3 className="text-xl font-bold text-[#34414A] mb-3">
                 Cut Costs Without Losing Coverage
@@ -745,10 +780,14 @@ export default function HomePage() {
                 className="w-14 h-14 bg-white rounded-2xl flex items-center justify-center mb-8 shadow-sm border border-slate-100"
               >
                 <img
-                  src="/icons/custom-call-routing.ico"
+                  src="/icons/custom-call-routing.webp"
                   alt="Build a More Professional Brand Image Icon"
                   className="w-12 h-12 object-contain"
-                />
+            width={256}
+            height={256}
+            loading="lazy"
+            decoding="async"
+          />
               </div>
               <h3 className="text-xl font-bold text-[#34414A] mb-3">
                 Build a More Professional Brand Image
@@ -781,10 +820,14 @@ export default function HomePage() {
               className="group bg-white rounded-2xl p-8 border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-2 hover:border-[#8CA365]/30 transition-all duration-300"
             >
               <img
-                src="/icons/virtual-receptionist.ico"
+                src="/icons/virtual-receptionist.webp"
                 alt="Virtual Receptionist Icon"
                 className="w-16 h-16 mb-6 object-contain"
-              />
+            width={256}
+            height={256}
+            loading="lazy"
+            decoding="async"
+          />
               <h3 className="text-xl font-bold text-[#34414A] mb-3">
                 Virtual Receptionist
               </h3>
@@ -797,10 +840,14 @@ export default function HomePage() {
               className="group bg-white rounded-2xl p-8 border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-2 hover:border-[#8CA365]/30 transition-all duration-300"
             >
               <img
-                src="/icons/after-hours-answering-service.ico"
+                src="/icons/after-hours-answering-service.webp"
                 alt="After Hours Answering Service Icon"
                 className="w-16 h-16 mb-6 object-contain"
-              />
+            width={256}
+            height={256}
+            loading="lazy"
+            decoding="async"
+          />
               <h3 className="text-xl font-bold text-[#34414A] mb-3">
                 After Hours Answering Service
               </h3>
@@ -813,10 +860,14 @@ export default function HomePage() {
               className="group bg-white rounded-2xl p-8 border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-2 hover:border-[#8CA365]/30 transition-all duration-300"
             >
               <img
-                src="/icons/overflow-call-answering-service.ico"
+                src="/icons/overflow-call-answering-service.webp"
                 alt="Overflow Call Answering Service Icon"
                 className="w-16 h-16 mb-6 object-contain"
-              />
+            width={256}
+            height={256}
+            loading="lazy"
+            decoding="async"
+          />
               <h3 className="text-xl font-bold text-[#34414A] mb-3">
                 Overflow Call Answering Service
               </h3>
@@ -829,10 +880,14 @@ export default function HomePage() {
               className="group bg-white rounded-2xl p-8 border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-2 hover:border-[#8CA365]/30 transition-all duration-300"
             >
               <img
-                src="/icons/appointment-scheduling-service.ico"
+                src="/icons/appointment-scheduling-service.webp"
                 alt="Appointment Scheduling Service Icon"
                 className="w-16 h-16 mb-6 object-contain"
-              />
+            width={256}
+            height={256}
+            loading="lazy"
+            decoding="async"
+          />
               <h3 className="text-xl font-bold text-[#34414A] mb-3">
                 Appointment Scheduling Service
               </h3>
@@ -845,10 +900,14 @@ export default function HomePage() {
               className="group bg-white rounded-2xl p-8 border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-2 hover:border-[#8CA365]/30 transition-all duration-300"
             >
               <img
-                src="/icons/lead-capture.ico"
+                src="/icons/lead-capture.webp"
                 alt="Lead Capture Icon"
                 className="w-16 h-16 mb-6 object-contain"
-              />
+            width={256}
+            height={256}
+            loading="lazy"
+            decoding="async"
+          />
               <h3 className="text-xl font-bold text-[#34414A] mb-3">
                 Lead Capture
               </h3>
@@ -861,10 +920,14 @@ export default function HomePage() {
               className="group bg-white rounded-2xl p-8 border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-2 hover:border-[#8CA365]/30 transition-all duration-300"
             >
               <img
-                src="/icons/call-routing-service.ico"
+                src="/icons/call-routing-service.webp"
                 alt="Call Routing Service Icon"
                 className="w-16 h-16 mb-6 object-contain"
-              />
+            width={256}
+            height={256}
+            loading="lazy"
+            decoding="async"
+          />
               <h3 className="text-xl font-bold text-[#34414A] mb-3">
                 Call Routing Service
               </h3>
@@ -3054,10 +3117,14 @@ export default function HomePage() {
               </div>
               <div className="rounded-3xl overflow-hidden shadow-2xl relative border-4 border-gray-50">
                 <img
-                  src="/images/real-human-empathy-live-phone-answering-service.png"
+                  src="/images/real-human-empathy-live-phone-answering-service.webp"
                   className="w-full h-auto object-cover transform hover:scale-105 transition-transform duration-700"
                   alt="Live receptionist providing real human empathy during a business phone answering call"
-                />
+            width={1200}
+            height={1200}
+            loading="lazy"
+            decoding="async"
+          />
               </div>
             </div>
             {/* Tab 2: Zero Bots */}
@@ -3131,10 +3198,14 @@ export default function HomePage() {
               </div>
               <div className="rounded-3xl overflow-hidden shadow-2xl relative border-4 border-gray-50">
                 <img
-                  src="/images/zero-bot-frustration-live-answering-service.png"
+                  src="/images/zero-bot-frustration-live-answering-service.webp"
                   className="w-full h-auto object-cover transform hover:scale-105 transition-transform duration-700"
                   alt="Live phone answering service connecting callers to a real receptionist instead of automated bots"
-                />
+            width={1200}
+            height={1200}
+            loading="lazy"
+            decoding="async"
+          />
               </div>
             </div>
             {/* Tab 3: Higher Close Rates */}
@@ -3208,10 +3279,14 @@ export default function HomePage() {
               </div>
               <div className="rounded-3xl overflow-hidden shadow-2xl relative border-4 border-gray-50">
                 <img
-                  src="/images/higher-close-rates-live-phone-answering-service.png"
+                  src="/images/higher-close-rates-live-phone-answering-service.webp"
                   className="w-full h-auto object-cover transform hover:scale-105 transition-transform duration-700"
                   alt="Live receptionist capturing a new lead and booking an appointment to improve close rates"
-                />
+            width={1200}
+            height={1200}
+            loading="lazy"
+            decoding="async"
+          />
               </div>
             </div>
           </div>

@@ -65,7 +65,12 @@ export default function SiteHeader() {
         <div className="px-4 md:px-8 h-[68px] md:h-[88px] flex items-center gap-4 md:gap-8 max-w-[1280px] mx-auto w-full">
           <div className="flex items-center h-[52px] md:h-[80px] w-[160px] sm:w-[200px] md:w-[260px] shrink-0">
             <Link href="/" className="block w-full h-full" aria-label="LivePhoneAnswering Home">
-              <img src="/images/logo.png" alt="Live Phone Answering" className="w-full h-full object-contain object-left" />
+              <img src="/images/logo.webp" alt="Live Phone Answering" className="w-full h-full object-contain object-left"
+            width={400}
+            height={234}
+            loading="eager"
+            fetchPriority="high"
+          />
             </Link>
           </div>
 

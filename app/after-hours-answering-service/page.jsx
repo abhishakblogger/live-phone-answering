@@ -4,6 +4,21 @@ export const metadata = {
   title: "After-Hours Answering Service | Live Phone Answering",
   description: "Never miss a lead after hours. Professional 24/7 after-hours answering service for US businesses to capture more leads and provide better service.",
   alternates: { canonical: "/after-hours-answering-service" },
+  openGraph: {
+    type: 'website',
+    siteName: 'LivePhoneAnswering',
+    locale: 'en_US',
+    images: [{ url: '/images/Phone Answering Services.webp', width: 1122, height: 1402, alt: 'Live Phone Answering Service' }],
+    title: "After-Hours Answering Service | Live Phone Answering",
+    description: "Never miss a lead after hours. Professional 24/7 after-hours answering service for US businesses to capture more leads and provide better service.",
+    url: "/after-hours-answering-service",
+  },
+  twitter: {
+    card: 'summary_large_image',
+    images: ['/images/Phone Answering Services.webp'],
+    title: "After-Hours Answering Service | Live Phone Answering",
+    description: "Never miss a lead after hours. Professional 24/7 after-hours answering service for US businesses to capture more leads and provide better service.",
+  },
 }
 
 const pageSchema = [
@@ -27,26 +42,22 @@ const pageSchema = [
       {
         "@type": "HowToStep",
         "name": "Forward your business number",
-        "text": "Keep your existing business number and use our secure forwarding code.",
-        "image": "https://livephoneanswering.com/images/step1.jpg"
+        "text": "Keep your existing business number and use our secure forwarding code."
       },
       {
         "@type": "HowToStep",
         "name": "Set your after-hours greeting and call script",
-        "text": "We build a customized call flow to handle emergencies and inquiries.",
-        "image": "https://livephoneanswering.com/images/step2.jpg"
+        "text": "We build a customized call flow to handle emergencies and inquiries."
       },
       {
         "@type": "HowToStep",
         "name": "Your calls are answered live",
-        "text": "A professional, US-based human answers promptly.",
-        "image": "https://livephoneanswering.com/images/step3.jpg"
+        "text": "A professional, US-based human answers promptly."
       },
       {
         "@type": "HowToStep",
         "name": "Instant message summary sent to you",
-        "text": "Detailed notes are pushed instantly via SMS, email, or CRM.",
-        "image": "https://livephoneanswering.com/images/step4.jpg"
+        "text": "Detailed notes are pushed instantly via SMS, email, or CRM."
       }
     ]
   },

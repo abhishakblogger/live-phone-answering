@@ -26,6 +26,23 @@ export const metadata = {
   description:
     'Professional live phone answering services for US businesses. Real human receptionists available 24/7.',
   robots: { index: true, follow: true },
+  openGraph: {
+    type: 'website',
+    siteName: 'LivePhoneAnswering',
+    locale: 'en_US',
+    url: 'https://livephoneanswering.com',
+    title: 'Live Phone Answering Services | Generate Leads While You Sleep',
+    description:
+      'Professional live phone answering services for US businesses. Real human receptionists available 24/7.',
+    images: [{ url: '/images/Phone Answering Services.webp', width: 1122, height: 1402, alt: 'Live Phone Answering Service' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Live Phone Answering Services | Generate Leads While You Sleep',
+    description:
+      'Professional live phone answering services for US businesses. Real human receptionists available 24/7.',
+    images: ['/images/Phone Answering Services.webp'],
+  },
   icons: {
     icon: [
       { url: '/images/LPA_Favicon.png', sizes: '16x16', type: 'image/png' },

@@ -1,3 +1,5 @@
+export const dynamic = 'force-static'
+
 const BASE_URL = 'https://livephoneanswering.com'
 
 const ROUTES = [
@@ -13,7 +15,6 @@ const ROUTES = [
   { path: '/industries-served', changeFrequency: 'monthly', priority: 0.8 },
   { path: '/how-it-works', changeFrequency: 'monthly', priority: 0.8 },
   { path: '/contact-us', changeFrequency: 'monthly', priority: 0.8 },
-  { path: '/thank-you', changeFrequency: 'monthly', priority: 0.5 },
   { path: '/privacy-policy', changeFrequency: 'yearly', priority: 0.3 },
 ]
 

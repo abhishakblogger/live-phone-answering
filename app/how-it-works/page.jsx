@@ -1,9 +1,24 @@
 import Link from 'next/link'
 
 export const metadata = {
-  title: "How Live Phone Answering Works — Set Up in Under 5 Minutes | LivePhoneAnswering.com",
-  description: "See exactly how our live phone answering service works. Forward your number, we answer as your business, and you get instant message alerts. Setup takes under 5 minutes.",
+  title: "How It Works — Setup in 5 Minutes | Live Phone Answering",
+  description: "Forward your number, we answer as your business, and you get instant message alerts. See how our live answering service works — setup takes 5 minutes.",
   alternates: { canonical: "/how-it-works" },
+  openGraph: {
+    type: 'website',
+    siteName: 'LivePhoneAnswering',
+    locale: 'en_US',
+    images: [{ url: '/images/Phone Answering Services.webp', width: 1122, height: 1402, alt: 'Live Phone Answering Service' }],
+    title: "How It Works — Setup in 5 Minutes | Live Phone Answering",
+    description: "Forward your number, we answer as your business, and you get instant message alerts. See how our live answering service works — setup takes 5 minutes.",
+    url: "/how-it-works",
+  },
+  twitter: {
+    card: 'summary_large_image',
+    images: ['/images/Phone Answering Services.webp'],
+    title: "How It Works — Setup in 5 Minutes | Live Phone Answering",
+    description: "Forward your number, we answer as your business, and you get instant message alerts. See how our live answering service works — setup takes 5 minutes.",
+  },
 }
 
 export default function HowItWorksPage() {

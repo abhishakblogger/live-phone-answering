@@ -4,6 +4,21 @@ export const metadata = {
   title: "Virtual Receptionist Service | Live Phone Answering",
   description: "Professional virtual receptionist service for US businesses. Real human receptionists answer every call 24/7 in your company's name. Get started today.",
   alternates: { canonical: "/virtual-receptionist" },
+  openGraph: {
+    type: 'website',
+    siteName: 'LivePhoneAnswering',
+    locale: 'en_US',
+    images: [{ url: '/images/Phone Answering Services.webp', width: 1122, height: 1402, alt: 'Live Phone Answering Service' }],
+    title: "Virtual Receptionist Service | Live Phone Answering",
+    description: "Professional virtual receptionist service for US businesses. Real human receptionists answer every call 24/7 in your company's name. Get started today.",
+    url: "/virtual-receptionist",
+  },
+  twitter: {
+    card: 'summary_large_image',
+    images: ['/images/Phone Answering Services.webp'],
+    title: "Virtual Receptionist Service | Live Phone Answering",
+    description: "Professional virtual receptionist service for US businesses. Real human receptionists answer every call 24/7 in your company's name. Get started today.",
+  },
 }
 
 export default function VirtualReceptionistPage() {
