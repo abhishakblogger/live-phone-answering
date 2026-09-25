@@ -4,8 +4,6 @@ import emailjs from '@emailjs/browser'
 import { usePathname } from 'next/navigation'
 import { useEffect } from 'react'
 
-const FAQ_PREFIXES = ['new', 'prc', 'ct', 'hiw', 'svc', 'ind']
-
 const INDUSTRY_TAB_DATA = {
   'Law Firms': {
     title: 'Law Firms & Legal Professionals',
@@ -60,49 +58,6 @@ export default function SiteScripts() {
     )
     document.querySelectorAll('.reveal').forEach((el) => revealObserver.observe(el))
     cleanups.push(() => revealObserver.disconnect())
-
-    FAQ_PREFIXES.forEach((prefix) => {
-      const items = document.querySelectorAll(`.${prefix}-faq-item`)
-      items.forEach((item) => {
-        const trigger = item.querySelector(`.${prefix}-faq-q`)
-        if (!trigger) return
-        on(trigger, 'click', () => {
-          const isOpen = item.classList.contains('open')
-          items.forEach((el) => {
-            el.classList.remove('open', 'border-[#8CA365]')
-            el.classList.add('border-gray-200')
-            el.style.backgroundColor = '#ffffff'
-            const elAnswer = el.querySelector(`.${prefix}-faq-a`)
-            const elIcon = el.querySelector(`.${prefix}-faq-icon`)
-            if (elAnswer) elAnswer.style.maxHeight = null
-            if (elIcon) {
-              elIcon.classList.remove('rotate-45', 'bg-[#8CA365]', 'text-white')
-              elIcon.classList.add('bg-slate-100', 'text-gray-500')
-            }
-          })
-          if (isOpen) return
-          item.classList.add('open', 'border-[#8CA365]')
-          item.classList.remove('border-gray-200')
-          item.style.backgroundColor = '#f0fdf4'
-          const answer = item.querySelector(`.${prefix}-faq-a`)
-          const icon = item.querySelector(`.${prefix}-faq-icon`)
-          if (answer) answer.style.maxHeight = `${answer.scrollHeight}px`
-          if (icon) {
-            icon.classList.add('rotate-45', 'bg-[#8CA365]', 'text-white')
-            icon.classList.remove('bg-slate-100', 'text-gray-500')
-          }
-        })
-      })
-    })
-
-    document.querySelectorAll('.faq-q').forEach((q) => {
-      on(q, 'click', () => {
-        const item = q.closest('.faq-item')
-        const isOpen = item.classList.contains('open')
-        document.querySelectorAll('.faq-item.open').forEach((i) => i.classList.remove('open'))
-        if (!isOpen) item.classList.add('open')
-      })
-    })
 
     document.querySelectorAll('#features-accordion .accordion-header').forEach((header) => {
       on(header, 'click', () => {
@@ -159,30 +114,6 @@ export default function SiteScripts() {
           .join('')
         document.querySelector('.ind-visual span').textContent = data.emoji
         document.querySelector('.ind-visual .font-bold').textContent = data.label
-      })
-    })
-
-    const humanTabs = document.querySelectorAll('.human-tab')
-    humanTabs.forEach((tab) => {
-      on(tab, 'click', () => {
-        humanTabs.forEach((t) => {
-          t.classList.remove('active', 'bg-green', 'text-white', 'shadow-md', 'border-transparent')
-          t.classList.add('bg-white', 'text-gray-500', 'border-gray-200')
-        })
-        tab.classList.remove('bg-white', 'text-gray-500', 'border-gray-200')
-        tab.classList.add('active', 'bg-green', 'text-white', 'shadow-md', 'border-transparent')
-
-        document.querySelectorAll('.human-tab-pane').forEach((pane) => {
-          pane.classList.add('hidden', 'opacity-0')
-          pane.classList.remove('opacity-100')
-        })
-        const target = document.getElementById(tab.getAttribute('data-target'))
-        if (!target) return
-        target.classList.remove('hidden')
-        requestAnimationFrame(() => {
-          target.classList.remove('opacity-0')
-          target.classList.add('opacity-100')
-        })
       })
     })
 
