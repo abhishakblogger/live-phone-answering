@@ -87,20 +87,22 @@ function ArrowIcon() {
   )
 }
 
-export default function IndustriesTabs() {
+export default function IndustriesTabs({
+  sectionClassName = 'py-20 md:py-32 bg-white font-sans relative overflow-hidden',
+  headingClassName = 'text-3xl md:text-5xl font-extrabold text-[#34414A] tracking-tight mb-4',
+  heading = 'Trained for your exact workflow.',
+  intro = 'We serve over 50+ verticals. Select your category to see how we integrate seamlessly into your specialized software and daily operations.',
+}) {
   const [activeId, setActiveId] = useState(INDUSTRIES[0].id)
 
   return (
-    <section className="py-20 md:py-32 bg-white font-sans relative overflow-hidden" id="industries" aria-labelledby="industries-heading">
+    <section className={sectionClassName} id="industries" aria-labelledby="industries-heading">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16 reveal">
-          <h2 id="industries-heading" className="text-3xl md:text-5xl font-extrabold text-[#34414A] tracking-tight mb-4">
-            Trained for your exact workflow.
+          <h2 id="industries-heading" className={headingClassName}>
+            {heading}
           </h2>
-          <p className="text-lg text-gray-600">
-            We serve over 50+ verticals. Select your category to see how we integrate seamlessly into your specialized software and
-            daily operations.
-          </p>
+          <p className="text-lg text-gray-600">{intro}</p>
         </div>
 
         <div

@@ -87,7 +87,11 @@ export const hipaaFaq = {
     },
     {
       "q": "What happens if my answering service is not HIPAA compliant?",
-      "a": "Using a non-compliant answering service to handle patient data can result in severe federal penalties, including fines ranging from $137 to $2,067,813 per violation year, depending on the level of negligence. You can review the official penalty structure on the"
+      "a": [
+        "Using a non-compliant answering service to handle patient data can result in severe federal penalties, including fines ranging from $137 to $2,067,813 per violation year, depending on the level of negligence. You can review the official penalty structure on the ",
+        { "text": "HHS.gov penalty guidelines", "href": "https://www.hhs.gov/hipaa/for-professionals/faq/3013/what-are-the-penalties-for-hipaa-violations/index.html" },
+        " page."
+      ]
     },
     {
       "q": "What is the difference between HIPAA compliant and HIPAA certified?",

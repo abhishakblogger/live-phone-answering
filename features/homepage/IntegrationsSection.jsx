@@ -125,7 +125,7 @@ export default function IntegrationsSection() {
 
       <div className="max-w-7xl mx-auto">
         <h2 id="integrations-heading" className="text-3xl md:text-5xl font-bold text-[#34414A] text-center mb-6 max-w-4xl mx-auto">
-          Works With the Tools You Already Use 1,000+ Integrations
+          Works With the Tools You Already Use — 1,000+ Integrations
         </h2>
         <p className="text-lg text-gray-600 text-center mb-10 max-w-2xl mx-auto">
           Stop wasting time on manual data entry. Our receptionists instantly log calls, push leads, and book appointments directly

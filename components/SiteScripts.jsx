@@ -1,6 +1,5 @@
 'use client'
 
-import emailjs from '@emailjs/browser'
 import { usePathname } from 'next/navigation'
 import { useEffect } from 'react'
 
@@ -58,6 +57,10 @@ export default function SiteScripts() {
     )
     document.querySelectorAll('.reveal').forEach((el) => revealObserver.observe(el))
     cleanups.push(() => revealObserver.disconnect())
+
+    const idle = window.requestIdleCallback || ((fn) => setTimeout(fn, 1))
+    const cancelIdle = window.cancelIdleCallback || clearTimeout
+    const idleId = idle(() => {
 
     document.querySelectorAll('#features-accordion .accordion-header').forEach((header) => {
       on(header, 'click', () => {
@@ -130,9 +133,8 @@ export default function SiteScripts() {
       cleanups.push(() => clearInterval(timer))
     }
 
-    emailjs.init('8SvPluKr3Xb-PIAbh')
     document.querySelectorAll('form').forEach((form) => {
-      on(form, 'submit', (event) => {
+      on(form, 'submit', async (event) => {
         event.preventDefault()
         const submitBtn = form.querySelector('button[type="submit"], input[type="submit"]')
         const originalText = submitBtn ? submitBtn.innerText || submitBtn.value : 'Submit'
@@ -144,6 +146,8 @@ export default function SiteScripts() {
         }
         setButton('Sending...', true)
 
+        const { default: emailjs } = await import('@emailjs/browser')
+        emailjs.init('8SvPluKr3Xb-PIAbh')
         emailjs.sendForm('service_8v9labn', 'template_et80ndw', form).then(
           () => {
             window.location.href = '/thank-you'
@@ -156,6 +160,9 @@ export default function SiteScripts() {
         )
       })
     })
+
+    })
+    cleanups.push(() => cancelIdle(idleId))
 
     return () => cleanups.forEach((fn) => fn())
   }, [pathname])

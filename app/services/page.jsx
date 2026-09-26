@@ -648,7 +648,7 @@ export default function ServicesPage() {
         {/* Mesh Gradient Background */}
         <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
           <div
-            className="absolute -top-32 -left-32 w-[600px] h-[600px] bg-[#8CA365]/40 rounded-full blur-[120px] animate-pulse"
+            className="absolute -top-32 -left-32 w-[600px] h-[600px] bg-[#8CA365]/40 rounded-full blur-[120px]"
           >
           </div>
           <div

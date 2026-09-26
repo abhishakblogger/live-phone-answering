@@ -485,11 +485,11 @@ export default function VirtualReceptionistPage() {
       <section className="w-full bg-[#8CA365] py-32 px-4 relative overflow-hidden">
         {/* Animated Background Orbs */}
         <div
-          className="absolute top-0 left-1/4 w-[600px] h-[600px] bg-white/20 rounded-full blur-[120px] animate-pulse pointer-events-none"
+          className="absolute top-0 left-1/4 w-[600px] h-[600px] bg-white/20 rounded-full blur-[120px] pointer-events-none"
         >
         </div>
         <div
-          className="absolute bottom-0 right-1/4 w-[800px] h-[800px] bg-white/10 rounded-full blur-[150px] animate-pulse pointer-events-none delay-1000"
+          className="absolute bottom-0 right-1/4 w-[800px] h-[800px] bg-white/10 rounded-full blur-[150px] pointer-events-none delay-1000"
         >
         </div>
         <div className="max-w-7xl mx-auto relative z-10">
@@ -996,7 +996,7 @@ export default function VirtualReceptionistPage() {
         <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
           {/* Glowing Orb 1 (Brand Green) */}
           <div
-            className="absolute -top-32 -left-32 w-[600px] h-[600px] bg-[#8CA365]/40 rounded-full blur-[120px] animate-pulse pointer-events-none"
+            className="absolute -top-32 -left-32 w-[600px] h-[600px] bg-[#8CA365]/40 rounded-full blur-[120px] pointer-events-none"
           >
           </div>
           {/* Glowing Orb 2 (Bright Mint) */}
@@ -1157,7 +1157,7 @@ export default function VirtualReceptionistPage() {
         <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
           {/* Glowing Orb 1 (Brand Green) */}
           <div
-            className="absolute -top-32 -left-32 w-[600px] h-[600px] bg-[#8CA365]/40 rounded-full blur-[120px] animate-pulse pointer-events-none"
+            className="absolute -top-32 -left-32 w-[600px] h-[600px] bg-[#8CA365]/40 rounded-full blur-[120px] pointer-events-none"
           >
           </div>
           {/* Glowing Orb 2 (Bright Mint) */}

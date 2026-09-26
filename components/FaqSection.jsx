@@ -24,15 +24,11 @@ function FaqItem({ item, index, open, onToggle }) {
       >
         <h3 className="text-lg font-bold text-[#34414A] pr-4 group-hover:text-[#8CA365] transition-colors">{item.q}</h3>
         <span
-          className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 transition-all transform duration-300 ${
+          className={`icon-mask icon-plus w-8 h-8 rounded-full flex items-center justify-center shrink-0 transition-all transform duration-300 ${
             open ? 'bg-[#8CA365] text-white rotate-45' : 'bg-slate-100 text-gray-500 group-hover:bg-[#8CA365] group-hover:text-white'
           }`}
           aria-hidden="true"
-        >
-          <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-            <path strokeLinecap="round" strokeLinejoin="round" d="M12 4v16m8-8H4" />
-          </svg>
-        </span>
+        ></span>
       </button>
 
       <div
@@ -41,7 +37,25 @@ function FaqItem({ item, index, open, onToggle }) {
         aria-labelledby={buttonId}
         className={`overflow-hidden transition-all duration-300 ease-in-out ${open ? 'max-h-[1000px]' : 'max-h-0'}`}
       >
-        <div className="p-6 pt-0 text-gray-600 leading-relaxed">{item.a}</div>
+        <div className="p-6 pt-0 text-gray-600 leading-relaxed">
+          {Array.isArray(item.a)
+            ? item.a.map((part) =>
+                typeof part === 'string' ? (
+                  part
+                ) : (
+                  <a
+                    key={part.href}
+                    href={part.href}
+                    className="text-blue-600 hover:underline"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {part.text}
+                  </a>
+                )
+              )
+            : item.a}
+        </div>
       </div>
     </div>
   )
@@ -65,11 +79,8 @@ export default function FaqSection({ heading, intro, sideTitle, sideBody, linkTe
             <div className="bg-slate-50 border border-gray-200 rounded-2xl p-6">
               <h3 className="font-bold text-[#34414A] mb-2">{sideTitle}</h3>
               <p className="text-sm text-gray-600 mb-4">{sideBody}</p>
-              <CtaTag href={linkHref} className="text-sm font-bold text-[#8CA365] hover:text-[#7a8f57] flex items-center gap-2">
+              <CtaTag href={linkHref} className="icon-mask icon-arrow-right text-sm font-bold text-[#8CA365] hover:text-[#7a8f57] flex flex-row-reverse items-center justify-end gap-2">
                 {linkText}
-                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2" aria-hidden="true">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                </svg>
               </CtaTag>
             </div>
           </div>
