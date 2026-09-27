@@ -158,7 +158,7 @@ export default function IndustriesTabs({
                 <ul className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4 list-none">
                   {industry.cards.map((card) => (
                     <li key={card.name}>
-                      <Link
+                      <Link prefetch={false}
                         href={card.href}
                         className="group p-5 bg-gray-50 border border-gray-100 rounded-2xl hover:bg-white hover:border-[#8CA365] hover:shadow-lg hover:-translate-y-1 transition-all duration-300 flex items-center justify-between"
                       >

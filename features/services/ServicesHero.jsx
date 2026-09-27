@@ -3,17 +3,16 @@ import Link from 'next/link'
 // All colours, sizes and animation timings are copied verbatim from the
 // page's original markup.
 const PILLS = [
-  { label: 'Medical & Healthcare', icon: 'icon-heart', tone: 'before:text-red-500' },
-  { label: 'Legal Firms', icon: 'icon-scale', tone: 'before:text-blue-500' },
-  { label: 'Real Estate', icon: 'icon-home', tone: 'before:text-amber-500' },
-  { label: 'IT & Tech', icon: 'icon-desktop', tone: 'before:text-purple-500' },
-  { label: 'Small Business', icon: 'icon-briefcase', tone: 'before:text-[#8CA365]' },
+  { label: 'Live Call Answering', icon: 'icon-phone', tone: 'before:text-[#8CA365]' },
+  { label: 'Appointment Booking', icon: 'icon-calendar', tone: 'before:text-[#295657]' },
+  { label: 'After-Hours Coverage', icon: 'icon-moon', tone: 'before:text-[#8CA365]' },
+  { label: 'Bilingual Support', icon: 'icon-translate', tone: 'before:text-[#295657]' },
 ]
 
 const STATS = [
-  { value: '20+', label: 'Industries' },
-  { value: 'HIPAA', label: 'Compliant' },
   { value: '98.5%', label: 'Satisfaction' },
+  { value: '10+', label: 'Services' },
+  { value: '2,400+', label: 'Calls/Month' },
 ]
 
 const BLOBS = [
@@ -32,9 +31,10 @@ const BLOBS = [
 ]
 
 const DOTS = [
-  { className: 'top-10 right-[12%] w-3 h-3 bg-[#295657]/35', style: { animation: 'blobFloat 5s ease-in-out infinite' } },
-  { className: 'top-1/3 left-[8%] w-2.5 h-2.5 bg-[#8CA365]/40', style: { animation: 'blobFloat 4s ease-in-out infinite 1.5s' } },
-  { className: 'bottom-24 right-[15%] w-2 h-2 bg-[#8CA365]/30', style: { animation: 'blobFloat 6s ease-in-out infinite 2.5s' } },
+  { className: 'top-12 left-[10%] w-3 h-3 bg-[#8CA365]/40', style: { animation: 'blobFloat 5s ease-in-out infinite' } },
+  { className: 'top-1/3 right-[8%] w-2.5 h-2.5 bg-[#295657]/30', style: { animation: 'blobFloat 4s ease-in-out infinite 1s' } },
+  { className: 'bottom-20 left-[15%] w-2 h-2 bg-[#8CA365]/30', style: { animation: 'blobFloat 6s ease-in-out infinite 2s' } },
+  { className: 'bottom-1/3 right-[12%] w-3.5 h-3.5 bg-[#295657]/20', style: { animation: 'blobFloat 5s ease-in-out infinite 3s' } },
 ]
 
 // The mint gradient, 48px grid and diagonal hatch were three stacked divs;
@@ -53,12 +53,12 @@ const SECTION_BACKGROUND = {
 
 const rise = (delay) => ({ animation: `blobFadeUp 0.7s cubic-bezier(0.16,1,0.3,1) ${delay} both` })
 
-export default function IndustriesHero() {
+export default function ServicesHero() {
   return (
     <section
       className="relative overflow-hidden py-16 sm:py-20 lg:py-24 px-4 lg:px-[5%]"
       style={SECTION_BACKGROUND}
-      aria-label="Industries we serve"
+      aria-label="Our answering services"
     >
       <div className="absolute inset-0 z-[1] overflow-hidden pointer-events-none" aria-hidden="true">
         {BLOBS.map((blob) => (
@@ -68,22 +68,22 @@ export default function IndustriesHero() {
 
       <div className="max-w-3xl mx-auto text-center relative z-10">
         <p
-          className="icon-mask icon-building inline-flex items-center gap-2 bg-white/70 backdrop-blur-sm text-[#295657] rounded-full text-sm font-semibold px-5 py-2 mb-6 shadow-sm border border-white/50"
+          className="icon-mask icon-check-circle inline-flex items-center gap-2 bg-white/70 backdrop-blur-sm text-[#4a7a3e] rounded-full text-sm font-semibold px-5 py-2 mb-6 shadow-sm border border-white/50"
           style={rise('0s')}
         >
-          Industries We Serve
+          Our Services
         </p>
 
         <h1
           className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.6rem] font-extrabold text-[#1a2e35] leading-[1.1] tracking-tight"
           style={rise('0.1s')}
         >
-          Trained For Your Exact Workflow &amp; Industry
+          Professional Answering Services That Grow Your Business
         </h1>
 
         <p className="text-base sm:text-lg text-[#3d5c42] mt-5 max-w-2xl mx-auto leading-relaxed" style={rise('0.2s')}>
-          Our receptionists are trained in your specific industry terminology, compliance requirements, and call-handling
-          protocols — so every caller gets a knowledgeable, professional response.
+          From live call answering to appointment booking, after-hours coverage and bilingual support — every service is
+          delivered by trained, US-based receptionists who follow your exact script.
         </p>
 
         <ul className="flex flex-wrap justify-center gap-3 mt-8 list-none" style={rise('0.3s')}>
@@ -104,12 +104,12 @@ export default function IndustriesHero() {
           >
             Get Started Now &rarr;
           </Link>
-          <a
-            href="#industries"
+          <Link prefetch={false}
+            href="/pricing"
             className="inline-flex justify-center items-center bg-white/80 backdrop-blur-sm border-2 border-[#34414A]/20 text-[#34414A] hover:bg-white font-bold py-3.5 px-9 rounded-xl transition-all hover:-translate-y-0.5 text-center shadow-sm"
           >
-            View All Industries
-          </a>
+            View Pricing Plans
+          </Link>
         </div>
 
         <div className="flex flex-wrap justify-center gap-6 sm:gap-10 mt-10" style={rise('0.5s')}>

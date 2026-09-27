@@ -34,7 +34,7 @@ export default function SiteHeader() {
           <div className="w-px h-3.5 bg-white/15"></div>
           <span className="flex items-center gap-1.5">
             🔒{' '}
-            <Link href="/hipaa-compliant-answering-service" className="hover:underline hover:text-white transition-all">
+            <Link prefetch={false} href="/hipaa-compliant-answering-service" className="hover:underline hover:text-white transition-all">
               HIPAA Compliant
             </Link>{' '}
             · No Setup Fees
@@ -45,7 +45,7 @@ export default function SiteHeader() {
             📞 (857) 453-1055
           </a>
           <div className="w-px h-3.5 bg-white/15"></div>
-          <Link
+          <Link prefetch={false}
             href="/pricing"
             className="bg-green text-white py-1 px-3.5 rounded-full font-semibold text-[0.75rem] hover:bg-green-dark transition-colors"
           >
@@ -64,7 +64,7 @@ export default function SiteHeader() {
       >
         <div className="px-4 md:px-8 h-[68px] md:h-[88px] flex items-center gap-4 md:gap-8 max-w-[1280px] mx-auto w-full">
           <div className="flex items-center h-[52px] md:h-[80px] w-[160px] sm:w-[200px] md:w-[260px] shrink-0">
-            <Link href="/" className="block w-full h-full" aria-label="LivePhoneAnswering Home">
+            <Link prefetch={false} href="/" className="block w-full h-full" aria-label="LivePhoneAnswering Home">
               <img src="/images/logo.webp" alt="Live Phone Answering" className="w-full h-full object-contain object-left"
             width={400}
             height={234}
@@ -77,7 +77,7 @@ export default function SiteHeader() {
           <ul className="hidden lg:flex items-center gap-2 list-none flex-1 lg:justify-center">
             {NAV_LINKS.map((link) => (
               <li key={link.href}>
-                <Link
+                <Link prefetch={false}
                   href={link.href}
                   className="px-3 py-2 text-[0.875rem] font-medium text-gray-700 rounded-lg hover:text-navy hover:bg-gray-50 transition-all"
                 >
@@ -88,7 +88,7 @@ export default function SiteHeader() {
           </ul>
 
           <div className="hidden lg:flex items-center gap-2.5 shrink-0">
-            <Link
+            <Link prefetch={false}
               href="/contact-us"
               className="relative overflow-hidden btn-shimmer text-[0.87rem] font-bold text-white px-5 py-2.5 rounded-lg bg-green hover:bg-green-dark shadow-green-glow hover:-translate-y-px transition-all"
             >
@@ -110,7 +110,7 @@ export default function SiteHeader() {
 
         <div className={`${menuOpen ? '' : 'hidden'} lg:hidden border-t border-border bg-white px-[5%] py-4 space-y-1`}>
           {NAV_LINKS.map((link) => (
-            <Link
+            <Link prefetch={false}
               key={link.href}
               href={link.href}
               onClick={() => setMenuOpen(false)}
@@ -120,7 +120,7 @@ export default function SiteHeader() {
             </Link>
           ))}
           <div className="pt-2 space-y-2 border-t border-border mt-2">
-            <Link
+            <Link prefetch={false}
               href="/contact-us"
               onClick={() => setMenuOpen(false)}
               className="block w-full text-center py-2.5 rounded-xl font-bold bg-green text-white text-sm hover:bg-green-dark transition-colors"

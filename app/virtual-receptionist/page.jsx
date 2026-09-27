@@ -137,13 +137,13 @@ export default function VirtualReceptionistPage() {
               </div>
               {/* CTA Group */}
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link
+                <Link prefetch={false}
                   className="bg-[#8CA365] hover:bg-[#7a8f57] text-white font-bold py-3.5 px-8 rounded-xl shadow-lg hover:shadow-xl transition-all hover:-translate-y-0.5 text-center"
                   href="/pricing"
                 >
                   Get Started Now
                 </Link>
-                <Link
+                <Link prefetch={false}
                   className="bg-white border-2 border-[#34414A] text-[#34414A] hover:bg-slate-50 font-bold py-3.5 px-8 rounded-xl transition-colors text-center"
                   href="/contact-us"
                 >
@@ -1130,7 +1130,7 @@ export default function VirtualReceptionistPage() {
               </div>
               {/* Right Action Side (The Conversion Point) */}
               <div className="flex-shrink-0 w-full md:w-auto">
-                <Link
+                <Link prefetch={false}
                   className="block w-full bg-[#8CA365] hover:bg-[#7a8f57] text-white text-center font-bold text-lg py-4 px-8 rounded-xl shadow-[0_0_20px_rgba(140,163,101,0.4)] hover:shadow-[0_0_30px_rgba(140,163,101,0.6)] hover:-translate-y-1 transition-all duration-300"
                   href="/pricing"
                 >
@@ -1338,7 +1338,7 @@ export default function VirtualReceptionistPage() {
                     </p>
                   </div>
                 </form>
-                <Link
+                <Link prefetch={false}
                   className="block text-center mt-6 text-sm font-semibold text-gray-500 hover:text-[#8CA365] transition-colors"
                   href="/contact-us"
                 >

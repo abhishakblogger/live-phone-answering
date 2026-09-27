@@ -1543,7 +1543,7 @@ export default function AfterHoursAnsweringServicePage() {
               </p>
             </div>
             <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-4 reveal reveal-delay-1">
-              <Link
+              <Link prefetch={false}
                 className="group flex flex-col items-center text-center p-5 rounded-2xl border border-gray-100 hover:border-[#8CA365]/40 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 bg-white"
                 href="/industries-served"
               >
@@ -1576,7 +1576,7 @@ export default function AfterHoursAnsweringServicePage() {
                   Learn more →
                 </span>
               </Link>
-              <Link
+              <Link prefetch={false}
                 className="group flex flex-col items-center text-center p-5 rounded-2xl border border-gray-100 hover:border-[#8CA365]/40 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 bg-white"
                 href="/medical-answering-service"
               >
@@ -2220,7 +2220,7 @@ export default function AfterHoursAnsweringServicePage() {
                 </div>
                 {/* Action Element */}
                 <div className="md:pl-11">
-                  <Link
+                  <Link prefetch={false}
                     className="mt-4 inline-flex items-center gap-2 bg-white border-2 border-[#34414A] hover:bg-slate-50 text-[#34414A] font-extrabold text-base py-3 px-8 rounded-xl transition-all w-max group"
                     href="/pricing"
                   >
@@ -2591,7 +2591,7 @@ export default function AfterHoursAnsweringServicePage() {
                   <p className="text-sm text-gray-600 mb-4">
                     Our team is here to help you build the perfect custom call flow.
                   </p>
-                  <Link
+                  <Link prefetch={false}
                     className="text-sm font-bold text-[#8CA365] hover:text-[#7a8f57] flex items-center gap-2"
                     href="/contact-us"
                   >
@@ -2705,7 +2705,7 @@ export default function AfterHoursAnsweringServicePage() {
                     </span>
                   </div>
                 </div>
-                <Link
+                <Link prefetch={false}
                   className="w-full bg-white text-[#8CA365] hover:bg-slate-50 font-black text-lg py-4 px-8 rounded-xl transition-all duration-300 shadow-md inline-block"
                   href="/pricing"
                 >
@@ -2722,7 +2722,7 @@ export default function AfterHoursAnsweringServicePage() {
                 <p className="text-slate-400 text-base mb-8 leading-relaxed">
                   Have questions? Speak with a specialist to design the perfect custom call flow for your business.
                 </p>
-                <Link
+                <Link prefetch={false}
                   className="w-full bg-transparent border-2 border-slate-500 text-white hover:bg-slate-700 hover:border-slate-400 font-bold text-lg py-4 px-8 rounded-xl transition-all duration-300 mt-auto inline-block"
                   href="/contact-us"
                 >

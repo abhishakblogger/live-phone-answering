@@ -265,7 +265,7 @@ export default function AppointmentSchedulingPage() {
                   >
                     Get Started Now
                   </a>
-                  <Link
+                  <Link prefetch={false}
                     className="flex justify-center items-center bg-white hover:bg-slate-50 border-2 border-slate-200 text-slate-700 font-bold text-lg py-4 px-8 rounded-xl transition-all text-center"
                     href="/contact-us"
                   >
@@ -1764,7 +1764,7 @@ export default function AppointmentSchedulingPage() {
             {/* Industry Icon Grid: 4 cols desktop, 4 tablet, 2 mobile */}
             <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-4 reveal reveal-delay-1">
               {/* Lawyers */}
-              <Link
+              <Link prefetch={false}
                 className="group flex flex-col items-center text-center p-5 rounded-2xl border border-gray-100 hover:border-[#8CA365]/40 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 bg-white"
                 href="/industries-served"
               >
@@ -1798,7 +1798,7 @@ export default function AppointmentSchedulingPage() {
                 </span>
               </Link>
               {/* Medical */}
-              <Link
+              <Link prefetch={false}
                 className="group flex flex-col items-center text-center p-5 rounded-2xl border border-gray-100 hover:border-[#8CA365]/40 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 bg-white"
                 href="/medical-answering-service"
               >
@@ -3533,7 +3533,7 @@ export default function AppointmentSchedulingPage() {
                 {/* Specialties Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 reveal reveal-delay-1">
                   {/* Specialty 1: Primary Care */}
-                  <Link
+                  <Link prefetch={false}
                     className="group bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-7 hover:bg-white/10 hover:border-[#8CA365]/50 hover:-translate-y-1 transition-all duration-300 flex gap-5 items-start"
                     href="/medical-answering-service"
                   >
@@ -3584,7 +3584,7 @@ export default function AppointmentSchedulingPage() {
                     </div>
                   </Link>
                   {/* Specialty 2: Mental Health */}
-                  <Link
+                  <Link prefetch={false}
                     className="group bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-7 hover:bg-white/10 hover:border-[#8CA365]/50 hover:-translate-y-1 transition-all duration-300 flex gap-5 items-start"
                     href="/medical-answering-service"
                   >
@@ -3635,7 +3635,7 @@ export default function AppointmentSchedulingPage() {
                     </div>
                   </Link>
                   {/* Specialty 3: Dental */}
-                  <Link
+                  <Link prefetch={false}
                     className="group bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-7 hover:bg-white/10 hover:border-[#8CA365]/50 hover:-translate-y-1 transition-all duration-300 flex gap-5 items-start"
                     href="/medical-answering-service"
                   >
@@ -3686,7 +3686,7 @@ export default function AppointmentSchedulingPage() {
                     </div>
                   </Link>
                   {/* Specialty 4: Urgent Care */}
-                  <Link
+                  <Link prefetch={false}
                     className="group bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-7 hover:bg-white/10 hover:border-red-400/40 hover:-translate-y-1 transition-all duration-300 flex gap-5 items-start relative"
                     href="/medical-answering-service"
                   >
@@ -3742,7 +3742,7 @@ export default function AppointmentSchedulingPage() {
                     </div>
                   </Link>
                   {/* Specialty 5: OB-GYN / Cardiology / Specialists */}
-                  <Link
+                  <Link prefetch={false}
                     className="group bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-7 hover:bg-white/10 hover:border-[#8CA365]/50 hover:-translate-y-1 transition-all duration-300 flex gap-5 items-start"
                     href="/medical-answering-service"
                   >
@@ -3793,7 +3793,7 @@ export default function AppointmentSchedulingPage() {
                     </div>
                   </Link>
                   {/* Specialty 6: Hospitals & Health Groups */}
-                  <Link
+                  <Link prefetch={false}
                     className="group bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-7 hover:bg-white/10 hover:border-[#8CA365]/50 hover:-translate-y-1 transition-all duration-300 flex gap-5 items-start"
                     href="/medical-answering-service"
                   >
@@ -3844,7 +3844,7 @@ export default function AppointmentSchedulingPage() {
                     </div>
                   </Link>
                   {/* Specialty 7: Chiro / PT / Allied Health — Full width on last row */}
-                  <Link
+                  <Link prefetch={false}
                     className="group bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-7 hover:bg-white/10 hover:border-[#8CA365]/50 hover:-translate-y-1 transition-all duration-300 flex gap-5 items-start md:col-span-2 lg:col-span-1"
                     href="/medical-answering-service"
                   >
@@ -4380,7 +4380,7 @@ export default function AppointmentSchedulingPage() {
                     <p className="text-blue-200/60 text-sm mb-6 max-w-xl mx-auto">
                       Read our complete HIPAA compliance documentation — including our security architecture, audit procedures, and compliance certifications in full detail.
                     </p>
-                    <Link
+                    <Link prefetch={false}
                       className="inline-flex items-center gap-2 bg-[#8CA365] hover:bg-[#7a8f57] text-white font-bold px-8 py-4 rounded-xl shadow-[0_8px_20px_rgba(140,163,101,0.3)] transition-all hover:-translate-y-0.5"
                       href="/hipaa-compliant-answering-service"
                     >
@@ -4737,7 +4737,7 @@ export default function AppointmentSchedulingPage() {
                       <p className="text-sm text-gray-600 mb-4">
                         Our team is here to help you build the perfect custom call flow.
                       </p>
-                      <Link
+                      <Link prefetch={false}
                         className="text-sm font-bold text-[#8CA365] hover:text-[#7a8f57] flex items-center gap-2"
                         href="/contact-us"
                       >
@@ -4965,7 +4965,7 @@ export default function AppointmentSchedulingPage() {
                         No obligation to purchase
                       </div>
                     </div>
-                    <Link
+                    <Link prefetch={false}
                       className="w-full bg-transparent border border-[#8CA365]/50 text-[#8CA365] hover:bg-[#8CA365] hover:text-white font-bold text-base py-4 px-6 rounded-xl transition-all duration-300 mt-auto inline-block"
                       href="/contact-us"
                     >

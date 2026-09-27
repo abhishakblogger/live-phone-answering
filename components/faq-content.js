@@ -9,7 +9,7 @@ export const homeFaq = {
   "items": [
     {
       "q": "How much does an answering service cost?",
-      "a": "Usually, the cost is round __________. Answering service pricing depends on the provider, call volume, and features included. Some companies offer pay per call answering service plans, while others charge monthly packages."
+      "a": "Our plans start at $199 per month for 100 receptionist minutes, and dedicated virtual receptionist plans start at $399 per month. Answering service pricing depends on the provider, call volume, and features included. Some companies offer pay per call answering service plans, while others charge monthly packages."
     },
     {
       "q": "How does a live answering service work for businesses?",

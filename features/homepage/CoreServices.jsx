@@ -56,7 +56,7 @@ function ServiceCard({ service }) {
         className="w-16 h-16 mb-6 object-contain"
       />
       <h3 className="text-xl font-bold text-[#34414A] mb-3">
-        <Link href={service.href} className="hover:text-[#8CA365] transition-colors">
+        <Link prefetch={false} href={service.href} className="hover:text-[#8CA365] transition-colors">
           {service.title}
         </Link>
       </h3>

@@ -154,7 +154,7 @@ export default function IntegrationsSection() {
           <p className="text-white font-medium text-lg text-center md:text-left">
             Need something else? We connect to 1,000+ apps via Zapier.
           </p>
-          <Link
+          <Link prefetch={false}
             href="/services"
             className="bg-[#8CA365] hover:bg-[#7a8f57] text-white px-6 py-2 rounded-lg font-bold transition-colors mt-4 md:mt-0 whitespace-nowrap"
           >

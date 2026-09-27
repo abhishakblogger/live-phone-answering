@@ -9,7 +9,7 @@ export default function SiteFooter() {
           <h3 className="text-3xl font-extrabold text-white mb-2">Ready to stop missing leads?</h3>
           <p className="text-green-100 text-lg">Get started today. Setup in 5 minutes.</p>
         </div>
-        <Link
+        <Link prefetch={false}
           href="/contact-us"
           className="mt-6 md:mt-0 bg-white text-[#34414A] font-bold py-3 px-8 rounded-xl shadow-lg hover:scale-105 hover:shadow-xl transition-all duration-300 whitespace-nowrap"
         >
@@ -50,7 +50,7 @@ export default function SiteFooter() {
                 { href: '/pricing', label: 'Pricing & FAQs' },
               ].map((link) => (
                 <li key={link.label}>
-                  <Link
+                  <Link prefetch={false}
                     href={link.href}
                     className="text-slate-400 hover:text-white transition-colors duration-300 flex items-center group text-sm font-medium"
                   >
@@ -70,7 +70,7 @@ export default function SiteFooter() {
                 { href: '/contact-us', label: 'Contact Support' },
               ].map((link) => (
                 <li key={link.label}>
-                  <Link
+                  <Link prefetch={false}
                     href={link.href}
                     className="text-slate-400 hover:text-white transition-colors duration-300 flex items-center group text-sm font-medium"
                   >
@@ -126,7 +126,7 @@ export default function SiteFooter() {
         <div className="border-t border-slate-800 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="text-slate-500 text-sm">© 2026 LivePhoneAnswering.com. All rights reserved.</div>
           <div className="flex gap-6 text-slate-500 text-sm">
-            <Link href="/privacy-policy" className="hover:text-white transition-colors">
+            <Link prefetch={false} href="/privacy-policy" className="hover:text-white transition-colors">
               Privacy Policy
             </Link>
             <a href="/sitemap.xml" className="hover:text-white transition-colors">

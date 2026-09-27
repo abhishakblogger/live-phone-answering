@@ -48,7 +48,7 @@ function PlanCard({ plan }) {
         ))}
       </ul>
 
-      <Link
+      <Link prefetch={false}
         href={plan.href}
         className={`w-full block text-center font-bold py-3 rounded-lg transition-colors mt-8 ${
           featured

@@ -70,7 +70,7 @@ export default function ThankYouPage() {
               <p className="text-lg text-gray-500 mb-10 max-w-lg text-center">
                 Your message has been successfully sent. One of our specialists will be in touch with you shortly.
               </p>
-              <Link
+              <Link prefetch={false}
                 href="/"
                 className="inline-flex justify-center items-center bg-[#8CA365] hover:bg-[#7a8f57] text-white font-bold py-3.5 px-8 rounded-lg shadow-[0_8px_32px_rgba(140,163,101,0.3)] transition-all hover:-translate-y-1 hover:shadow-[0_12px_40px_rgba(140,163,101,0.4)]"
               >

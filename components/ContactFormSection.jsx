@@ -180,7 +180,7 @@ export default function ContactFormSection({ theme = 'dark' }) {
                 </button>
                 <p className="text-xs text-gray-400 mt-4 text-center">
                   By submitting, you agree to our Terms of Service and{' '}
-                  <Link href="/privacy-policy" className="underline hover:text-gray-600">
+                  <Link prefetch={false} href="/privacy-policy" className="underline hover:text-gray-600">
                     Privacy Policy
                   </Link>
                   . We never sell your data.

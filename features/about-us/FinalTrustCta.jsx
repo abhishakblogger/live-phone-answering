@@ -43,7 +43,7 @@ export default function FinalTrustCta() {
           </p>
 
           <div className="flex flex-col md:flex-row items-center justify-center gap-6 w-full max-w-3xl mb-12">
-            <Link
+            <Link prefetch={false}
               href="/pricing"
               className="w-full md:w-auto bg-[#8CA365] hover:bg-[#7a8f57] text-white font-extrabold text-lg py-4 px-10 rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2"
             >

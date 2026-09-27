@@ -32,13 +32,13 @@ export default function DarkCtaBanner({ heading, body, points, primary, secondar
         </ul>
 
         <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
-          <Link
+          <Link prefetch={false}
             href={primary.href}
             className="w-full sm:w-auto inline-flex justify-center items-center bg-[#8CA365] hover:bg-[#7a8f57] text-white font-bold py-4 px-10 rounded-xl shadow-lg shadow-[#8CA365]/30 transition-all hover:-translate-y-1 text-lg"
           >
             {primary.label}
           </Link>
-          <Link
+          <Link prefetch={false}
             href={secondary.href}
             className="w-full sm:w-auto inline-flex justify-center items-center bg-white/10 backdrop-blur-sm border-2 border-white/20 text-white hover:bg-white/20 font-bold py-4 px-10 rounded-xl transition-all hover:-translate-y-1 text-lg"
           >

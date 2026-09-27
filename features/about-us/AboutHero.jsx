@@ -46,13 +46,13 @@ export default function AboutHero() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 mt-8 w-full sm:w-auto">
-            <Link
+            <Link prefetch={false}
               href="/contact-us"
               className="inline-flex justify-center items-center bg-[#8CA365] hover:bg-[#7a8f57] text-white font-bold py-3 px-8 rounded-lg shadow-lg transition-transform hover:-translate-y-1 text-center"
             >
               Get Started Now
             </Link>
-            <Link
+            <Link prefetch={false}
               href="/how-it-works"
               className="inline-flex justify-center items-center bg-white border-2 border-[#34414A] text-[#34414A] hover:bg-slate-50 font-bold py-3 px-8 rounded-lg transition-colors text-center"
             >

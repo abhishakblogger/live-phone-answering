@@ -70,13 +70,13 @@ export default function HowItWorksHero() {
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8" style={rise('0.3s')}>
-          <Link
+          <Link prefetch={false}
             href="/contact-us"
             className="inline-flex items-center justify-center gap-2 bg-[#8CA365] hover:bg-[#7a8f57] text-white font-bold py-3.5 px-8 rounded-xl shadow-lg transition-all hover:-translate-y-1 text-base"
           >
             Get Started Today →
           </Link>
-          <Link
+          <Link prefetch={false}
             href="/pricing"
             className="inline-flex items-center justify-center gap-2 bg-white/80 backdrop-blur-sm border-2 border-[#34414A]/15 text-[#34414A] font-bold py-3.5 px-8 rounded-xl hover:bg-white transition-all hover:-translate-y-1 text-base"
           >
