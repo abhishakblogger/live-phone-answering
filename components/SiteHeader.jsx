@@ -3,11 +3,36 @@
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
 
+// Items without a dedicated page yet point at their hub rather than a URL that
+// would 404 — the nav is crawled on every page, so dead links are costly.
+// Swap the href here once the individual page exists.
 const NAV_LINKS = [
   { href: '/', label: 'Home' },
   { href: '/about-us', label: 'About Us' },
-  { href: '/services', label: 'Services' },
-  { href: '/industries-served', label: 'Industries Served' },
+  {
+    href: '/services',
+    label: 'Services',
+    children: [
+      { href: '/virtual-receptionist', label: 'Live Receptionist' },
+      { href: '/after-hours-answering-service', label: 'After Hours Answering Service' },
+      { href: '/services', label: 'Overflow Call Answering' },
+      { href: '/appointment-scheduling', label: 'Appointment Scheduling Service' },
+      { href: '/services', label: 'Lead Capture' },
+      { href: '/services', label: 'Call Routing Service' },
+    ],
+  },
+  {
+    href: '/industries-served',
+    label: 'Industries Served',
+    children: [
+      { href: '/industries-served', label: 'Real Estate' },
+      { href: '/medical-answering-service', label: 'Medical' },
+      { href: '/industries-served', label: 'Franchise' },
+      { href: '/industries-served', label: 'Attorney' },
+      { href: '/industries-served', label: 'Hotel' },
+      { href: '/industries-served', label: 'Home Services' },
+    ],
+  },
   { href: '/how-it-works', label: 'How It Works' },
   { href: '/pricing', label: 'Pricing' },
 ]
@@ -15,6 +40,8 @@ const NAV_LINKS = [
 export default function SiteHeader() {
   const [menuOpen, setMenuOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
+  // A single value, so opening one dropdown always closes the other.
+  const [openMenu, setOpenMenu] = useState(null)
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20)
@@ -74,15 +101,58 @@ export default function SiteHeader() {
             </Link>
           </div>
 
-          <ul className="hidden lg:flex items-center gap-2 list-none flex-1 lg:justify-center">
+          <ul
+            className="hidden lg:flex items-center gap-2 list-none flex-1 lg:justify-center"
+            onKeyDown={(event) => { if (event.key === 'Escape') setOpenMenu(null) }}
+          >
             {NAV_LINKS.map((link) => (
-              <li key={link.href}>
+              <li
+                key={link.label}
+                className={link.children ? 'relative' : undefined}
+                onMouseEnter={link.children ? () => setOpenMenu(link.label) : undefined}
+                onMouseLeave={link.children ? () => setOpenMenu(null) : undefined}
+                onFocus={() => setOpenMenu(link.children ? link.label : null)}
+              >
                 <Link prefetch={false}
                   href={link.href}
-                  className="px-3 py-2 text-[0.875rem] font-medium text-gray-700 rounded-lg hover:text-navy hover:bg-gray-50 transition-all"
+                  onClick={() => setOpenMenu(null)}
+                  aria-haspopup={link.children ? 'true' : undefined}
+                  aria-expanded={link.children ? openMenu === link.label : undefined}
+                  className="flex items-center gap-1.5 px-3 py-2 text-[0.875rem] font-medium text-gray-700 rounded-lg hover:text-navy hover:bg-gray-50 transition-all"
                 >
                   {link.label}
+                  {link.children && (
+                    <span
+                      className={`icon-mask icon-chevron-down [--icon-size:0.75rem] text-gray-400 transition-transform ${
+                        openMenu === link.label ? 'rotate-180' : ''
+                      }`}
+                      aria-hidden="true"
+                    ></span>
+                  )}
                 </Link>
+
+                {/* Driven by one piece of state rather than :hover/:focus-within,
+                    so a second menu can never open on top of the first. */}
+                {link.children && (
+                  <ul
+                    className={`absolute left-1/2 top-full z-50 w-64 -translate-x-1/2 list-none rounded-xl border border-gray-100 bg-white p-2 shadow-xl transition-opacity duration-150 ${
+                      openMenu === link.label ? 'visible opacity-100' : 'invisible opacity-0'
+                    }`}
+                  >
+                    {link.children.map((child) => (
+                      <li key={child.label}>
+                        <Link
+                          prefetch={false}
+                          href={child.href}
+                          onClick={() => setOpenMenu(null)}
+                          className="block rounded-lg px-3 py-2 text-[0.82rem] font-medium text-gray-600 hover:bg-gray-50 hover:text-navy"
+                        >
+                          {child.label}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                )}
               </li>
             ))}
           </ul>
@@ -110,14 +180,31 @@ export default function SiteHeader() {
 
         <div className={`${menuOpen ? '' : 'hidden'} lg:hidden border-t border-border bg-white px-[5%] py-4 space-y-1`}>
           {NAV_LINKS.map((link) => (
-            <Link prefetch={false}
-              key={link.href}
-              href={link.href}
-              onClick={() => setMenuOpen(false)}
-              className="block px-3 py-2 text-sm font-medium text-gray-700 rounded-lg hover:bg-gray-50"
-            >
-              {link.label}
-            </Link>
+            <div key={link.label}>
+              <Link prefetch={false}
+                href={link.href}
+                onClick={() => setMenuOpen(false)}
+                className="block px-3 py-2 text-sm font-medium text-gray-700 rounded-lg hover:bg-gray-50"
+              >
+                {link.label}
+              </Link>
+              {link.children && (
+                <ul className="list-none ml-3 border-l border-gray-100 pl-3">
+                  {link.children.map((child) => (
+                    <li key={child.label}>
+                      <Link
+                        prefetch={false}
+                        href={child.href}
+                        onClick={() => setMenuOpen(false)}
+                        className="block px-3 py-1.5 text-[0.8rem] text-gray-500 rounded-lg hover:bg-gray-50 hover:text-navy"
+                      >
+                        {child.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </div>
           ))}
           <div className="pt-2 space-y-2 border-t border-border mt-2">
             <Link prefetch={false}

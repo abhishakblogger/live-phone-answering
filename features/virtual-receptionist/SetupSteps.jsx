@@ -1,42 +1,116 @@
+'use client'
+
 import Link from 'next/link'
+import { useState } from 'react'
+
+// Illustrations are inline SVG rather than image files: they stay sharp at any
+// size, take their colours from the palette, and add no network requests.
+function BriefIllustration() {
+  return (
+    <svg viewBox="0 0 260 200" className="w-full h-auto" aria-hidden="true">
+      <path
+        d="M22 108c-8-44 26-84 74-88 46-4 88 14 108 48 20 34 6 78-28 96-34 18-86 20-118 4-18-9-30-32-36-60z"
+        fill="#eef6e8"
+      />
+      <rect x="72" y="126" width="104" height="46" rx="6" fill="#34414A" />
+      <rect x="86" y="136" width="76" height="26" rx="3" fill="#f7fbf5" />
+      <circle cx="124" cy="82" r="24" fill="#295657" />
+      <path d="M96 126c0-18 12-30 28-30s28 12 28 30z" fill="#8CA365" />
+      <rect x="186" y="70" width="52" height="8" rx="4" fill="#8CA365" />
+      <rect x="186" y="88" width="40" height="8" rx="4" fill="#c8dcb4" />
+      <rect x="186" y="106" width="46" height="8" rx="4" fill="#c8dcb4" />
+    </svg>
+  )
+}
+
+function RulesIllustration() {
+  return (
+    <svg viewBox="0 0 260 200" className="w-full h-auto" aria-hidden="true">
+      <path
+        d="M26 100c0-42 34-76 78-80 44-4 86 16 104 52 18 36 2 76-34 92-36 16-88 14-118-6-18-12-30-34-30-58z"
+        fill="#eef6e8"
+      />
+      <rect x="74" y="44" width="112" height="132" rx="10" fill="#ffffff" />
+      <rect x="74" y="44" width="112" height="26" rx="10" fill="#0f2925" />
+      <circle cx="98" cy="96" r="9" fill="#8CA365" />
+      <rect x="116" y="91" width="56" height="9" rx="4.5" fill="#dfe9d6" />
+      <circle cx="98" cy="126" r="9" fill="#8CA365" />
+      <rect x="116" y="121" width="46" height="9" rx="4.5" fill="#dfe9d6" />
+      <circle cx="98" cy="156" r="9" fill="#c8dcb4" />
+      <rect x="116" y="151" width="52" height="9" rx="4.5" fill="#dfe9d6" />
+    </svg>
+  )
+}
+
+function ConnectIllustration() {
+  return (
+    <svg viewBox="0 0 260 200" className="w-full h-auto" aria-hidden="true">
+      <path
+        d="M24 96c4-40 38-72 82-76 44-4 84 18 100 54 16 36-2 74-36 90-34 16-84 12-112-10-18-14-36-34-34-58z"
+        fill="#eef6e8"
+      />
+      <rect x="96" y="40" width="68" height="126" rx="14" fill="#0f2925" />
+      <rect x="106" y="56" width="48" height="90" rx="6" fill="#f7fbf5" />
+      <circle cx="130" cy="158" r="5" fill="#8CA365" />
+      <path d="M176 78a34 34 0 010 48" stroke="#8CA365" strokeWidth="7" strokeLinecap="round" fill="none" />
+      <path d="M196 62a58 58 0 010 80" stroke="#c8dcb4" strokeWidth="7" strokeLinecap="round" fill="none" />
+      <path d="M84 78a34 34 0 000 48" stroke="#8CA365" strokeWidth="7" strokeLinecap="round" fill="none" />
+    </svg>
+  )
+}
+
+function UpdatesIllustration() {
+  return (
+    <svg viewBox="0 0 260 200" className="w-full h-auto" aria-hidden="true">
+      <path
+        d="M20 104c0-44 36-78 80-82 44-4 88 18 106 54 18 36 0 74-36 90-36 16-86 12-114-10-20-16-36-30-36-52z"
+        fill="#eef6e8"
+      />
+      <rect x="60" y="46" width="76" height="130" rx="14" fill="#0f2925" />
+      <rect x="70" y="62" width="56" height="96" rx="6" fill="#f7fbf5" />
+      <rect x="148" y="60" width="86" height="42" rx="10" fill="#ffffff" />
+      <rect x="160" y="74" width="46" height="8" rx="4" fill="#8CA365" />
+      <rect x="148" y="116" width="86" height="42" rx="10" fill="#8CA365" />
+      <rect x="160" y="130" width="52" height="8" rx="4" fill="#ffffff" />
+    </svg>
+  )
+}
 
 const STEPS = [
   {
-    number: '01',
+    label: 'Tell us about your business',
     title: 'Tell us about your business',
-    body: 'Share your services, opening hours, and common caller questions.',
+    body: 'Share your services, opening hours, and the questions callers ask most often. We use this to build the brief your receptionists work from, so they answer as part of your team from the very first call.',
+    Illustration: BriefIllustration,
   },
   {
-    number: '02',
+    label: 'Set your call-handling rules',
     title: 'Set your call-handling rules',
-    body: 'Choose your greeting, intake questions, and transfer preferences.',
+    body: 'Choose your greeting, the details to collect on every call, and who to transfer to. You also decide what should happen when nobody on your team is available to take the call.',
+    Illustration: RulesIllustration,
   },
   {
-    number: '03',
+    label: 'Connect and test your calls',
     title: 'Connect and test your calls',
-    body: 'Set up call forwarding and check the experience with a test call.',
+    body: 'Set up call forwarding from your existing number, then place a test call and hear the experience for yourself. Adjust anything that does not sound right before you go live.',
+    Illustration: ConnectIllustration,
   },
   {
-    number: '04',
+    label: 'Start receiving calls and updates',
     title: 'Start receiving calls and updates',
-    body: 'Receive caller details and request changes as your needs evolve.',
+    body: 'Caller details and messages reach your team the way you chose. Request changes to your greeting, questions or routing whenever your needs change.',
+    Illustration: UpdatesIllustration,
   },
-]
-
-// Label/value pairs, so this renders as a <dl> rather than nested divs.
-const INSTRUCTIONS = [
-  ['Greeting', 'Answer using our business name'],
-  ['New inquiries', 'Collect name, number, and reason for calling'],
-  ['Call transfers', 'Try the designated team member first'],
-  ['If no one answers', 'Take a message and request a callback'],
-  ['Unfamiliar questions', 'Record the question for our team'],
 ]
 
 export default function SetupSteps() {
+  const [active, setActive] = useState(0)
+  const go = (next) => setActive((next + STEPS.length) % STEPS.length)
+
   return (
     <section className="w-full bg-white py-20 md:py-24 px-4" aria-labelledby="setup-heading">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center max-w-3xl mx-auto mb-12 md:mb-16">
+      <div className="max-w-6xl mx-auto">
+        <div className="text-center max-w-3xl mx-auto mb-12 md:mb-14">
           <p className="icon-mask icon-sliders inline-flex items-center gap-2 bg-[#8CA365]/10 text-[#6b8a3e] rounded-full text-sm font-semibold px-4 py-1.5 mb-5">
             Set up around your business
           </p>
@@ -52,81 +126,91 @@ export default function SetupSteps() {
           </p>
         </div>
 
-        <div className="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-[minmax(0,330px)_1fr] gap-10 lg:gap-12 items-start">
-          {/* The rail between circles is an li::after that runs from one circle's
-              bottom edge to the next one's top, so it adapts to any row height. */}
-          <ol className="list-none">
-            {STEPS.map((step) => (
-              <li
-                key={step.number}
-                className="relative flex items-start gap-5 pb-8 last:pb-0 after:absolute after:left-5 after:top-11 after:bottom-0 after:w-px after:bg-[#8CA365]/40 after:content-[''] last:after:hidden"
+        {/* The rail between the numbers is an li::after, so the whole connected
+            stepper costs no extra elements. */}
+        {/* A tablist must contain its tabs directly, so this is a div of
+            buttons rather than an ol/li — the rail lives on button::after. */}
+        <div
+          role="tablist"
+          aria-label="Setup steps"
+          className="grid grid-cols-2 gap-y-8 sm:grid-cols-4 mb-10 md:mb-14"
+        >
+          {STEPS.map((step, index) => {
+            const isActive = index === active
+            return (
+              <button
+                key={step.label}
+                type="button"
+                role="tab"
+                id={`setup-tab-${index}`}
+                aria-selected={isActive}
+                aria-controls={`setup-panel-${index}`}
+                onClick={() => setActive(index)}
+                className="group relative flex w-full flex-col items-center gap-3 px-2 text-center after:absolute after:top-6 after:left-[calc(50%+1.75rem)] after:right-[calc(-50%+1.75rem)] after:hidden after:h-px after:bg-[#8CA365]/40 after:content-[''] sm:after:block sm:last:after:hidden"
               >
                 <span
-                  className="relative z-10 flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full border-2 border-[#8CA365]/40 bg-[#eef6e8] text-xs font-bold text-[#295657]"
-                  aria-hidden="true"
+                  className={`flex h-12 w-12 items-center justify-center rounded-full text-base font-bold transition-colors ${
+                    isActive
+                      ? 'bg-[#8CA365] text-white'
+                      : 'border-2 border-[#8CA365]/40 bg-white text-[#5f7a3a] group-hover:border-[#8CA365]'
+                  }`}
                 >
-                  {step.number}
+                  {index + 1}
                 </span>
-                <span className="min-w-0 pt-1">
-                  <span className="block text-lg font-bold text-[#34414A]">{step.title}</span>
-                  <span className="mt-1 block text-sm text-gray-600 leading-relaxed">{step.body}</span>
+                <span
+                  className={`text-sm font-bold leading-snug transition-colors ${
+                    isActive ? 'text-[#34414A]' : 'text-[#5f7a3a]'
+                  }`}
+                >
+                  {step.label}
                 </span>
-              </li>
-            ))}
-          </ol>
-
-          <div className="relative">
-            <p className="text-center text-[10px] font-bold uppercase tracking-[0.2em] text-gray-400 mb-4">
-              Example call instructions
-            </p>
-
-            <div className="rounded-3xl bg-white border border-gray-100 shadow-xl overflow-hidden">
-              <p className="icon-mask icon-sliders [--icon-size:1.25rem] flex items-center gap-3 bg-[#0f2925] px-6 py-5 text-base font-bold text-white before:text-[#8CA365]">
-                Your business. Your preferences.
-              </p>
-
-              <dl className="px-6 py-2">
-                {INSTRUCTIONS.map(([label, value]) => (
-                  <div
-                    key={label}
-                    className="grid grid-cols-1 sm:grid-cols-[minmax(0,8.5rem)_1fr] gap-1 sm:gap-3 py-4 border-b border-gray-100 last:border-b-0"
-                  >
-                    <dt className="text-[10px] font-bold uppercase tracking-[0.14em] text-gray-400 sm:pt-0.5">
-                      {label}
-                    </dt>
-                    <dd className="text-sm text-[#34414A]">{value}</dd>
-                  </div>
-                ))}
-              </dl>
-
-              <p className="icon-mask icon-pencil [--icon-size:1.125rem] m-6 mt-2 flex items-center gap-3 rounded-2xl bg-[#eef6e8] px-5 py-4 text-sm text-gray-600 before:text-[#295657]">
-                Instructions can evolve with your business.
-              </p>
-            </div>
-
-            {/* Dotted arc sweeping from the card up to the phone badge. One
-                <path>, so the whole flourish costs two elements. */}
-            <svg
-              className="hidden lg:block absolute -top-10 -right-6 w-48 h-40 text-[#8CA365]/50"
-              viewBox="0 0 190 160"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="1.5"
-              strokeDasharray="3 7"
-              strokeLinecap="round"
-              aria-hidden="true"
-            >
-              <path d="M2 152C40 152 96 140 126 108C150 82 152 52 150 30" />
-            </svg>
-
-            <span
-              className="icon-mask icon-phone [--icon-size:1.5rem] hidden lg:flex absolute -top-4 -right-2 h-16 w-16 items-center justify-center rounded-full bg-white shadow-lg text-[#0f2925]"
-              aria-hidden="true"
-            ></span>
-          </div>
+              </button>
+            )
+          })}
         </div>
 
-        <div className="max-w-5xl mx-auto mt-12 flex flex-col sm:flex-row sm:items-center gap-5 rounded-2xl bg-[#f2f9ee] px-6 py-6 sm:px-8">
+        <div className="relative">
+          <button
+            type="button"
+            onClick={() => go(active - 1)}
+            aria-label="Previous step"
+            className="icon-mask icon-chevron-down [--icon-size:1.5rem] absolute left-0 top-1/2 z-10 hidden h-11 w-11 -translate-y-1/2 rotate-90 items-center justify-center rounded-full text-[#8CA365] transition-colors hover:bg-[#eef6e8] lg:flex"
+          ></button>
+
+          {STEPS.map((step, index) => {
+            const { Illustration } = step
+            return (
+              <div
+                key={step.label}
+                id={`setup-panel-${index}`}
+                role="tabpanel"
+                aria-labelledby={`setup-tab-${index}`}
+                className={
+                  index === active
+                    ? 'grid grid-cols-1 items-center gap-8 md:grid-cols-2 md:gap-12 lg:px-16'
+                    : 'hidden'
+                }
+              >
+                <div className="mx-auto w-full max-w-[320px] md:max-w-[380px]">
+                  <Illustration />
+                </div>
+                <div>
+                  <h3 className="text-2xl md:text-3xl font-extrabold text-[#34414A] mb-4">{step.title}</h3>
+                  <p className="text-base text-gray-600 leading-relaxed">{step.body}</p>
+                </div>
+              </div>
+            )
+          })}
+
+          <button
+            type="button"
+            onClick={() => go(active + 1)}
+            aria-label="Next step"
+            className="icon-mask icon-chevron-down [--icon-size:1.5rem] absolute right-0 top-1/2 z-10 hidden h-11 w-11 -translate-y-1/2 -rotate-90 items-center justify-center rounded-full text-[#8CA365] transition-colors hover:bg-[#eef6e8] lg:flex"
+          ></button>
+        </div>
+
+        <div className="mt-14 flex flex-col sm:flex-row sm:items-center gap-5 rounded-2xl bg-[#f2f9ee] px-6 py-6 sm:px-8">
           <span
             className="icon-mask icon-shield-check [--icon-size:1.375rem] flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-white text-[#295657]"
             aria-hidden="true"
