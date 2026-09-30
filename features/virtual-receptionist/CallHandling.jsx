@@ -44,7 +44,7 @@ export default function CallHandling() {
     <section className="w-full bg-[#f2f9ee] py-20 md:py-24 px-4" aria-labelledby="call-handling-heading">
       <div className="max-w-7xl mx-auto">
         <div className="text-center max-w-3xl mx-auto mb-12 md:mb-14">
-          <p className="text-[11px] sm:text-xs font-bold uppercase tracking-[0.22em] text-[#8CA365] mb-4">
+          <p className="icon-mask icon-phone inline-flex items-center gap-2 bg-white text-[#4a7a3e] rounded-full text-sm font-semibold px-5 py-2 mb-6 shadow-sm border border-white/60">
             Your calls, professionally handled
           </p>
           <h2
