@@ -53,7 +53,7 @@ function ServiceCard({ service }) {
         height={256}
         loading="lazy"
         decoding="async"
-        className="w-16 h-16 mb-6 object-contain"
+        className="w-16 h-16 mb-6 object-contain rounded-2xl"
       />
       <h3 className="text-xl font-bold text-[#34414A] mb-3">
         <Link prefetch={false} href={service.href} className="hover:text-[#8CA365] transition-colors">

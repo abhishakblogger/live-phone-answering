@@ -5,20 +5,20 @@ import { useState } from 'react'
 
 // Illustrations are inline SVG rather than image files: they stay sharp at any
 // size, take their colours from the palette, and add no network requests.
+// Every scene shares one centred backdrop ellipse and keeps its shapes inside
+// it, so no element hangs off the edge of the blob.
+function Backdrop() {
+  return <ellipse cx="130" cy="100" rx="118" ry="92" fill="#eef6e8" />
+}
+
 function BriefIllustration() {
   return (
     <svg viewBox="0 0 260 200" className="w-full h-auto" aria-hidden="true">
-      <path
-        d="M22 108c-8-44 26-84 74-88 46-4 88 14 108 48 20 34 6 78-28 96-34 18-86 20-118 4-18-9-30-32-36-60z"
-        fill="#eef6e8"
-      />
-      <rect x="72" y="126" width="104" height="46" rx="6" fill="#34414A" />
-      <rect x="86" y="136" width="76" height="26" rx="3" fill="#f7fbf5" />
-      <circle cx="124" cy="82" r="24" fill="#295657" />
-      <path d="M96 126c0-18 12-30 28-30s28 12 28 30z" fill="#8CA365" />
-      <rect x="186" y="70" width="52" height="8" rx="4" fill="#8CA365" />
-      <rect x="186" y="88" width="40" height="8" rx="4" fill="#c8dcb4" />
-      <rect x="186" y="106" width="46" height="8" rx="4" fill="#c8dcb4" />
+      <Backdrop />
+      <circle cx="130" cy="70" r="22" fill="#295657" />
+      <path d="M100 118a30 30 0 0160 0z" fill="#8CA365" />
+      <rect x="86" y="114" width="88" height="42" rx="7" fill="#34414A" />
+      <rect x="96" y="123" width="68" height="24" rx="4" fill="#f7fbf5" />
     </svg>
   )
 }
@@ -26,18 +26,15 @@ function BriefIllustration() {
 function RulesIllustration() {
   return (
     <svg viewBox="0 0 260 200" className="w-full h-auto" aria-hidden="true">
-      <path
-        d="M26 100c0-42 34-76 78-80 44-4 86 16 104 52 18 36 2 76-34 92-36 16-88 14-118-6-18-12-30-34-30-58z"
-        fill="#eef6e8"
-      />
-      <rect x="74" y="44" width="112" height="132" rx="10" fill="#ffffff" />
-      <rect x="74" y="44" width="112" height="26" rx="10" fill="#0f2925" />
-      <circle cx="98" cy="96" r="9" fill="#8CA365" />
-      <rect x="116" y="91" width="56" height="9" rx="4.5" fill="#dfe9d6" />
-      <circle cx="98" cy="126" r="9" fill="#8CA365" />
-      <rect x="116" y="121" width="46" height="9" rx="4.5" fill="#dfe9d6" />
-      <circle cx="98" cy="156" r="9" fill="#c8dcb4" />
-      <rect x="116" y="151" width="52" height="9" rx="4.5" fill="#dfe9d6" />
+      <Backdrop />
+      <rect x="85" y="42" width="90" height="116" rx="10" fill="#ffffff" />
+      <path d="M85 52a10 10 0 0110-10h70a10 10 0 0110 10v14H85z" fill="#0f2925" />
+      <circle cx="104" cy="92" r="8" fill="#8CA365" />
+      <rect x="120" y="87" width="44" height="9" rx="4.5" fill="#dfe9d6" />
+      <circle cx="104" cy="118" r="8" fill="#8CA365" />
+      <rect x="120" y="113" width="36" height="9" rx="4.5" fill="#dfe9d6" />
+      <circle cx="104" cy="144" r="8" fill="#c8dcb4" />
+      <rect x="120" y="139" width="40" height="9" rx="4.5" fill="#dfe9d6" />
     </svg>
   )
 }
@@ -45,16 +42,14 @@ function RulesIllustration() {
 function ConnectIllustration() {
   return (
     <svg viewBox="0 0 260 200" className="w-full h-auto" aria-hidden="true">
-      <path
-        d="M24 96c4-40 38-72 82-76 44-4 84 18 100 54 16 36-2 74-36 90-34 16-84 12-112-10-18-14-36-34-34-58z"
-        fill="#eef6e8"
-      />
-      <rect x="96" y="40" width="68" height="126" rx="14" fill="#0f2925" />
-      <rect x="106" y="56" width="48" height="90" rx="6" fill="#f7fbf5" />
-      <circle cx="130" cy="158" r="5" fill="#8CA365" />
-      <path d="M176 78a34 34 0 010 48" stroke="#8CA365" strokeWidth="7" strokeLinecap="round" fill="none" />
-      <path d="M196 62a58 58 0 010 80" stroke="#c8dcb4" strokeWidth="7" strokeLinecap="round" fill="none" />
-      <path d="M84 78a34 34 0 000 48" stroke="#8CA365" strokeWidth="7" strokeLinecap="round" fill="none" />
+      <Backdrop />
+      <path d="M92 80a28 28 0 000 40" stroke="#8CA365" strokeWidth="7" strokeLinecap="round" fill="none" />
+      <path d="M72 64a52 52 0 000 72" stroke="#c8dcb4" strokeWidth="7" strokeLinecap="round" fill="none" />
+      <rect x="104" y="48" width="52" height="104" rx="12" fill="#0f2925" />
+      <rect x="112" y="62" width="36" height="74" rx="5" fill="#f7fbf5" />
+      <circle cx="130" cy="144" r="4" fill="#8CA365" />
+      <path d="M168 80a28 28 0 010 40" stroke="#8CA365" strokeWidth="7" strokeLinecap="round" fill="none" />
+      <path d="M188 64a52 52 0 010 72" stroke="#c8dcb4" strokeWidth="7" strokeLinecap="round" fill="none" />
     </svg>
   )
 }
@@ -62,16 +57,14 @@ function ConnectIllustration() {
 function UpdatesIllustration() {
   return (
     <svg viewBox="0 0 260 200" className="w-full h-auto" aria-hidden="true">
-      <path
-        d="M20 104c0-44 36-78 80-82 44-4 88 18 106 54 18 36 0 74-36 90-36 16-86 12-114-10-20-16-36-30-36-52z"
-        fill="#eef6e8"
-      />
-      <rect x="60" y="46" width="76" height="130" rx="14" fill="#0f2925" />
-      <rect x="70" y="62" width="56" height="96" rx="6" fill="#f7fbf5" />
-      <rect x="148" y="60" width="86" height="42" rx="10" fill="#ffffff" />
-      <rect x="160" y="74" width="46" height="8" rx="4" fill="#8CA365" />
-      <rect x="148" y="116" width="86" height="42" rx="10" fill="#8CA365" />
-      <rect x="160" y="130" width="52" height="8" rx="4" fill="#ffffff" />
+      <Backdrop />
+      <rect x="56" y="50" width="64" height="110" rx="12" fill="#0f2925" />
+      <rect x="64" y="64" width="48" height="82" rx="6" fill="#f7fbf5" />
+      <circle cx="88" cy="152" r="4" fill="#8CA365" />
+      <rect x="132" y="62" width="74" height="38" rx="10" fill="#ffffff" />
+      <rect x="144" y="76" width="42" height="8" rx="4" fill="#8CA365" />
+      <rect x="132" y="112" width="74" height="38" rx="10" fill="#8CA365" />
+      <rect x="144" y="126" width="48" height="8" rx="4" fill="#ffffff" />
     </svg>
   )
 }

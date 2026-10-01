@@ -34,7 +34,6 @@ export default function CallExperience() {
           </p>
         </div>
 
-        <p className="text-xs text-gray-400 mb-3 ml-1">Illustrative call example</p>
 
         <div className="bg-[#f2f9ee] rounded-3xl p-6 sm:p-8 lg:p-12">
           <div className="max-w-4xl mx-auto grid grid-cols-1 lg:grid-cols-[minmax(0,300px)_1fr] gap-10 lg:gap-16 items-center">

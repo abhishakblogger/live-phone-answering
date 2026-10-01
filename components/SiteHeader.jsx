@@ -178,7 +178,7 @@ export default function SiteHeader() {
           </button>
         </div>
 
-        <div className={`${menuOpen ? '' : 'hidden'} lg:hidden border-t border-border bg-white px-[5%] py-4 space-y-1`}>
+        <div className={`${menuOpen ? '' : 'hidden'} lg:hidden border-t border-border bg-white px-[5%] py-4 space-y-1 max-h-[calc(100vh-68px)] overflow-y-auto overscroll-contain`}>
           {NAV_LINKS.map((link) => (
             <div key={link.label}>
               <Link prefetch={false}

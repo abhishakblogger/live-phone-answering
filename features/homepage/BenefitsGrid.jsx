@@ -88,7 +88,7 @@ function BenefitCard({ benefit }) {
               height={256}
               loading="lazy"
               decoding="async"
-              className="w-12 h-12 object-contain"
+              className="w-12 h-12 object-contain rounded-xl"
             />
           </div>
 

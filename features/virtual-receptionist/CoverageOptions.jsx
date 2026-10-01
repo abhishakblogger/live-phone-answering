@@ -19,14 +19,14 @@ const LIGHT = {
 }
 
 const DARK = {
-  card: 'bg-[#0f2925] border border-[#0f2925] shadow-2xl',
-  eyebrow: 'text-white/50',
-  panel: 'bg-white/5',
-  title: 'text-white',
-  body: 'text-white/70',
-  rule: 'border-white/15',
-  idealLabel: 'text-white',
-  idealValue: 'text-white/60',
+  card: 'bg-white border-2 border-[#8CA365] shadow-2xl',
+  eyebrow: 'text-[#6b8a3e]',
+  panel: 'bg-[#eef6e8]',
+  title: 'text-[#34414A]',
+  body: 'text-gray-600',
+  rule: 'border-gray-100',
+  idealLabel: 'text-[#34414A]',
+  idealValue: 'text-gray-500',
 }
 
 function Card({ theme, eyebrow, title, body, idealFor, children }) {
@@ -103,9 +103,9 @@ export default function CoverageOptions() {
             idealFor="Busy periods and staff breaks"
           >
             <div className="flex items-center justify-center gap-3">
-              <span className="icon-mask icon-phone [--icon-size:1.5rem] flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl bg-white/10 text-white"></span>
+              <span className="icon-mask icon-phone [--icon-size:1.5rem] flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl bg-white text-[#0f2925]"></span>
               <span className="flex flex-col gap-2">
-                <span className="rounded-full bg-white/90 px-3 py-1.5 text-[10px] font-semibold text-[#34414A]">
+                <span className="rounded-full bg-white border border-gray-200 px-3 py-1.5 text-[10px] font-semibold text-[#34414A]">
                   Your team is busy
                 </span>
                 <span className="icon-mask icon-headset [--icon-size:0.875rem] flex items-center gap-1.5 rounded-full bg-[#8CA365] px-3 py-1.5 text-[10px] font-semibold text-white">

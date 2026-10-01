@@ -84,18 +84,18 @@ export default function ServicesList() {
             <li key={service.title}>
               <Link prefetch={false}
                 href={service.href}
-                className="group grid gap-x-8 rounded-2xl border border-gray-100 bg-white p-7 sm:p-8 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-[#8CA365]/40 hover:shadow-xl md:grid-cols-[1fr_auto]"
+                className="group grid gap-x-8 rounded-2xl border border-gray-100 bg-white p-7 sm:p-8 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-[#295657] hover:bg-[#295657] hover:shadow-xl md:grid-cols-[1fr_auto]"
               >
-                <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-[#8CA365] md:col-start-1 md:row-start-1">
+                <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-[#8CA365] transition-colors group-hover:text-white/75 md:col-start-1 md:row-start-1">
                   {service.eyebrow}
                 </p>
-                <h3 className="mt-2 text-xl sm:text-2xl font-bold text-[#34414A] transition-colors group-hover:text-[#8CA365] md:col-start-1 md:row-start-2">
+                <h3 className="mt-2 text-xl sm:text-2xl font-bold text-[#34414A] transition-colors group-hover:text-white md:col-start-1 md:row-start-2">
                   {service.title}
                 </h3>
-                <p className="mt-2 max-w-2xl leading-relaxed text-gray-600 md:col-start-1 md:row-start-3">
+                <p className="mt-2 max-w-2xl leading-relaxed text-gray-600 transition-colors group-hover:text-white/85 md:col-start-1 md:row-start-3">
                   {service.body}
                 </p>
-                <span className="mt-4 text-[11px] font-bold uppercase tracking-[0.18em] text-[#8CA365] transition-transform group-hover:translate-x-1 md:col-start-2 md:row-start-1 md:row-span-3 md:mt-0 md:self-start">
+                <span className="mt-4 text-[11px] font-bold uppercase tracking-[0.18em] text-[#8CA365] transition-all group-hover:translate-x-1 group-hover:text-white md:col-start-2 md:row-start-1 md:row-span-3 md:mt-0 md:self-start">
                   Learn More &rarr;
                 </span>
               </Link>
