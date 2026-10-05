@@ -1,3 +1,5 @@
+import { BLOG_POSTS } from '@/features/blog/posts'
+
 export const dynamic = 'force-static'
 
 const BASE_URL = 'https://livephoneanswering.com'
@@ -15,6 +17,8 @@ const ROUTES = [
   { path: '/industries-served', changeFrequency: 'monthly', priority: 0.8 },
   { path: '/how-it-works', changeFrequency: 'monthly', priority: 0.8 },
   { path: '/contact-us', changeFrequency: 'monthly', priority: 0.8 },
+  { path: '/blog', changeFrequency: 'weekly', priority: 0.8 },
+  ...BLOG_POSTS.map((post) => ({ path: `/blog/${post.slug}`, changeFrequency: 'monthly', priority: 0.7 })),
   { path: '/privacy-policy', changeFrequency: 'yearly', priority: 0.3 },
 ]
 
