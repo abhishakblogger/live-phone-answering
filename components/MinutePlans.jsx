@@ -1,4 +1,6 @@
-const PLANS = [
+// Exported so other pages can present the same plans in their own layout —
+// prices must never be duplicated into a second file.
+export const PLANS = [
   {
     tag: 'Starter',
     minutes: '100 Minutes',
