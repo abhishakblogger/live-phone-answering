@@ -1,31 +1,34 @@
 import Link from 'next/link'
 import { PLANS } from '@/components/MinutePlans'
 
-// Scheduling-specific presentation of the same plans the rest of the site
-// sells. Prices are imported, never retyped, so they cannot drift apart.
-const SCHEDULING_DESCRIPTIONS = {
-  'Starter Answering': 'For businesses that need live call answering, message taking, and basic call screening.',
-  'Growth Answering': 'For growing teams that need caller intake and appointment request handling.',
-  'Business Answering': 'For higher call volumes and more detailed call routing requirements.',
-}
-
-export default function SchedulingPricing() {
+// One pricing block for every page that sells the same plans. Prices come from
+// PLANS and are never retyped, so they cannot drift apart; only the wording
+// around them varies per page.
+export default function PlanPricing({
+  heading = 'Live Phone Answering Pricing',
+  intro = 'Choose the monthly receptionist minutes your business needs. Our live receptionists answer calls, take messages, route callers, and help you capture more opportunities without hiring in-house staff.',
+  badge = 'Best Value',
+  descriptions = {},
+  customTitle = 'Need 1,000+ Minutes or Custom Coverage?',
+  customBody = 'Discuss call volumes, coverage hours, and handling requirements with our team.',
+  footnote = 'Plan features and supported workflows are confirmed during setup.',
+  headingId = 'plan-pricing-heading',
+}) {
   return (
-    <section className="w-full bg-[#12382a] px-4 py-14 md:py-16 lg:px-[5%]" aria-labelledby="scheduling-pricing-heading">
+    <section className="w-full bg-[#12382a] px-4 py-14 md:py-16 lg:px-[5%]" aria-labelledby={headingId}>
       <div className="mx-auto max-w-6xl">
         <div className="mx-auto max-w-3xl text-center">
           <p className="inline-flex items-center rounded-full border border-white/25 px-5 py-2 text-[0.72rem] font-bold uppercase tracking-[0.14em] text-white/80">
             Simple monthly minute plans
           </p>
           <h2
-            id="scheduling-pricing-heading"
+            id={headingId}
             className="mt-5 text-3xl font-extrabold leading-[1.14] tracking-tight text-white sm:text-[2.5rem]"
           >
-            Appointment Scheduling Answering Service Pricing
+            {heading}
           </h2>
           <p className="mt-4 text-[0.92rem] leading-relaxed text-white/70">
-            Choose the monthly receptionist minutes your business needs. Growth and Business plans include appointment
-            request handling. For direct calendar booking or more complex scheduling, request a custom quote.
+            {intro}
           </p>
         </div>
 
@@ -34,7 +37,7 @@ export default function SchedulingPricing() {
             <li key={plan.name} className="relative h-full">
               {plan.featured && (
                 <span className="absolute -top-3.5 left-1/2 z-10 -translate-x-1/2 whitespace-nowrap rounded-full bg-[#8CA365] px-4 py-1.5 text-[0.8rem] font-semibold text-white">
-                  Appointment request support
+                  {badge}
                 </span>
               )}
 
@@ -49,7 +52,7 @@ export default function SchedulingPricing() {
 
                 <h3 className="mt-4 text-[1.4rem] font-extrabold text-[#1a2e35]">{plan.name}</h3>
                 <p className="mt-2 text-[0.84rem] leading-relaxed text-gray-600">
-                  {SCHEDULING_DESCRIPTIONS[plan.name] || plan.description}
+                  {descriptions[plan.name] || plan.description}
                 </p>
 
                 <p className="mt-5 text-[0.82rem] text-gray-600">Starting at</p>
@@ -89,10 +92,10 @@ export default function SchedulingPricing() {
         <div className="mt-6 flex flex-col items-start gap-5 rounded-xl bg-[#1d4a37] px-6 py-5 sm:flex-row sm:items-center sm:justify-between">
           <p>
             <span className="block text-[1.2rem] font-extrabold text-white">
-              Need 1,000+ Minutes or Custom Scheduling?
+              {customTitle}
             </span>
             <span className="mt-1 block text-[0.85rem] text-white/70">
-              Discuss direct booking, calendar compatibility, and scheduling requirements with our team.
+              {customBody}
             </span>
           </p>
 
@@ -108,8 +111,7 @@ export default function SchedulingPricing() {
         {/* What a plan covers depends on the caller's own tools, so the
             distinction between request handling and direct booking is stated. */}
         <p className="mt-5 text-center text-[0.78rem] text-white/60">
-          Appointment request handling captures booking requests for your team. Direct calendar booking and
-          integrations are confirmed separately.
+          {footnote}
         </p>
       </div>
     </section>

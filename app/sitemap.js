@@ -14,6 +14,7 @@ const ROUTES = [
   { path: '/after-hours-answering-service', changeFrequency: 'monthly', priority: 0.9 },
   { path: '/overflow-call-answering', changeFrequency: 'monthly', priority: 0.9 },
   { path: '/lead-capture', changeFrequency: 'monthly', priority: 0.9 },
+  { path: '/call-routing', changeFrequency: 'monthly', priority: 0.9 },
   { path: '/appointment-scheduling', changeFrequency: 'monthly', priority: 0.9 },
   { path: '/about-us', changeFrequency: 'monthly', priority: 0.8 },
   { path: '/industries-served', changeFrequency: 'monthly', priority: 0.8 },

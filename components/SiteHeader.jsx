@@ -18,7 +18,7 @@ const NAV_LINKS = [
       { href: '/overflow-call-answering', label: 'Overflow Call Answering' },
       { href: '/appointment-scheduling', label: 'Appointment Scheduling Service' },
       { href: '/lead-capture', label: 'Lead Capture' },
-      { href: '/services', label: 'Call Routing Service' },
+      { href: '/call-routing', label: 'Call Routing Service' },
     ],
   },
   {

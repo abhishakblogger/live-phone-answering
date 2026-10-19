@@ -9,7 +9,7 @@ import SchedulingBenefits from '@/features/appointment-scheduling/SchedulingBene
 import IndustriesTabs from '@/components/IndustriesTabs'
 import SchedulingReceptionists from '@/features/appointment-scheduling/SchedulingReceptionists'
 import SchedulingWhyChooseUs from '@/features/appointment-scheduling/SchedulingWhyChooseUs'
-import SchedulingPricing from '@/features/appointment-scheduling/SchedulingPricing'
+import PlanPricing from '@/components/PlanPricing'
 import Testimonials from '@/components/Testimonials'
 import FaqSection from '@/components/FaqSection'
 import ContactFormSection from '@/components/ContactFormSection'
@@ -153,7 +153,20 @@ export default function AppointmentSchedulingPage() {
         <IndustriesTabs />
         <SchedulingReceptionists />
         <SchedulingWhyChooseUs />
-        <SchedulingPricing />
+        <PlanPricing
+          headingId='scheduling-pricing-heading'
+          heading='Appointment Scheduling Answering Service Pricing'
+          intro='Choose the monthly receptionist minutes your business needs. Growth and Business plans include appointment request handling. For direct calendar booking or more complex scheduling, request a custom quote.'
+          badge='Appointment request support'
+          descriptions={{
+            'Starter Answering': 'For businesses that need live call answering, message taking, and basic call screening.',
+            'Growth Answering': 'For growing teams that need caller intake and appointment request handling.',
+            'Business Answering': 'For higher call volumes and more detailed call routing requirements.',
+          }}
+          customTitle='Need 1,000+ Minutes or Custom Scheduling?'
+          customBody='Discuss direct booking, calendar compatibility, and scheduling requirements with our team.'
+          footnote='Appointment request handling captures booking requests for your team. Direct calendar booking and integrations are confirmed separately.'
+        />
         <Testimonials />
         <FaqSection {...homeFaq} />
         <ContactFormSection theme="dark" />
