@@ -44,7 +44,7 @@ export default function SchedulingWhyChooseUs() {
             </p>
             <h2
               id="scheduling-why-heading"
-              className="mt-4 text-3xl font-extrabold leading-[1.12] tracking-tight text-white sm:text-[2.5rem]"
+              className="mt-4 text-3xl sm:text-4xl md:text-5xl font-bold leading-[1.12] tracking-tight text-white"
             >
               Appointment Scheduling
               <br />

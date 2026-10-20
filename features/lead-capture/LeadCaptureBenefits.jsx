@@ -36,7 +36,7 @@ export default function LeadCaptureBenefits() {
           </p>
           <h2
             id="lead-capture-benefits-heading"
-            className="mt-4 text-3xl font-extrabold leading-[1.14] tracking-tight text-[#1b4332] sm:text-[2.5rem]"
+            className="mt-4 text-3xl sm:text-4xl md:text-5xl font-bold leading-[1.14] tracking-tight text-[#1b4332]"
           >
             Turn Inbound Enquiries
             <br />
@@ -50,30 +50,18 @@ export default function LeadCaptureBenefits() {
 
         <div className="mt-9 grid grid-cols-1 items-stretch gap-8 lg:grid-cols-[minmax(0,0.92fr)_minmax(0,1fr)] lg:gap-11">
           {/* The photo absorbs the height difference so both columns stay level. */}
-          <figure className="flex flex-col overflow-hidden rounded-xl">
-            <span className="relative block min-h-[16rem] flex-grow">
-              <img
-                src="/images/scheduling-receptionist.webp"
-                alt="A receptionist taking notes while greeting a customer at a front desk"
-                width={1024}
-                height={1024}
-                loading="lazy"
-                decoding="async"
-                className="absolute inset-0 h-full w-full object-cover"
-              />
-            </span>
-            <figcaption className="flex items-center gap-5 bg-[#1d4b37] px-6 py-5">
-              <span
-                className="icon-mask icon-chats [--icon-size:2rem] flex-shrink-0 border-r border-white/20 pr-5 text-[#a8c47d]"
-                aria-hidden="true"
-              ></span>
-              <span className="min-w-0">
-                <span className="block text-[1.02rem] font-bold text-white">Be present for the people you serve.</span>
-                <span className="mt-1 block text-[0.86rem] leading-relaxed text-white/70">
-                  Let your receptionists handle the first enquiry.
-                </span>
-              </span>
-            </figcaption>
+          {/* The caption panel is part of the supplied artwork, so it is not
+              drawn again in HTML and the photo is not cropped. */}
+          <figure className="overflow-hidden rounded-xl">
+            <img
+              src="/images/lead-capture-benefits.webp"
+              alt="A receptionist in a green blazer smiling as she takes notes for a visitor at a front desk, above the line: Be present for the people you serve. Let your receptionists handle the first enquiry."
+              width={1100}
+              height={892}
+              loading="lazy"
+              decoding="async"
+              className="block h-auto w-full"
+            />
           </figure>
 
           <ul className="flex h-full list-none flex-col divide-y divide-gray-300/50">

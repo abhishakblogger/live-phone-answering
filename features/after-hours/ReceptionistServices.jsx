@@ -75,7 +75,7 @@ export default function ReceptionistServices() {
             </p>
             <h2
               id="services-heading"
-              className="mt-2 text-3xl font-extrabold leading-[1.05] tracking-tight text-[#1a2e35] sm:text-4xl lg:text-[2.9rem]"
+              className="mt-2 text-3xl sm:text-4xl md:text-5xl font-bold leading-[1.05] tracking-tight text-[#1a2e35]"
             >
               What Our After-Hours
               <br />
@@ -146,17 +146,14 @@ export default function ReceptionistServices() {
           <div className="flex flex-col overflow-hidden rounded-xl bg-[#0f2925]">
             <div className="relative flex-shrink-0">
               <img
-                src="/images/zero-bot-frustration-live-answering-service.webp"
+                src="/images/after-hours-greeting.webp"
                 alt="An after-hours receptionist wearing a headset greeting a caller"
-                width={1200}
-                height={700}
+                width={1566}
+                height={672}
                 loading="lazy"
                 decoding="async"
-                className="h-40 w-full object-cover sm:h-44"
+                className="block h-auto w-full"
               />
-              <p className="absolute top-4 left-4 rounded-md bg-white/95 px-3.5 py-1.5 text-[0.82rem] font-medium text-[#34414A] shadow-sm">
-                Your business. A familiar welcome.
-              </p>
             </div>
 
             <div className="flex flex-grow flex-col p-5 sm:p-6">

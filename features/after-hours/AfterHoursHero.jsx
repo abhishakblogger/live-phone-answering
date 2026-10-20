@@ -19,13 +19,6 @@ const CRUMBS = [
   { label: 'Services', href: '/services' },
 ]
 
-// The summary card is a worked example, not a real customer record — the
-// eyebrow says so on screen so nothing here reads as a factual claim.
-const SUMMARY_ROWS = [
-  { label: 'Received', value: '8:42 PM' },
-  { label: 'Next step', value: 'Morning follow-up' },
-]
-
 // Tells Google where this page sits in the site, which is what produces the
 // Home > Services > After-Hours Answering trail in search results.
 const breadcrumbSchema = {
@@ -72,7 +65,7 @@ export default function AfterHoursHero() {
         </ol>
       </nav>
 
-      <div className="max-w-7xl mx-auto relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center pt-10 pb-16 lg:pt-14 lg:pb-20">
+      <div className="max-w-7xl mx-auto relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center pt-10 pb-16 lg:pt-[2rem] lg:pb-20">
         <div>
           <p className="icon-mask icon-moon inline-flex items-center gap-2 bg-white/70 backdrop-blur-sm text-[#295657] rounded-full text-xs sm:text-sm font-bold uppercase tracking-wider px-5 py-2 mb-6 shadow-sm border border-white/50">
             Live support after your office closes
@@ -111,43 +104,21 @@ export default function AfterHoursHero() {
           <p className="text-sm text-[#5a6c6e] mt-5">Your business name. Your call instructions. Your schedule.</p>
         </div>
 
-        {/* The badge and summary card are positioned against this wrapper so
-            they stay pinned to the artwork at every breakpoint. */}
-        <div className="relative mx-auto w-full max-w-[560px]">
+        {/* Badge and summary card are part of the supplied artwork, so
+            nothing is overlaid on top of it here. */}
+        <div className="mx-auto w-full max-w-[560px]">
           <img
-            src="/images/office-receptionists.webp"
-            srcSet="/images/office-receptionists-640.webp 640w, /images/office-receptionists.webp 1024w"
+            src="/images/after-hours-hero.webp"
+            srcSet="/images/after-hours-hero-560.webp 560w, /images/after-hours-hero.webp 992w"
             sizes="(max-width: 1024px) 90vw, 560px"
-            alt="A receptionist wearing a headset answering an after-hours call at a desk in the evening"
-            width={1024}
-            height={1024}
+            alt="A receptionist wearing a headset taking an after-hours call, beside a captured message summary for a recurring appointment booking"
+            width={992}
+            height={1070}
             loading="eager"
             fetchPriority="high"
             decoding="async"
             className="w-full h-auto rounded-3xl shadow-xl"
           />
-
-          <p className="icon-mask icon-moon [--icon-size:0.875rem] absolute top-4 right-4 inline-flex items-center gap-2 rounded-full bg-[#0f2925]/90 backdrop-blur-sm px-4 py-2 text-xs font-semibold text-white shadow-lg">
-            After-hours support
-          </p>
-
-          <div className="absolute -bottom-6 left-4 right-10 sm:left-6 sm:right-20 rounded-2xl bg-white/95 backdrop-blur-sm p-5 shadow-xl border border-gray-100">
-            <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-gray-500">Illustrative call summary</p>
-            <p className="mt-1.5 text-base font-bold text-[#34414A]">New service inquiry</p>
-
-            <dl className="mt-3 space-y-1.5 border-t border-gray-100 pt-3">
-              {SUMMARY_ROWS.map((row) => (
-                <div key={row.label} className="flex items-center justify-between gap-4 text-xs">
-                  <dt className="text-gray-500">{row.label}</dt>
-                  <dd className="font-semibold text-[#34414A]">{row.value}</dd>
-                </div>
-              ))}
-            </dl>
-
-            <p className="icon-mask icon-check-circle [--icon-size:1rem] mt-3 flex items-center gap-2 border-t border-gray-100 pt-3 text-xs font-semibold text-[#34414A] before:text-[#566e34]">
-              Message captured
-            </p>
-          </div>
         </div>
       </div>
 

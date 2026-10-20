@@ -30,7 +30,7 @@ const ROWS = [
 export default function CallHandlingRules() {
   return (
     <section className="w-full bg-[#f8f6ec] px-4 py-14 md:py-16 lg:px-[5%]" aria-labelledby="call-handling-heading">
-      <div className="mx-auto max-w-6xl">
+      <div className="mx-auto max-w-8xl">
         <div className="grid grid-cols-1 items-start gap-4 lg:grid-cols-[minmax(0,1fr)_minmax(0,25rem)] lg:gap-12">
           <div>
             <p className="icon-mask icon-sliders [--icon-size:1rem] inline-flex items-center gap-2 bg-[#8CA365]/10 text-[#5f7a3a] rounded-full text-sm font-semibold px-4 py-1.5">
@@ -38,7 +38,7 @@ export default function CallHandlingRules() {
             </p>
             <h2
               id="call-handling-heading"
-              className="mt-2 text-3xl font-extrabold leading-[1.05] tracking-tight text-[#1a2e35] sm:text-4xl lg:text-[2.9rem]"
+              className="mt-2 text-3xl sm:text-4xl md:text-5xl font-bold leading-[1.05] tracking-tight text-[#1a2e35]"
             >
               After-Hours Calls.
               <br />

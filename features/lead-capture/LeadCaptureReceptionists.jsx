@@ -24,7 +24,9 @@ export default function LeadCaptureReceptionists() {
       className="w-full bg-[#f8f7f1] px-4 py-14 md:py-16 lg:px-[5%]"
       aria-labelledby="lead-capture-receptionists-heading"
     >
-      <div className="mx-auto grid max-w-6xl grid-cols-1 items-stretch gap-9 lg:grid-cols-2 lg:gap-12">
+      {/* Narrower photo column: the artwork is portrait, so an even split made
+          it far taller than the list of points beside it. */}
+      <div className="mx-auto grid max-w-6xl grid-cols-1 items-start gap-9 lg:grid-cols-[minmax(0,1fr)_minmax(0,0.75fr)] lg:gap-12">
         <div>
           <p className="icon-mask icon-headset [--icon-size:1rem] inline-flex items-center gap-2 bg-[#8CA365]/10 text-[#5f7a3a] rounded-full text-sm font-semibold px-4 py-1.5">
             A human voice for new enquiries
@@ -32,7 +34,7 @@ export default function LeadCaptureReceptionists() {
 
           <h2
             id="lead-capture-receptionists-heading"
-            className="mt-4 text-3xl font-extrabold leading-[1.12] tracking-tight text-[#1b4332] sm:text-[2.4rem]"
+            className="mt-4 text-3xl sm:text-4xl md:text-5xl font-bold leading-[1.12] tracking-tight text-[#1b4332]"
           >
             Live Virtual Receptionists
             <br />
@@ -82,30 +84,18 @@ export default function LeadCaptureReceptionists() {
         </div>
 
         {/* Photo grows to match the column beside it, so the two stay level. */}
-        <figure className="flex flex-col overflow-hidden rounded-xl">
-          <span className="relative block min-h-[18rem] flex-grow">
-            <img
-              src="/images/zero-bot-frustration-live-answering-service.webp"
-              alt="A live receptionist wearing a headset handling a new enquiry at a desk"
-              width={1200}
-              height={1200}
-              loading="lazy"
-              decoding="async"
-              className="absolute inset-0 h-full w-full object-cover"
-            />
-          </span>
-          <figcaption className="flex items-center gap-5 bg-[#1d4b37] px-6 py-5">
-            <span
-              className="icon-mask icon-headset-call [--icon-size:2.1rem] flex-shrink-0 border-r border-white/20 pr-5 text-[#a8c47d]"
-              aria-hidden="true"
-            ></span>
-            <span className="min-w-0">
-              <span className="block text-[1.05rem] font-bold text-white">A helpful first conversation.</span>
-              <span className="mt-1 block text-[0.86rem] leading-relaxed text-white/70">
-                Clear details for the next one.
-              </span>
-            </span>
-          </figcaption>
+        {/* The caption panel is part of the supplied artwork, so it is not
+            drawn again in HTML and the photo is not cropped. */}
+        <figure className="overflow-hidden rounded-xl">
+          <img
+            src="/images/lead-capture-receptionists.webp"
+            alt="A receptionist wearing a headset working at her screen, above the line: A helpful first conversation. Clear details for the next one."
+            width={848}
+            height={1233}
+            loading="lazy"
+            decoding="async"
+            className="block h-auto w-full"
+          />
         </figure>
       </div>
     </section>

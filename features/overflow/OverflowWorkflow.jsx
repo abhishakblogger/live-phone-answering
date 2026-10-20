@@ -99,7 +99,7 @@ export default function OverflowWorkflow() {
           </p>
           <h2
             id="overflow-workflow-heading"
-            className="mt-3 text-3xl font-extrabold leading-[1.12] tracking-tight text-white sm:text-[2.4rem]"
+            className="mt-3 text-3xl sm:text-4xl md:text-5xl font-bold leading-[1.12] tracking-tight text-white"
           >
             How Our Overflow Call
             <br />
@@ -134,7 +134,7 @@ export default function OverflowWorkflow() {
               >
                 <span
                   className={`h-3 w-3 flex-shrink-0 rounded-full border-2 ${
-                    flowId === item.id ? 'border-[#0f2925] bg-[#0f2925]/35' : 'border-white/40'
+                    flowId === item.id ? 'border-[#0f2925] bg-[#ffffff]' : 'border-white/40'
                   }`}
                   aria-hidden="true"
                 ></span>
@@ -144,65 +144,65 @@ export default function OverflowWorkflow() {
           </div>
         </div>
 
-        <ol className="mt-7 grid list-none grid-cols-1 gap-y-10 sm:grid-cols-2 sm:gap-x-7 lg:grid-cols-4">
+        <ol className="mt-7 grid list-none grid-cols-1 gap-y-10 sm:grid-cols-2 sm:gap-x-8 lg:grid-cols-4">
           {STEPS.map((step, index) => (
             <li key={step.number} className="relative">
               <div
-                className={`relative flex h-full flex-col items-center rounded-2xl px-6 pb-5 pt-16 text-center shadow-lg ${
-                  step.active ? 'border-2 border-[#8CA365] bg-[#eef5e2]' : 'bg-white'
+                className={`relative flex h-full flex-col items-center rounded-2xl px-6 pb-4 pt-12 text-center shadow-lg ${
+                  step.active ? 'border-4 border-[#8CA365] bg-[#eef5e2]' : 'bg-[#F8F9F4]'
                 }`}
               >
                 <span
-                  className="absolute top-3 left-1/2 flex h-10 w-10 -translate-x-1/2 items-center justify-center rounded-full bg-[#17352a] text-[0.78rem] font-bold text-white"
+                  className="absolute -top-4 left-1/2 flex h-9 w-9 -translate-x-1/2 items-center justify-center rounded-full bg-[#17352a] text-[0.78rem] font-bold  border-2 border-white text-white"
                   aria-hidden="true"
                 >
                   {step.number}
                 </span>
 
                 {step.active && (
-                  <span className="absolute right-3 top-[3.1rem] rounded-full bg-[#8CA365]/25 px-2.5 py-1 text-[0.58rem] font-bold uppercase tracking-[0.12em] text-[#3f5a26]">
+                  <span className="absolute right-3 top-7 rounded-full bg-[#8CA365]/25 px-2.5 py-1 text-[0.58rem] font-bold uppercase tracking-[0.12em] text-[#3f5a26]">
                     Active step
                   </span>
                 )}
 
                 <span
-                  className={`icon-mask ${step.icon} [--icon-size:2.3rem] text-[#6b8a3e]`}
+                  className={`icon-mask ${step.icon} [--icon-size:3rem] text-[#6b8a3e]`}
                   aria-hidden="true"
                 ></span>
 
-                <h3 className="mt-3 text-[0.98rem] font-bold text-[#1a2e35]">{step.title}</h3>
+                <h3 className="mt-2.5 text-[0.98rem] font-bold leading-tight text-[#1a2e35]">{step.title}</h3>
 
                 {step.isTrigger ? (
                   // Every flow's wording stays in the HTML; only visibility changes.
                   <span className="mt-2 block w-full flex-grow">
                     {FLOWS.map((item) => (
                       <span key={item.id} hidden={item.id !== flowId}>
-                        <span className="block text-[0.82rem] leading-relaxed text-gray-600">{item.trigger.body}</span>
+                        <span className="block text-[0.82rem] leading-[1.45] text-gray-600">{item.trigger.body}</span>
                       </span>
                     ))}
                   </span>
                 ) : (
-                  <p className="mt-2 flex-grow text-[0.82rem] leading-relaxed text-gray-600">{step.body}</p>
+                  <p className="mt-2 flex-grow text-[0.82rem] leading-[1.45] text-gray-600">{step.body}</p>
                 )}
 
                 {step.isTrigger ? (
-                  <span className="mt-4 block w-full">
+                  <span className="mt-3 block w-full">
                     {FLOWS.map((item) => (
                       <span key={item.id} hidden={item.id !== flowId}>
-                        <span className="flex w-full items-center justify-center gap-2 rounded-full bg-[#f3f5ef] px-4 py-2.5">
+                        <span className="flex w-full items-center justify-center gap-1.5 rounded-full bg-[#e5ebda] px-3 py-2.5">
                           <span
                             className={`icon-mask ${item.trigger.pillIcon} [--icon-size:0.9rem] text-[#295657]`}
                             aria-hidden="true"
                           ></span>
-                          <span className="text-[0.78rem] font-semibold text-[#1a2e35]">{item.trigger.pill}</span>
+                          <span className="text-[0.78rem] font-semibold t">{item.trigger.pill}</span>
                         </span>
                       </span>
                     ))}
                   </span>
                 ) : (
                   <p
-                    className={`mt-4 flex w-full items-center justify-center gap-2 rounded-full px-4 py-2.5 ${
-                      step.active ? 'bg-[#dfecc9]' : 'bg-[#f3f5ef]'
+                    className={`mt-3 flex w-full items-center justify-center  gap-1.5 rounded-full px-3 py-2.5 ${
+                      step.active ? 'bg-[#dfecc9] ' : 'bg-[#e5ebda]'
                     }`}
                   >
                     <span
@@ -220,7 +220,7 @@ export default function OverflowWorkflow() {
 
               {index < STEPS.length - 1 && (
                 <svg
-                  className="absolute left-full top-[26%] hidden h-3 w-7 -translate-y-1/2 lg:block"
+                  className="absolute left-full top-[20%] hidden h-3 w-8 -translate-y-1/2 lg:block"
                   viewBox="0 0 24 12"
                   fill="none"
                   aria-hidden="true"

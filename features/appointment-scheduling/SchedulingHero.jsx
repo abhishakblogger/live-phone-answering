@@ -68,7 +68,7 @@ export default function SchedulingHero() {
           </ol>
         </nav>
 
-        <div className="grid grid-cols-1 items-center gap-10 pt-10 pb-16 lg:pt-14 lg:pb-20 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.06fr)] lg:gap-14">
+        <div className="grid grid-cols-1 items-center gap-10 pt-10 pb-16 lg:pt-[4rem] lg:pb-20 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.06fr)] lg:gap-14">
           <div>
 
             <p className="icon-mask icon-calendar inline-flex items-center gap-2 bg-white/70 backdrop-blur-sm text-[#295657] rounded-full text-xs sm:text-sm font-bold uppercase tracking-wider px-5 py-2 mb-6 shadow-sm border border-white/50">
@@ -131,14 +131,16 @@ export default function SchedulingHero() {
           </div>
 
           <img
-            src="/images/scheduling-receptionist.webp"
-            alt="A laptop showing a weekly appointment calendar beside a notebook on a desk"
+            src="/images/scheduling-hero.webp"
+            srcSet="/images/scheduling-hero-560.webp 560w, /images/scheduling-hero.webp 1024w"
+            sizes="(max-width: 1024px) 90vw, 520px"
+            alt="A laptop showing a weekly appointment calendar beside a notebook and pen on a desk"
             width={1024}
-            height={1024}
+            height={1003}
             loading="eager"
             fetchPriority="high"
             decoding="async"
-            className="aspect-square w-full rounded-2xl object-cover"
+            className="block h-auto w-full rounded-2xl"
           />
         </div>
       </div>

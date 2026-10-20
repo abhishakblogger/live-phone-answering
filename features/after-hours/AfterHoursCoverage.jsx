@@ -21,7 +21,9 @@ const TABS = [
     ],
     cta: { href: '/contact-us', label: 'Plan my evening coverage' },
     pill: 'Your evening, uninterrupted',
-    image: '/images/higher-close-rates-live-phone-answering-service.webp',
+    image: '/images/after-hours-evening.webp',
+    // this artwork already carries the pill and the message card
+    bakedOverlay: true,
     alt: 'A receptionist taking an evening call at a desk after office hours',
     card: { title: 'New service inquiry captured', body: 'Details ready for office follow-up' },
   },
@@ -78,7 +80,7 @@ export default function AfterHoursCoverage() {
             </p>
             <h2
               id="coverage-heading"
-              className="mt-2 text-3xl font-extrabold leading-[1.05] tracking-tight text-[#1a2e35] sm:text-4xl lg:text-[2.9rem]"
+              className="mt-2 text-3xl sm:text-4xl md:text-5xl font-bold leading-[1.05] tracking-tight text-[#1a2e35]"
             >
               Coverage From Closing Time
               <br />
@@ -176,31 +178,35 @@ export default function AfterHoursCoverage() {
                     className="aspect-[3/2] w-full rounded-xl object-cover"
                   />
 
-                  <p className="icon-mask icon-moon [--icon-size:0.9rem] absolute top-3.5 left-3.5 inline-flex items-center gap-2 rounded-lg bg-[#0f2925]/80 backdrop-blur-sm px-3 py-1.5 text-[0.8rem] font-medium text-white">
-                    {tab.pill}
-                  </p>
-
-                  <div className="absolute bottom-3.5 right-3.5 left-3.5 rounded-lg bg-white/95 backdrop-blur-sm px-4 py-3 shadow-lg sm:left-auto sm:w-[21rem]">
-                    <p className="text-[0.6rem] font-bold uppercase tracking-[0.16em] text-gray-500">
-                      Illustrative message
+                  {!tab.bakedOverlay && (
+                    <p className="icon-mask icon-moon [--icon-size:0.9rem] absolute top-3.5 left-3.5 inline-flex items-center gap-2 rounded-lg bg-[#0f2925]/80 backdrop-blur-sm px-3 py-1.5 text-[0.8rem] font-medium text-white">
+                      {tab.pill}
                     </p>
-                    <div className="mt-1 flex items-center gap-3">
-                      <span
-                        className="icon-mask icon-phone [--icon-size:1.3rem] flex-shrink-0 text-[#295657]"
-                        aria-hidden="true"
-                      ></span>
-                      <span className="min-w-0 flex-grow">
-                        <span className="block text-[0.9rem] font-bold leading-tight text-[#34414A]">
-                          {tab.card.title}
+                  )}
+
+                  {!tab.bakedOverlay && (
+                    <div className="absolute bottom-3.5 right-3.5 left-3.5 rounded-lg bg-white/95 backdrop-blur-sm px-4 py-3 shadow-lg sm:left-auto sm:w-[21rem]">
+                      <p className="text-[0.6rem] font-bold uppercase tracking-[0.16em] text-gray-500">
+                        Illustrative message
+                      </p>
+                      <div className="mt-1 flex items-center gap-3">
+                        <span
+                          className="icon-mask icon-phone [--icon-size:1.3rem] flex-shrink-0 text-[#295657]"
+                          aria-hidden="true"
+                        ></span>
+                        <span className="min-w-0 flex-grow">
+                          <span className="block text-[0.9rem] font-bold leading-tight text-[#34414A]">
+                            {tab.card.title}
+                          </span>
+                          <span className="mt-0.5 block text-[0.8rem] text-gray-500">{tab.card.body}</span>
                         </span>
-                        <span className="mt-0.5 block text-[0.8rem] text-gray-500">{tab.card.body}</span>
-                      </span>
-                      <span
-                        className="icon-mask icon-check [--icon-size:0.9rem] flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-full bg-[#eef6e8] text-[#566e34]"
-                        aria-hidden="true"
-                      ></span>
+                        <span
+                          className="icon-mask icon-check [--icon-size:0.9rem] flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-full bg-[#eef6e8] text-[#566e34]"
+                          aria-hidden="true"
+                        ></span>
+                      </div>
                     </div>
-                  </div>
+                  )}
                 </div>
               </div>
             </div>

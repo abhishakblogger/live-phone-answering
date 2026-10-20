@@ -56,7 +56,7 @@ export default function LeadCaptureHowItWorks() {
           </p>
           <h2
             id="lead-capture-how-heading"
-            className="mt-4 text-3xl font-extrabold leading-[1.14] tracking-tight text-white sm:text-[2.4rem]"
+            className="mt-4 text-3xl sm:text-4xl md:text-5xl font-bold leading-[1.14] tracking-tight text-white"
           >
             How Our Lead Capture
             <br />
@@ -73,7 +73,7 @@ export default function LeadCaptureHowItWorks() {
             <li key={step.number} className="relative">
               <div className="relative flex h-full flex-col items-center rounded-xl bg-[#f7f7f0] px-5 pb-6 pt-12 text-center">
                 <span
-                  className="absolute -top-5 left-1/2 flex h-11 w-11 -translate-x-1/2 items-center justify-center rounded-full bg-[#8CA365] text-[0.85rem] font-bold text-white"
+                  className="absolute -top-5 left-1/2 flex h-11 w-11 -translate-x-1/2 items-center border-2 border-white justify-center rounded-full bg-[#8CA365] text-[0.85rem] font-bold text-white"
                   aria-hidden="true"
                 >
                   {step.number}

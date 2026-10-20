@@ -47,7 +47,7 @@ export default function LeadCaptureServices() {
           </p>
           <h2
             id="lead-capture-services-heading"
-            className="mt-4 text-3xl font-extrabold leading-[1.14] tracking-tight text-[#1b4332] sm:text-[2.5rem]"
+            className="mt-4 text-3xl sm:text-4xl md:text-5xl font-bold leading-[1.14] tracking-tight text-[#1b4332]"
           >
             Lead Capture and Intake
             <br />
@@ -63,7 +63,7 @@ export default function LeadCaptureServices() {
           {SERVICES.map((service) => (
             <li
               key={service.title}
-              className="flex h-full flex-col rounded-xl border border-gray-300/50 bg-[#fbfaf6] p-5 sm:p-6"
+              className="flex h-full flex-col rounded-xl border border-gray-300/50 bg-[#fff] p-5 sm:p-6"
             >
               {/* Icon and title share a row, as in the reference; the body sits
                   below at full card width rather than indented under the title. */}

@@ -36,7 +36,7 @@ export default function ServiceAssurance() {
 
           <h2
             id="assurance-heading"
-            className="mt-4 text-3xl font-extrabold leading-[1.15] tracking-tight text-white sm:text-4xl lg:text-[2.7rem]"
+            className="mt-4 text-3xl sm:text-4xl md:text-5xl font-bold leading-[1.15] tracking-tight text-white"
           >
             Your office closes.
             <br />

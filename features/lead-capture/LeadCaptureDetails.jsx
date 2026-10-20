@@ -23,18 +23,6 @@ const QUESTIONS = [
   },
 ]
 
-// A worked example, labelled as one on screen. The two-column pair sits first,
-// then the full-width rows, exactly as in the reference.
-const PAIRED_ROWS = [
-  { icon: 'icon-calendar', label: 'Appointment request', value: 'New patient consultation' },
-  { icon: 'icon-user', label: 'Patient status', value: 'First-time caller' },
-]
-
-const FULL_ROWS = [
-  { icon: 'icon-chat', label: 'Reason for call', value: 'Asking about appointment availability' },
-  { icon: 'icon-id-card', label: 'Contact details', value: 'Name and callback number captured' },
-]
-
 const STAGES = [
   { label: 'Capture', title: 'Record the enquiry', body: 'Who called and what they need.' },
   { label: 'Qualification', title: 'Check your criteria', body: 'Apply your agreed intake rules.' },
@@ -53,7 +41,7 @@ export default function LeadCaptureDetails() {
         </p>
         <h2
           id="lead-capture-details-heading"
-          className="mt-4 text-3xl font-extrabold leading-[1.14] tracking-tight text-[#1b4332] sm:text-[2.5rem]"
+          className="mt-4 text-3xl sm:text-4xl md:text-5xl font-bold leading-[1.14] tracking-tight text-[#1b4332]"
         >
           The Lead Details Your Team
           <br />
@@ -64,7 +52,7 @@ export default function LeadCaptureDetails() {
           business and organize it for your team.
         </p>
 
-        <div className="mt-8 grid grid-cols-1 items-stretch gap-9 lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1fr)] lg:gap-12">
+        <div className="mt-8 grid grid-cols-1 items-start gap-9 lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1fr)] lg:gap-12">
           <ul className="flex h-full list-none flex-col divide-y divide-gray-300/50">
             {QUESTIONS.map((question, index) => (
               <li key={question.title} className={`flex flex-1 items-center gap-4 py-4 ${index === 0 ? 'lg:pt-0' : ''}`}>
@@ -80,77 +68,16 @@ export default function LeadCaptureDetails() {
             ))}
           </ul>
 
-          <div className="flex h-full flex-col">
-            <div className="flex flex-grow flex-col overflow-hidden rounded-xl bg-white shadow-lg">
-              <div className="flex items-center justify-between gap-4 bg-[#1d4b37] px-5 py-3.5">
-                <span className="min-w-0">
-                  <span className="block text-[0.62rem] font-bold uppercase tracking-[0.16em] text-white/60">
-                    Illustrative lead summary
-                  </span>
-                  <span className="mt-1 block text-[1.2rem] font-extrabold leading-tight text-white">
-                    Medical Appointment Enquiry
-                  </span>
-                </span>
-                <span
-                  className="icon-mask icon-medical-cross [--icon-size:1.7rem] flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-lg bg-[#8CA365] text-[#1d4b37]"
-                  aria-hidden="true"
-                ></span>
-              </div>
-
-              <p className="icon-mask icon-clock [--icon-size:1rem] flex items-center gap-2.5 bg-[#f4f4ee] px-5 py-2.5 text-[0.84rem] text-gray-600 before:text-[#5f7a3a]">
-                Callback requested today
-              </p>
-
-              <div className="divide-y divide-gray-200">
-                <div className="grid grid-cols-1 divide-y divide-gray-200 sm:grid-cols-2 sm:divide-x sm:divide-y-0">
-                  {PAIRED_ROWS.map((row) => (
-                    <div key={row.label} className="flex items-center gap-3.5 px-5 py-3">
-                      <span
-                        className={`icon-mask ${row.icon} [--icon-size:1.2rem] flex-shrink-0 text-[#4f6630]`}
-                        aria-hidden="true"
-                      ></span>
-                      <span className="min-w-0">
-                        <span className="block text-[0.6rem] font-bold uppercase tracking-[0.14em] text-gray-500">
-                          {row.label}
-                        </span>
-                        <span className="mt-0.5 block text-[0.9rem] font-bold text-[#1a2e35]">{row.value}</span>
-                      </span>
-                    </div>
-                  ))}
-                </div>
-
-                {FULL_ROWS.map((row) => (
-                  <div key={row.label} className="flex items-center gap-3.5 px-5 py-3">
-                    <span
-                      className={`icon-mask ${row.icon} [--icon-size:1.2rem] flex-shrink-0 text-[#4f6630]`}
-                      aria-hidden="true"
-                    ></span>
-                    <span className="min-w-0">
-                      <span className="block text-[0.6rem] font-bold uppercase tracking-[0.14em] text-gray-500">
-                        {row.label}
-                      </span>
-                      <span className="mt-0.5 block text-[0.9rem] font-bold text-[#1a2e35]">{row.value}</span>
-                    </span>
-                  </div>
-                ))}
-              </div>
-
-              <div className="mt-auto flex items-center gap-4 bg-[#1d4b37] px-5 py-3.5">
-                <span
-                  className="icon-mask icon-arrow-right [--icon-size:1.1rem] flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full border border-[#8CA365] text-[#a8c47d]"
-                  aria-hidden="true"
-                ></span>
-                <span className="min-w-0">
-                  <span className="block text-[0.6rem] font-bold uppercase tracking-[0.14em] text-white/60">
-                    Next step for your team
-                  </span>
-                  <span className="mt-0.5 block text-[1.05rem] font-bold text-white">Practice team to follow up</span>
-                  <span className="mt-0.5 block text-[0.8rem] text-white/70">
-                    Transfer unavailable. Request sent to the agreed practice contact.
-                  </span>
-                </span>
-              </div>
-            </div>
+          <div>
+            <img
+              src="/images/lead-capture-summary.webp"
+              alt="An illustrative lead summary for a medical appointment enquiry: callback requested today, appointment request for a new patient consultation, patient status first-time caller, reason for call asking about appointment availability, contact details name and callback number captured, and the next step for your team, practice team to follow up"
+              width={1100}
+              height={764}
+              loading="lazy"
+              decoding="async"
+              className="block h-auto w-full rounded-xl shadow-lg"
+            />
 
             {/* The example is medical, so it is explicitly not advice or a booking. */}
             <p className="mt-2.5 text-[0.76rem] text-gray-500">

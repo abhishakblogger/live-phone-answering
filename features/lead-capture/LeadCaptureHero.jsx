@@ -68,7 +68,9 @@ export default function LeadCaptureHero() {
           </ol>
         </nav>
 
-        <div className="grid grid-cols-1 items-center gap-10 pt-10 pb-16 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] lg:gap-14 lg:pt-14 lg:pb-20">
+        {/* The photo is portrait, so its column is narrowed until its height
+            lands near the copy beside it rather than towering over it. */}
+        <div className="grid grid-cols-1 items-center gap-10 pt-10 pb-16 lg:grid-cols-[minmax(0,1fr)_minmax(0,0.62fr)] lg:gap-14 lg:pt-14 lg:pb-20">
           <div>
             <p className="icon-mask icon-user-plus inline-flex items-center gap-2 bg-white/70 backdrop-blur-sm text-[#295657] rounded-full text-xs sm:text-sm font-bold uppercase tracking-wider px-5 py-2 mb-6 shadow-sm border border-white/50">
               Live receptionists. Useful lead details.
@@ -131,31 +133,21 @@ export default function LeadCaptureHero() {
           </div>
 
           {/* Photo grows to match the copy beside it so the two stay level. */}
-          <figure className="flex h-full flex-col overflow-hidden rounded-xl">
-            <span className="relative block min-h-[20rem] flex-grow">
-              <img
-                src="/images/zero-bot-frustration-live-answering-service.webp"
-                alt="A live receptionist wearing a headset writing down a new caller's details"
-                width={1200}
-                height={1200}
-                loading="eager"
-                fetchPriority="high"
-                decoding="async"
-                className="absolute inset-0 h-full w-full object-cover"
-              />
-            </span>
-            <figcaption className="flex items-center gap-5 bg-[#1d4b37] px-6 py-5">
-              <span
-                className="icon-mask icon-intake-list [--icon-size:2rem] flex-shrink-0 border-r border-white/20 pr-5 text-[#a8c47d]"
-                aria-hidden="true"
-              ></span>
-              <span className="min-w-0">
-                <span className="block text-[1.05rem] font-bold text-white">From first hello to clear follow-up.</span>
-                <span className="mt-1 block text-[0.86rem] leading-relaxed text-white/70">
-                  Caller details. Service needs. Agreed next steps.
-                </span>
-              </span>
-            </figcaption>
+          {/* The caption panel is part of the supplied artwork, so it is not
+              drawn again in HTML and the photo is not cropped. */}
+          <figure className="overflow-hidden rounded-xl">
+            <img
+              src="/images/lead-capture-hero.webp"
+              srcSet="/images/lead-capture-hero-560.webp 560w, /images/lead-capture-hero.webp 928w"
+              sizes="(max-width: 1024px) 90vw, 520px"
+              alt="A receptionist wearing a headset writing in a notebook at her desk, above the line: From first hello to clear follow-up. Caller details. Service needs. Agreed next steps."
+              width={928}
+              height={1146}
+              loading="eager"
+              fetchPriority="high"
+              decoding="async"
+              className="block h-auto w-full"
+            />
           </figure>
         </div>
       </div>

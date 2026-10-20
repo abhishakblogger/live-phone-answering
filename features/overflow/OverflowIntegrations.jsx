@@ -1,39 +1,90 @@
 import Link from 'next/link'
 
-// Wordmarks stand in for the real logo files. Each entry becomes an <img> the
-// moment a file lands in public/icons — the slot size is already fixed so
-// swapping one in cannot shift the layout.
-const TOOLS = ['HubSpot', 'Notion', 'Calendly', 'Google Calendar', 'Zendesk', 'Zapier']
+const TOOLS = [
+  { slug: 'hubspot', name: 'HubSpot' },
+  { slug: 'notion', name: 'Notion' },
+  { slug: 'calendly', name: 'Calendly' },
+  { slug: 'googlecalendar', name: 'Google Calendar' },
+  { slug: 'zendesk', name: 'Zendesk' },
+  { slug: 'zapier', name: 'Zapier' },
+]
 
 const GROUPS = [
   {
     title: 'CRM & Lead Capture',
     body: 'Capture caller details, service needs, and follow-up notes. Where supported, add inquiries to your CRM or deliver them through your agreed process so your team knows where to find each lead.',
-    icons: [
-      { icon: 'icon-user-plus', className: 'text-[#3f8f5a]' },
-      { icon: 'icon-report', className: 'text-[#d9960b]' },
-      { icon: 'icon-doc-check', className: 'text-[#2f6fd0]' },
+    logos: [
+      { slug: 'hubspot', name: 'HubSpot' },
+      { slug: 'zoho', name: 'Zoho' },
+      { slug: 'notion', name: 'Notion' },
     ],
   },
   {
     title: 'Scheduling & Calendar Tools',
     body: "Use supported calendars and your availability rules to arrange appointments. When direct booking is unavailable, pass the caller's preferred dates and times to your team for confirmation.",
-    icons: [
-      { icon: 'icon-calendar', className: 'text-[#2f6fd0]' },
-      { icon: 'icon-clock', className: 'text-[#7a52c7]' },
-      { icon: 'icon-check-circle', className: 'text-[#3f8f5a]' },
+    logos: [
+      { slug: 'calendly', name: 'Calendly' },
+      { slug: 'googlecalendar', name: 'Google Calendar' },
+      { slug: 'airtable', name: 'Airtable' },
     ],
   },
   {
     title: 'Messages & Support Requests',
     body: 'Send useful call details to the right people through supported delivery channels. Define how customer questions and priority requests should be recorded and passed to your team.',
-    icons: [
-      { icon: 'icon-chat', className: 'text-[#3f8f5a]' },
-      { icon: 'icon-mail', className: 'text-[#2f6fd0]' },
-      { icon: 'icon-price-tag', className: 'text-[#d04a3f]' },
+    logos: [
+      { slug: 'zendesk', name: 'Zendesk' },
+      { slug: 'intercom', name: 'Intercom' },
+      { slug: 'helpscout', name: 'Help Scout' },
     ],
   },
 ]
+
+// Same card and hover treatment as the homepage integrations section, so the
+// two read as one design: the panel glows, the dashed line sends a dot across
+// to the logo stack, and the border picks up the brand green.
+function IntegrationCard({ group }) {
+  return (
+    <li className="group flex flex-col rounded-3xl border border-gray-200 bg-white/80 p-8 shadow-sm backdrop-blur-md transition-all duration-300 hover:border-[#8CA365] hover:shadow-xl">
+      <div className="relative mb-6 flex h-32 items-center justify-center gap-4 overflow-hidden rounded-2xl bg-slate-50">
+        <div
+          className="absolute inset-0 bg-[#8CA365]/5 opacity-0 blur-xl transition-opacity duration-500 group-hover:opacity-100"
+          aria-hidden="true"
+        ></div>
+
+        <span
+          className="icon-mask icon-phone [--icon-size:1.25rem] z-10 flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-[#1d4b37] text-white shadow-md"
+          aria-hidden="true"
+        ></span>
+
+        <span className="relative z-0 block h-0 w-12 border-t-2 border-dashed border-gray-300" aria-hidden="true">
+          <span className="absolute -top-1 left-0 block h-2 w-2 rounded-full bg-[#8CA365] opacity-0 group-hover:animate-[dashFlow_1.5s_linear_infinite]"></span>
+        </span>
+
+        <span className="z-10 flex -space-x-3">
+          {group.logos.map((logo) => (
+            <span
+              key={logo.slug}
+              className="flex h-10 w-10 items-center justify-center rounded-full border border-gray-100 bg-white p-2 shadow-sm"
+            >
+              <img
+                src={`/logos/${logo.slug}.svg`}
+                alt={`${logo.name} logo`}
+                width={24}
+                height={24}
+                loading="lazy"
+                decoding="async"
+                className="h-full w-full object-contain"
+              />
+            </span>
+          ))}
+        </span>
+      </div>
+
+      <h3 className="mb-3 text-xl font-bold text-[#1a2e35]">{group.title}</h3>
+      <p className="flex-grow text-sm leading-relaxed text-gray-600">{group.body}</p>
+    </li>
+  )
+}
 
 export default function OverflowIntegrations() {
   return (
@@ -46,7 +97,7 @@ export default function OverflowIntegrations() {
           <p className="icon-mask icon-share [--icon-size:1rem] inline-flex items-center gap-2 bg-[#8CA365]/10 text-[#5f7a3a] rounded-full text-sm font-semibold px-4 py-1.5">Platform and integrations</p>
           <h2
             id="overflow-integrations-heading"
-            className="mt-3 text-3xl font-extrabold leading-[1.14] tracking-tight text-[#1d4b37] sm:text-[2.2rem]"
+            className="mt-3 text-3xl sm:text-4xl md:text-5xl font-bold leading-[1.14] tracking-tight text-[#1d4b37]"
           >
             Connect Overflow Calls
             <br />
@@ -60,11 +111,16 @@ export default function OverflowIntegrations() {
 
         <ul className="mt-8 flex list-none flex-wrap items-center justify-center gap-x-10 gap-y-5 sm:gap-x-14">
           {TOOLS.map((tool) => (
-            <li
-              key={tool}
-              className="flex h-10 items-center text-[0.95rem] font-bold tracking-tight text-gray-600"
-            >
-              {tool}
+            <li key={tool.slug} className="flex h-10 items-center">
+              <img
+                src={`/logos/${tool.slug}.svg`}
+                alt={`${tool.name} integration`}
+                width={40}
+                height={40}
+                loading="lazy"
+                decoding="async"
+                className="h-9 w-auto transition-transform hover:scale-110"
+              />
             </li>
           ))}
         </ul>
@@ -77,27 +133,7 @@ export default function OverflowIntegrations() {
 
         <ul className="mt-8 grid list-none grid-cols-1 gap-6 md:grid-cols-3">
           {GROUPS.map((group) => (
-            <li key={group.title} className="rounded-xl border border-gray-200/90 bg-white p-5">
-              <div className="flex items-center gap-3 rounded-lg bg-[#f3f4f1] px-5 py-6">
-                <span
-                  className="icon-mask icon-phone [--icon-size:1.2rem] flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-full bg-[#1d4b37] text-white"
-                  aria-hidden="true"
-                ></span>
-                <span className="h-px flex-grow border-t border-dashed border-gray-400/70" aria-hidden="true"></span>
-                <span className="flex flex-shrink-0 items-center gap-2">
-                  {group.icons.map((item) => (
-                    <span
-                      key={item.icon}
-                      className={`icon-mask ${item.icon} [--icon-size:1.05rem] flex h-9 w-9 items-center justify-center rounded-full bg-white shadow-sm ${item.className}`}
-                      aria-hidden="true"
-                    ></span>
-                  ))}
-                </span>
-              </div>
-
-              <h3 className="mt-5 text-[1.05rem] font-bold text-[#1a2e35]">{group.title}</h3>
-              <p className="mt-2 text-[0.82rem] leading-relaxed text-gray-600">{group.body}</p>
-            </li>
+            <IntegrationCard key={group.title} group={group} />
           ))}
         </ul>
 

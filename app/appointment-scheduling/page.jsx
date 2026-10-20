@@ -151,8 +151,8 @@ export default function AppointmentSchedulingPage() {
         <IntegrationsSection />
         <SchedulingBenefits />
         <IndustriesTabs />
-        <SchedulingReceptionists />
         <SchedulingWhyChooseUs />
+        <SchedulingReceptionists />
         <PlanPricing
           headingId='scheduling-pricing-heading'
           heading='Appointment Scheduling Answering Service Pricing'

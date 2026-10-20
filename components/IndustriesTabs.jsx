@@ -92,7 +92,7 @@ function ArrowIcon() {
 // observer adds — leaving the heading stuck at opacity 0 for good.
 export default function IndustriesTabs({
   sectionClassName = 'py-20 md:py-32 bg-white font-sans relative overflow-hidden',
-  headingClassName = 'text-3xl md:text-5xl font-extrabold text-[#34414A] tracking-tight mb-4',
+  headingClassName = 'text-3xl sm:text-4xl md:text-5xl font-bold text-[#34414A] tracking-tight mb-4',
   heading = 'Trained for your exact workflow.',
   intro = 'We serve over 50+ verticals. Select your category to see how we integrate seamlessly into your specialized software and daily operations.',
 }) {

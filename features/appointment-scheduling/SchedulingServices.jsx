@@ -46,7 +46,7 @@ export default function SchedulingServices() {
           </p>
           <h2
             id="scheduling-services-heading"
-            className="mt-4 text-3xl font-extrabold leading-[1.14] tracking-tight text-[#1d4b37] sm:text-[2.5rem]"
+            className="mt-4 text-3xl sm:text-4xl md:text-5xl font-bold leading-[1.14] tracking-tight text-[#1d4b37]"
           >
             Appointment Booking and
             <br />

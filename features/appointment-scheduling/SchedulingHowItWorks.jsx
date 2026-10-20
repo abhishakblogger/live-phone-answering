@@ -62,7 +62,7 @@ export default function SchedulingHowItWorks() {
           </p>
           <h2
             id="scheduling-how-heading"
-            className="mt-4 text-3xl font-extrabold leading-[1.14] tracking-tight text-white sm:text-[2.4rem]"
+            className="mt-4 text-3xl sm:text-4xl md:text-5xl font-bold leading-[1.14] tracking-tight text-white"
           >
             How Our Appointment Scheduling
             <br />

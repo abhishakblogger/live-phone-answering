@@ -37,7 +37,7 @@ export default function OverflowBenefits() {
           </p>
           <h2
             id="overflow-benefits-heading"
-            className="mt-3 text-3xl font-extrabold leading-[1.12] tracking-tight text-[#1d4b37] sm:text-[2.35rem]"
+            className="mt-3 text-3xl sm:text-4xl md:text-5xl font-bold leading-[1.12] tracking-tight text-[#1d4b37]"
           >
             Keep Calls Covered When
             <br />
@@ -49,27 +49,21 @@ export default function OverflowBenefits() {
           </p>
         </div>
 
-        <div className="mt-9 grid grid-cols-1 items-start gap-8 lg:grid-cols-[minmax(0,0.92fr)_minmax(0,1fr)] lg:gap-11">
-          {/* Photo and caption panel are stacked inside one rounded, clipped
-              box, so the dark block reads as part of the same card. */}
+        <div className="mt-9 grid grid-cols-1 items-start gap-8 lg:grid-cols-[minmax(0,0.82fr)_minmax(0,1fr)] lg:gap-11">
+          {/* The caption panel is part of the supplied artwork, so it is not
+              drawn again in HTML. The photo keeps its own aspect ratio rather
+              than being cropped, and the column ratio above is what lines its
+              bottom edge up with the benefits list beside it. */}
           <figure className="overflow-hidden rounded-2xl">
             <img
-              src="/images/real-human-empathy-live-phone-answering-service.webp"
-              alt="A shop owner helping a customer at the counter while overflow calls are answered elsewhere"
-              width={1200}
-              height={900}
+              src="/images/overflow-benefits.webp"
+              alt="A shop owner showing material samples to a customer at the counter, above the line: Stay focused on the customer in front of you. Give incoming callers a helpful response when your team is occupied."
+              width={1100}
+              height={848}
               loading="lazy"
               decoding="async"
-              className="aspect-[4/3] w-full object-cover"
+              className="block h-auto w-full"
             />
-            <figcaption className="bg-[#1d4b37] px-5 py-4">
-              <span className="block text-[0.95rem] font-bold text-white">
-                Stay focused on the customer in front of you.
-              </span>
-              <span className="mt-1 block text-[0.8rem] leading-relaxed text-white/70">
-                Give incoming callers a helpful response when your team is occupied.
-              </span>
-            </figcaption>
           </figure>
 
           <ul className="list-none divide-y divide-gray-300/50">

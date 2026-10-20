@@ -66,7 +66,7 @@ export default function OverflowHero() {
           </ol>
         </nav>
 
-        <div className="grid grid-cols-1 items-center gap-10 pt-10 pb-16 lg:pt-14 lg:pb-20 lg:grid-cols-[minmax(0,1fr)_minmax(0,0.95fr)] lg:gap-14">
+        <div className="grid grid-cols-1 items-center gap-10 pt-10 pb-16 lg:pt-[4rem] lg:pb-20 lg:grid-cols-[minmax(0,1fr)_minmax(0,0.95fr)] lg:gap-14">
           <div>
             <p className="icon-mask icon-phone-forward inline-flex items-center gap-2 bg-white/70 backdrop-blur-sm text-[#295657] rounded-full text-xs sm:text-sm font-bold uppercase tracking-wider px-5 py-2 mb-6 shadow-sm border border-white/50">Live receptionist backup</p>
 

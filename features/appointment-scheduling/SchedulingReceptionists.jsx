@@ -25,31 +25,18 @@ export default function SchedulingReceptionists() {
       aria-labelledby="scheduling-receptionists-heading"
     >
       <div className="mx-auto grid max-w-6xl grid-cols-1 items-stretch gap-9 lg:grid-cols-2 lg:gap-12">
-        {/* Photo grows to match the column beside it, so the two stay level. */}
-        <figure className="flex flex-col overflow-hidden rounded-xl">
-          <span className="relative block min-h-[18rem] flex-grow">
-            <img
-              src="/images/zero-bot-frustration-live-answering-service.webp"
-              alt="A live virtual receptionist wearing a headset handling an appointment call at a desk"
-              width={1200}
-              height={1200}
-              loading="lazy"
-              decoding="async"
-              className="absolute inset-0 h-full w-full object-cover"
-            />
-          </span>
-          <figcaption className="flex items-center gap-5 bg-[#1d4b37] px-6 py-5">
-            <span
-              className="icon-mask icon-headset-call [--icon-size:2rem] flex-shrink-0 border-r border-white/20 pr-5 text-[#a8c47d]"
-              aria-hidden="true"
-            ></span>
-            <span className="min-w-0">
-              <span className="block text-[0.95rem] font-bold text-white">A real conversation. A clear next step.</span>
-              <span className="mt-1 block text-[0.84rem] leading-relaxed text-white/70">
-                Appointment support that follows your instructions.
-              </span>
-            </span>
-          </figcaption>
+        {/* The headset icon and caption panel are part of the supplied artwork,
+            so they are not drawn again in HTML and the photo is not cropped. */}
+        <figure className="overflow-hidden rounded-xl">
+          <img
+            src="/images/scheduling-receptionists.webp"
+            alt="A live virtual receptionist wearing a headset smiling at her screen while handling an appointment call, above the line: A real conversation. A clear next step. Appointment support that follows your instructions."
+            width={896}
+            height={1191}
+            loading="lazy"
+            decoding="async"
+            className="block h-auto w-full"
+          />
         </figure>
 
         <div>
@@ -59,7 +46,7 @@ export default function SchedulingReceptionists() {
 
           <h2
             id="scheduling-receptionists-heading"
-            className="mt-4 text-3xl font-extrabold leading-[1.12] tracking-tight text-[#1b4332] sm:text-[2.4rem]"
+            className="mt-4 text-3xl sm:text-4xl md:text-5xl font-bold leading-[1.12] tracking-tight text-[#1b4332]"
           >
             Live Virtual Receptionists
             <br />

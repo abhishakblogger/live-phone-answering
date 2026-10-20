@@ -158,7 +158,7 @@ export default function HowItWorksSteps() {
             </p>
             <h2
               id="how-it-works-heading"
-              className="mt-2 text-3xl font-extrabold leading-[1.05] tracking-tight text-white sm:text-4xl lg:text-[2.9rem]"
+              className="mt-2 text-3xl sm:text-4xl md:text-5xl font-bold leading-[1.05] tracking-tight text-white"
             >
               How After-Hours
               <br />
@@ -223,7 +223,7 @@ export default function HowItWorksSteps() {
                 <p className="text-[0.72rem] font-bold uppercase tracking-[0.18em] text-[#a8c47d]">
                   Step {step.number}
                 </p>
-                <h3 className="mt-2 text-2xl font-extrabold leading-[1.12] tracking-tight text-white sm:text-[2.1rem]">
+                <h3 className="mt-2 text-2xl font-bold leading-[1.12] tracking-tight text-white sm:text-[2.1rem]">
                   {step.titleTop}
                   <br />
                   {step.titleBottom}

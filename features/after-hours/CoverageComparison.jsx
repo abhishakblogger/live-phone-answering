@@ -51,7 +51,7 @@ export default function CoverageComparison() {
           <p className="icon-mask icon-check-circle [--icon-size:1rem] inline-flex items-center gap-2 bg-[#8CA365]/10 text-[#5f7a3a] rounded-full text-sm font-semibold px-4 py-1.5">Find the right coverage</p>
           <h2
             id="comparison-heading"
-            className="mt-2 text-3xl font-extrabold leading-[1.1] tracking-tight text-[#1a2e35] sm:text-4xl"
+            className="mt-2 text-3xl sm:text-4xl md:text-5xl font-bold leading-[1.1] tracking-tight text-[#34414A]"
           >
             After-Hours, 24/7 or Overflow?
           </h2>
