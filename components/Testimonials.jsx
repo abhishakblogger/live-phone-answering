@@ -75,7 +75,6 @@ const TESTIMONIALS = [
     avatar: '/images/testimonial-james-l.webp',
     quote:
       '"In real estate, speed to lead is everything. Having a 24/7 live person answer our property inquiries means we secure tenants faster than our competitors. The immediate text alerts are incredible."',
-    recommends: true,
   },
   {
     name: 'Amanda P.',
@@ -132,11 +131,7 @@ function TestimonialCard({ item }) {
         <blockquote className="text-gray-700 text-sm leading-relaxed mb-3">{item.quote}</blockquote>
       </div>
 
-      {item.recommends && (
-        <div className="text-xs font-semibold text-gray-500 mt-2">
-          Recommends <span className="font-bold text-gray-800">Live Phone Answering</span>
-        </div>
-      )}
+     
     </figure>
   )
 }

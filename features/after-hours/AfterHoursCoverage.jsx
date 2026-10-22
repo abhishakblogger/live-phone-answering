@@ -132,7 +132,7 @@ export default function AfterHoursCoverage() {
               {/* The grid sits on an inner element on purpose: a display utility
                   on the panel itself outranks the browser's [hidden] rule and
                   would leave every tab visible at once. */}
-              <div className="grid grid-cols-1 items-center gap-6 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.18fr)] lg:gap-8">
+              <div className="grid grid-cols-1 items-center gap-6 lg:grid-cols-[minmax(0,1fr)_minmax(0,0.8fr)] lg:gap-8">
                 <div className="px-1 py-1 sm:px-3">
                   <p className="text-[0.7rem] font-bold uppercase tracking-[0.16em] text-[#566e34]">{tab.eyebrow}</p>
                   <h3 className="mt-1.5 text-2xl font-extrabold leading-[1.12] tracking-tight text-[#1a2e35] sm:text-[2.1rem]">
