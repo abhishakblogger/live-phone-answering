@@ -2,32 +2,32 @@ import Link from 'next/link'
 
 const SERVICES = [
   {
-    icon: 'icon-calendar-plus',
+    icon: 'new-appointment-booking',
     title: 'New Appointment Booking',
     body: "Collect the caller's details, check approved availability, and reserve a suitable appointment through supported tools. Give customers a clear next step while your team stays focused.",
   },
   {
-    icon: 'icon-calendar-refresh',
+    icon: 'appointment-rescheduling',
     title: 'Appointment Rescheduling',
     body: 'Help callers move an existing appointment using your notice periods and availability rules. Update the booking through the agreed process and clarify the revised details.',
   },
   {
-    icon: 'icon-calendar-minus',
+    icon: 'cancellation-handling',
     title: 'Cancellation Handling',
     body: 'Handle cancellation requests according to your policy. Record the change and update the appointment through the supported workflow so your team knows what has changed.',
   },
   {
-    icon: 'icon-id-card',
+    icon: 'new-client-intake',
     title: 'New Client Intake',
     body: 'Capture contact information, service needs, location, and other approved details before booking. Help your team prepare for the appointment with useful caller information.',
   },
   {
-    icon: 'icon-chat',
+    icon: 'appointment-confirmations',
     title: 'Appointment Confirmations',
     body: 'Review the appointment date, time, location, and approved preparation details with the caller. Use the confirmation channels supported by your service and booking tools.',
   },
   {
-    icon: 'icon-users',
+    icon: 'multi-staff-location-scheduling',
     title: 'Multi-Staff & Location Scheduling',
     body: 'Where supported, match callers with the right staff member, service, or location. Follow the availability and booking rules agreed for each calendar.',
   },
@@ -61,10 +61,16 @@ export default function SchedulingServices() {
         <ul className="mt-8 grid list-none grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {SERVICES.map((service) => (
             <li key={service.title} className="h-full rounded-xl border border-gray-200/80 bg-white p-6">
-              <span
-                className={`icon-mask ${service.icon} [--icon-size:1.6rem] flex h-12 w-12 items-center justify-center rounded-lg bg-[#eaf1dd] text-[#1d4b37]`}
-                aria-hidden="true"
-              ></span>
+              {/* Decorative: the card's own heading already names the service. */}
+              <img
+                src={`/icons/card/${service.icon}.webp`}
+                alt=""
+                width={56}
+                height={56}
+                loading="lazy"
+                decoding="async"
+                className="h-14 w-14 rounded-lg bg-[#eaf1dd] p-2 object-contain"
+              />
               <h3 className="mt-4 text-[1.05rem] font-bold leading-snug text-[#1d4b37]">{service.title}</h3>
               <p className="mt-2 text-base leading-relaxed text-gray-600">{service.body}</p>
             </li>

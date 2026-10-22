@@ -86,7 +86,7 @@ export default function CallRoutingBenefits() {
           {BENEFITS.map((benefit) => (
             <div
               key={benefit.title}
-              className="flex h-full flex-col rounded-xl border border-gray-300/50 bg-[#fbfaf6] p-5 sm:p-6"
+              className="flex h-full flex-col rounded-xl border border-gray-300/50 bg-[#fff] p-5 sm:p-6"
             >
               <div className="flex items-center gap-4">
                 <span

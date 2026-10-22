@@ -163,14 +163,6 @@ export default function BlogIndexPage() {
         </ul>
       </section>
 
-      <DarkCtaBanner
-        headingId="blog-cta-heading"
-        heading="Stop Letting Calls Go to Voicemail"
-        body="Join 2,400+ US businesses whose calls are answered by a real person. Setup takes less than 5 minutes."
-        points={['No lock-in contracts', '100% US-based receptionists', '24/7/365 coverage', 'HIPAA compliant']}
-        primary={{ href: '/contact-us', label: 'Get Started Today →' }}
-        secondary={{ href: '/pricing', label: 'View Pricing Plans' }}
-      />
 
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(blogSchema) }} />
     </main>

@@ -62,7 +62,7 @@ export default function CallRoutingServices() {
           {SERVICES.map((service) => (
             <li
               key={service.title}
-              className="flex h-full flex-col rounded-xl border border-gray-300/50 bg-[#fbfaf6] p-5 sm:p-6"
+              className="flex h-full flex-col rounded-xl border border-gray-300/50 bg-[#fff] p-5 sm:p-6"
             >
               {/* Icon sits on its own row with the title beneath, as in the
                   reference — not inline with it. */}

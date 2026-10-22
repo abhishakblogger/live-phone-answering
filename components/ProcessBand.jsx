@@ -72,7 +72,7 @@ export default function ProcessBand({
 
               {index < steps.length - 1 && (
                 <span
-                  className="icon-mask icon-arrow-right [--icon-size:1.25rem] absolute left-full top-[32%] ml-3 hidden -translate-x-1/2 -translate-y-1/2 text-[#8CA365] lg:block"
+                  className="icon-mask icon-arrow-right [--icon-size:1.25rem] absolute left-full top-1/2 ml-3 hidden -translate-x-1/2 -translate-y-1/2 text-[#8CA365] lg:block"
                   aria-hidden="true"
                 ></span>
               )}

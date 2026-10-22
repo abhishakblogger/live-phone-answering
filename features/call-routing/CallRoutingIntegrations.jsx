@@ -1,24 +1,39 @@
 import Link from 'next/link'
 
-// Wordmarks stand in for the real logo files. Each entry becomes an <img> the
-// moment a file lands in public/icons — the slot size is already fixed so
-// swapping one in cannot shift the layout.
 const PHONE_SYSTEMS = [
-  { name: 'RingCentral', detail: 'Business phone system' },
-  { name: 'Microsoft Teams Phone', detail: 'Business calling' },
-  { name: 'Zoom Phone', detail: 'Cloud phone system' },
+  { name: 'RingCentral', detail: 'Business phone system', logo: 'ringcentral.svg' },
+  { name: 'Microsoft Teams Phone', detail: 'Business calling', logo: 'microsoft-teams.webp' },
+  { name: 'Zoom Phone', detail: 'Cloud phone system', logo: 'zoom-phone.webp' },
 ]
 
 const CRM_TOOLS = [
-  { name: 'HubSpot', detail: 'CRM records' },
-  { name: 'Salesforce', detail: 'CRM records' },
-  { name: 'Zapier', detail: 'Workflow automation' },
+  { name: 'HubSpot', detail: 'CRM records', logo: 'hubspot.webp' },
+  { name: 'Salesforce', detail: 'CRM records', logo: 'salesforce.svg' },
+  { name: 'Zapier', detail: 'Workflow automation', logo: 'zapier.webp' },
 ]
 
 const FLOW = ['Screen the enquiry', 'Follow your routing rules', 'Connect or capture a message']
 
+// aspect-square keeps every tool in a square box rather than a wide strip.
 const CARD =
-  'relative flex h-full flex-col justify-center rounded-xl border border-gray-300/60 bg-white px-5 py-4 text-center'
+  'relative flex aspect-square h-full flex-col items-center justify-center gap-2 rounded-xl border border-gray-300/60 bg-white px-4 py-4 text-center'
+
+function ToolCard({ tool }) {
+  return (
+    <li className={CARD}>
+      <img
+        src={`/icons/logo/${tool.logo}`}
+        alt={`${tool.name} logo`}
+        width={120}
+        height={40}
+        loading="lazy"
+        decoding="async"
+        className="h-9 w-auto max-w-[75%] object-contain"
+      />
+      <span className="text-base leading-snug text-gray-600">{tool.detail}</span>
+    </li>
+  )
+}
 
 // Three cards of equal height with two gaps put the outer card centres at
 // ~15% and ~85% of the column, which is where the spine has to start and stop.
@@ -90,13 +105,7 @@ export default function CallRoutingIntegrations() {
             <p className="mb-3 text-[0.62rem] font-bold uppercase tracking-[0.16em] text-gray-600 lg:absolute lg:-top-7 lg:left-0 lg:mb-0">Phone systems</p>
             <ul className="list-none space-y-4">
               {PHONE_SYSTEMS.map((tool) => (
-                <li
-                  key={tool.name}
-                  className={CARD}
-                >
-                  <span className="text-[1.05rem] font-bold tracking-tight text-gray-700">{tool.name}</span>
-                  <span className="mt-1 text-base text-gray-600">{tool.detail}</span>
-                </li>
+                <ToolCard key={tool.name} tool={tool} />
               ))}
             </ul>
           </div>
@@ -129,13 +138,7 @@ export default function CallRoutingIntegrations() {
             </p>
             <ul className="list-none space-y-4">
               {CRM_TOOLS.map((tool) => (
-                <li
-                  key={tool.name}
-                  className={CARD}
-                >
-                  <span className="text-[1.05rem] font-bold tracking-tight text-gray-700">{tool.name}</span>
-                  <span className="mt-1 text-base text-gray-600">{tool.detail}</span>
-                </li>
+                <ToolCard key={tool.name} tool={tool} />
               ))}
             </ul>
           </div>
