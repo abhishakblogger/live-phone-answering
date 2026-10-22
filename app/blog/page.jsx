@@ -83,7 +83,7 @@ export default function BlogIndexPage() {
   return (
     <main className="w-full">
       <section
-        className="relative overflow-hidden py-16 sm:py-20 lg:py-24 px-4 lg:px-[5%]"
+        className="relative overflow-hidden py-16 sm:py-20 lg:py-24 px-4 md:px-8"
         style={SECTION_BACKGROUND}
         aria-labelledby="blog-heading"
       >
@@ -123,8 +123,8 @@ export default function BlogIndexPage() {
         </div>
       </section>
 
-      <section className="w-full bg-white px-4 py-16 md:py-20" aria-label="Articles">
-        <ul className="mx-auto grid max-w-6xl list-none grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <section className="w-full bg-white py-16 md:py-20" aria-label="Articles">
+        <ul className="site-container grid list-none grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {BLOG_POSTS.map((post) => (
             <li key={post.slug} className="h-full">
               <article className="h-full">

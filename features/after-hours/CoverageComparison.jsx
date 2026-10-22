@@ -45,8 +45,8 @@ const CRITERIA = ['When it answers', 'Your daytime calls', 'A good fit when']
 
 export default function CoverageComparison() {
   return (
-    <section className="w-full bg-[#f8f6ec] px-4 py-14 md:py-16 lg:px-[5%]" aria-labelledby="comparison-heading">
-      <div className="mx-auto max-w-5xl">
+    <section className="w-full bg-[#f8f6ec] py-14 md:py-16" aria-labelledby="comparison-heading">
+      <div className="site-container">
         <div className="mx-auto max-w-2xl text-center">
           <p className="icon-mask icon-check-circle [--icon-size:1rem] inline-flex items-center gap-2 bg-[#8CA365]/10 text-[#5f7a3a] rounded-full text-sm font-semibold px-4 py-1.5">Find the right coverage</p>
           <h2
@@ -55,7 +55,7 @@ export default function CoverageComparison() {
           >
             After-Hours, 24/7 or Overflow?
           </h2>
-          <p className="mt-2 text-[0.95rem] leading-relaxed text-gray-600">
+          <p className="mt-2 text-lg leading-relaxed text-gray-600">
             Choose coverage based on when your business needs help answering calls.
           </p>
         </div>
@@ -117,14 +117,14 @@ export default function CoverageComparison() {
                 <tr key={criterion} className="border-t border-gray-300/50">
                   <th
                     scope="row"
-                    className="bg-[#eef3e4] px-5 py-3.5 align-middle text-[0.95rem] font-bold text-[#295657]"
+                    className="bg-[#eef3e4] px-5 py-3.5 align-middle text-lg font-bold text-[#295657]"
                   >
                     {criterion}
                   </th>
                   {OPTIONS.map((option) => (
                     <td
                       key={option.id}
-                      className={`px-4 py-3.5 align-middle text-[0.9rem] leading-relaxed text-gray-600 ${
+                      className={`px-4 py-3.5 align-middle text-lg leading-relaxed text-gray-600 ${
                         option.featured
                           ? `border-x-2 border-[#8CA365] bg-[#e9f2df] ${
                               rowIndex === CRITERIA.length - 1 ? 'border-b-2' : ''
@@ -151,7 +151,7 @@ export default function CoverageComparison() {
               <span className="block text-[1.05rem] font-bold text-[#1a2e35]">
                 Need more than one type of coverage?
               </span>
-              <span className="mt-1 block text-[0.9rem] text-gray-600">
+              <span className="mt-1 block text-lg text-gray-600">
                 Discuss a setup that combines the support your business needs.
               </span>
             </span>
@@ -160,7 +160,7 @@ export default function CoverageComparison() {
           <Link
             prefetch={false}
             href="/contact-us"
-            className="icon-mask icon-arrow-right [--icon-size:1rem] inline-flex flex-shrink-0 flex-row-reverse items-center gap-3 rounded-lg bg-[#8CA365] px-7 py-3 text-[0.92rem] font-bold text-white transition-all hover:-translate-y-0.5 hover:bg-[#9cb374]"
+            className="icon-mask icon-arrow-right [--icon-size:1rem] inline-flex flex-shrink-0 flex-row-reverse items-center gap-3 rounded-lg bg-[#8CA365] px-7 py-3 text-lg font-bold text-white transition-all hover:-translate-y-0.5 hover:bg-[#9cb374]"
           >
             Find My Coverage
           </Link>

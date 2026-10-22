@@ -51,11 +51,11 @@ const CONTROLS = [
 export default function SchedulingHowItWorks() {
   return (
     <section
-      className="relative w-full overflow-hidden px-4 py-14 md:py-16 lg:px-[5%]"
+      className="relative w-full overflow-hidden py-14 md:py-16"
       style={SECTION_BACKGROUND}
       aria-labelledby="scheduling-how-heading"
     >
-      <div className="mx-auto max-w-6xl">
+      <div className="site-container">
         <div className="mx-auto max-w-3xl text-center">
           <p className="icon-mask icon-bolt [--icon-size:1rem] inline-flex items-center gap-2 bg-white/10 text-[#a8c47d] rounded-full text-sm font-semibold px-4 py-1.5">
             From first hello to the next appointment
@@ -68,7 +68,7 @@ export default function SchedulingHowItWorks() {
             <br />
             Answering Service Works
           </h2>
-          <p className="mt-3 text-[0.95rem] leading-relaxed text-white/65">
+          <p className="mt-3 text-lg leading-relaxed text-white/65">
             We answer your calls, collect the right details, and follow your booking rules to help callers take the
             next step.
           </p>
@@ -83,7 +83,7 @@ export default function SchedulingHowItWorks() {
                 }`}
               >
                 <span
-                  className="absolute -top-5 left-1/2 flex h-11 w-11 -translate-x-1/2 items-center justify-center rounded-full bg-[#8CA365] text-[0.85rem] font-bold text-white border-2 border-white "
+                  className="absolute -top-5 left-1/2 flex h-11 w-11 -translate-x-1/2 items-center justify-center rounded-full bg-[#8CA365] text-base font-bold text-white border-2 border-white "
                   aria-hidden="true"
                 >
                   {step.number}
@@ -95,9 +95,9 @@ export default function SchedulingHowItWorks() {
                 ></span>
 
                 <h3 className="mt-4 text-[1.1rem] font-bold text-[#1b4332]">{step.title}</h3>
-                <p className="mt-2.5 flex-grow text-[0.86rem] leading-relaxed text-gray-600">{step.body}</p>
+                <p className="mt-2.5 flex-grow text-base leading-relaxed text-gray-600">{step.body}</p>
 
-                <p className="mt-5 w-full rounded-full bg-[#E5EBDA] px-3 py-2.5 text-[0.8rem] text-gray-900">
+                <p className="mt-5 w-full rounded-full bg-[#E5EBDA] px-3 py-2.5 text-base text-gray-900">
                   {step.tag}
                 </p>
               </div>
@@ -123,7 +123,7 @@ export default function SchedulingHowItWorks() {
                 {CONTROLS.map((item) => (
                   <li
                     key={item.label}
-                    className="flex items-center gap-2.5 rounded-lg bg-[#EFF4E9] border border-gray-300 px-5 py-3 text-[0.86rem] font-medium text-gray-700"
+                    className="flex items-center gap-2.5 rounded-lg bg-[#EFF4E9] border border-gray-300 px-5 py-3 text-base font-medium text-gray-700"
                   >
                     <span
                       className={`icon-mask ${item.icon} [--icon-size:1.15rem] flex-shrink-0 text-[#4f6630]`}
@@ -133,7 +133,7 @@ export default function SchedulingHowItWorks() {
                   </li>
                 ))}
               </ul>
-              <p className="mt-3.5 text-center text-[0.84rem] text-gray-600">
+              <p className="mt-3.5 text-center text-base text-gray-600">
                 Set your preferences before coverage begins.
               </p>
             </div>
@@ -144,13 +144,13 @@ export default function SchedulingHowItWorks() {
           <Link
             prefetch={false}
             href="/contact-us"
-            className="icon-mask icon-arrow-right [--icon-size:0.95rem] inline-flex flex-row-reverse items-center gap-3 rounded-lg bg-[#8CA365] px-8 py-3.5 text-[0.95rem] font-bold text-white transition-all hover:-translate-y-0.5 hover:bg-[#9cb374]"
+            className="icon-mask icon-arrow-right [--icon-size:0.95rem] inline-flex flex-row-reverse items-center gap-3 rounded-lg bg-[#8CA365] px-8 py-3.5 text-lg font-bold text-white transition-all hover:-translate-y-0.5 hover:bg-[#9cb374]"
           >
             Plan My Scheduling Setup
           </Link>
           {/* Capabilities depend on the caller's own tools, so the claim is
               scoped rather than absolute. */}
-          <p className="mt-3 text-[0.78rem] text-white/45">
+          <p className="mt-3 text-sm text-white/45">
             Calendar access and booking capabilities are confirmed during setup.
           </p>
         </div>

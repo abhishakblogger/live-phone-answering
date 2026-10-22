@@ -36,10 +36,10 @@ const SERVICES = [
 export default function SchedulingServices() {
   return (
     <section
-      className="w-full bg-[#faf9f3] px-4 py-14 md:py-16 lg:px-[5%]"
+      className="w-full bg-[#faf9f3] py-14 md:py-16"
       aria-labelledby="scheduling-services-heading"
     >
-      <div className="mx-auto max-w-6xl">
+      <div className="site-container">
         <div className="mx-auto max-w-3xl text-center">
           <p className="icon-mask icon-calendar [--icon-size:1rem] inline-flex items-center gap-2 bg-[#8CA365]/10 text-[#5f7a3a] rounded-full text-sm font-semibold px-4 py-1.5">
             Appointment scheduling services
@@ -52,7 +52,7 @@ export default function SchedulingServices() {
             <br />
             Scheduling Services We Handle
           </h2>
-          <p className="mt-3 text-[0.95rem] leading-relaxed text-gray-600">
+          <p className="mt-3 text-lg leading-relaxed text-gray-600">
             Help callers book, change, and manage appointments with live receptionist support built around your
             scheduling rules.
           </p>
@@ -66,14 +66,14 @@ export default function SchedulingServices() {
                 aria-hidden="true"
               ></span>
               <h3 className="mt-4 text-[1.05rem] font-bold leading-snug text-[#1d4b37]">{service.title}</h3>
-              <p className="mt-2 text-[0.84rem] leading-relaxed text-gray-600">{service.body}</p>
+              <p className="mt-2 text-base leading-relaxed text-gray-600">{service.body}</p>
             </li>
           ))}
         </ul>
 
         {/* Keeps the list honest: what a given plan actually covers is agreed
             at setup, so the cards describe tasks rather than promise them all. */}
-        <p className="mt-6 text-center text-[0.78rem] text-gray-600">
+        <p className="mt-6 text-center text-sm text-gray-600">
           Your service plan defines the booking tasks, calendar access, and confirmation options available.
         </p>
 
@@ -81,7 +81,7 @@ export default function SchedulingServices() {
           <Link
             prefetch={false}
             href="/contact-us"
-            className="icon-mask icon-arrow-right [--icon-size:0.9rem] inline-flex flex-row-reverse items-center gap-3 rounded-lg bg-[#8CA365] px-7 py-3 text-[0.9rem] font-bold text-white transition-all hover:-translate-y-0.5 hover:bg-[#9cb374]"
+            className="icon-mask icon-arrow-right [--icon-size:0.9rem] inline-flex flex-row-reverse items-center gap-3 rounded-lg bg-[#8CA365] px-7 py-3 text-lg font-bold text-white transition-all hover:-translate-y-0.5 hover:bg-[#9cb374]"
           >
             Build My Scheduling Plan
           </Link>

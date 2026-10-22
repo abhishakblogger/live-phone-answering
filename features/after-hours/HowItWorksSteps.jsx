@@ -150,7 +150,7 @@ export default function HowItWorksSteps() {
       />
       <div className="absolute inset-0" style={OVERLAY} aria-hidden="true"></div>
 
-      <div className="relative z-10 mx-auto max-w-7xl px-4 py-12 md:py-14 lg:px-[5%]">
+      <div className="site-container relative z-10 py-12 md:py-14">
         <div className="grid grid-cols-1 items-start gap-4 lg:grid-cols-[minmax(0,1fr)_minmax(0,24rem)] lg:gap-14">
           <div>
             <p className="icon-mask icon-bolt [--icon-size:1rem] inline-flex items-center gap-2 bg-white/10 text-[#a8c47d] rounded-full text-sm font-semibold px-4 py-1.5">
@@ -165,7 +165,7 @@ export default function HowItWorksSteps() {
               Call Answering Works
             </h2>
           </div>
-          <p className="text-[0.95rem] leading-relaxed text-white/70 lg:pt-8">
+          <p className="text-lg leading-relaxed text-white/70 lg:pt-8">
             Set your instructions, connect your line, and give your callers a clear next step.
           </p>
         </div>
@@ -198,7 +198,7 @@ export default function HowItWorksSteps() {
                 {step.number}
               </span>
               <span
-                className={`mt-2.5 border-b-2 pb-1.5 text-[0.9rem] transition-colors ${
+                className={`mt-2.5 border-b-2 pb-1.5 text-lg transition-colors ${
                   i === index ? 'border-[#a8c47d] font-bold text-white' : 'border-transparent text-white/65'
                 }`}
               >
@@ -228,7 +228,7 @@ export default function HowItWorksSteps() {
                   <br />
                   {step.titleBottom}
                 </h3>
-                <p className="mt-3 max-w-md text-[0.95rem] leading-relaxed text-white/70">{step.body}</p>
+                <p className="mt-3 max-w-md text-lg leading-relaxed text-white/70">{step.body}</p>
 
                 <ul className="mt-5 list-none space-y-3">
                   {step.points.map((point) => (
@@ -237,7 +237,7 @@ export default function HowItWorksSteps() {
                         className={`icon-mask ${point.icon} [--icon-size:1.15rem] flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full border border-[#a8c47d]/50 text-[#a8c47d]`}
                         aria-hidden="true"
                       ></span>
-                      <span className="text-[0.95rem] text-white">{point.label}</span>
+                      <span className="text-lg text-white">{point.label}</span>
                     </li>
                   ))}
                 </ul>
@@ -245,12 +245,12 @@ export default function HowItWorksSteps() {
                 <Link
                   prefetch={false}
                   href="/contact-us"
-                  className="icon-mask icon-arrow-right [--icon-size:1rem] mt-6 inline-flex flex-row-reverse items-center gap-3 rounded-lg bg-[#8CA365] px-7 py-3 text-[0.95rem] font-bold text-white transition-all hover:-translate-y-0.5 hover:bg-[#9cb374]"
+                  className="icon-mask icon-arrow-right [--icon-size:1rem] mt-6 inline-flex flex-row-reverse items-center gap-3 rounded-lg bg-[#8CA365] px-7 py-3 text-lg font-bold text-white transition-all hover:-translate-y-0.5 hover:bg-[#9cb374]"
                 >
                   Talk Through My Setup
                 </Link>
 
-                <p className="mt-3 text-[0.78rem] text-white/50">Setup timing depends on your workflow.</p>
+                <p className="mt-3 text-sm text-white/50">Setup timing depends on your workflow.</p>
               </div>
 
               <div className="rounded-2xl bg-[#fbfaf3] p-5 shadow-2xl sm:p-6">
@@ -275,8 +275,8 @@ export default function HowItWorksSteps() {
                         {rowIndex + 1}
                       </span>
                       <span className="min-w-0">
-                        <span className="block text-[0.92rem] font-bold text-[#1a2e35]">{row.title}</span>
-                        <span className="mt-0.5 block text-[0.85rem] text-gray-600">{row.body}</span>
+                        <span className="block text-lg font-bold text-[#1a2e35]">{row.title}</span>
+                        <span className="mt-0.5 block text-base text-gray-600">{row.body}</span>
                       </span>
                     </li>
                   ))}
@@ -288,8 +288,8 @@ export default function HowItWorksSteps() {
                     aria-hidden="true"
                   ></span>
                   <span className="min-w-0">
-                    <span className="block text-[0.92rem] font-bold text-[#1a2e35]">{step.highlight.title}</span>
-                    <span className="mt-0.5 block text-[0.85rem] leading-relaxed text-gray-600">
+                    <span className="block text-lg font-bold text-[#1a2e35]">{step.highlight.title}</span>
+                    <span className="mt-0.5 block text-base leading-relaxed text-gray-600">
                       {step.highlight.body}
                     </span>
                   </span>
@@ -306,7 +306,7 @@ export default function HowItWorksSteps() {
             aria-label="Previous step"
             className="icon-mask icon-arrow-left [--icon-size:1rem] flex h-10 w-10 items-center justify-center rounded-full border border-white/35 text-white transition-colors hover:border-[#a8c47d] hover:text-[#a8c47d]"
           ></button>
-          <p className="text-[0.85rem] font-semibold tabular-nums text-white/80" aria-live="polite">
+          <p className="text-base font-semibold tabular-nums text-white/80" aria-live="polite">
             {active.number} / {STEPS[STEPS.length - 1].number}
           </p>
           <button

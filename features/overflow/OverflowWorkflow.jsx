@@ -88,11 +88,11 @@ export default function OverflowWorkflow() {
 
   return (
     <section
-      className="relative w-full overflow-hidden px-4 py-14 md:py-16 lg:px-[5%]"
+      className="relative w-full overflow-hidden py-14 md:py-16"
       style={SECTION_BACKGROUND}
       aria-labelledby="overflow-workflow-heading"
     >
-      <div className="mx-auto max-w-6xl">
+      <div className="site-container">
         <div className="mx-auto max-w-2xl text-center">
           <p className="icon-mask icon-refresh [--icon-size:1rem] inline-flex items-center gap-2 bg-white/10 text-[#a8c47d] rounded-full text-sm font-semibold px-4 py-1.5">
             Your team first. Backup when needed.
@@ -105,7 +105,7 @@ export default function OverflowWorkflow() {
             <br />
             Answering Service Works
           </h2>
-          <p className="mt-3 text-[0.95rem] leading-relaxed text-white/65">
+          <p className="mt-3 text-lg leading-relaxed text-white/65">
             Your number. Your greeting. A clear next step for every forwarded call.
           </p>
         </div>
@@ -128,7 +128,7 @@ export default function OverflowWorkflow() {
                 role="radio"
                 aria-checked={flowId === item.id}
                 onClick={() => setFlowId(item.id)}
-                className={`flex items-center gap-2.5 rounded-full px-5 py-2 text-[0.85rem] font-semibold transition-colors ${
+                className={`flex items-center gap-2.5 rounded-full px-5 py-2 text-base font-semibold transition-colors ${
                   flowId === item.id ? 'bg-[#8CA365] text-white' : 'text-white/70 hover:text-white'
                 }`}
               >
@@ -153,7 +153,7 @@ export default function OverflowWorkflow() {
                 }`}
               >
                 <span
-                  className="absolute -top-4 left-1/2 flex h-9 w-9 -translate-x-1/2 items-center justify-center rounded-full bg-[#17352a] text-[0.78rem] font-bold  border-2 border-white text-white"
+                  className="absolute -top-4 left-1/2 flex h-9 w-9 -translate-x-1/2 items-center justify-center rounded-full bg-[#17352a] text-sm font-bold  border-2 border-white text-white"
                   aria-hidden="true"
                 >
                   {step.number}
@@ -177,12 +177,12 @@ export default function OverflowWorkflow() {
                   <span className="mt-2 block w-full flex-grow">
                     {FLOWS.map((item) => (
                       <span key={item.id} hidden={item.id !== flowId}>
-                        <span className="block text-[0.82rem] leading-[1.45] text-gray-600">{item.trigger.body}</span>
+                        <span className="block text-base leading-[1.45] text-gray-600">{item.trigger.body}</span>
                       </span>
                     ))}
                   </span>
                 ) : (
-                  <p className="mt-2 flex-grow text-[0.82rem] leading-[1.45] text-gray-600">{step.body}</p>
+                  <p className="mt-2 flex-grow text-base leading-[1.45] text-gray-600">{step.body}</p>
                 )}
 
                 {step.isTrigger ? (
@@ -194,7 +194,7 @@ export default function OverflowWorkflow() {
                             className={`icon-mask ${item.trigger.pillIcon} [--icon-size:0.9rem] text-[#295657]`}
                             aria-hidden="true"
                           ></span>
-                          <span className="text-[0.78rem] font-semibold t">{item.trigger.pill}</span>
+                          <span className="text-sm font-semibold t">{item.trigger.pill}</span>
                         </span>
                       </span>
                     ))}
@@ -210,7 +210,7 @@ export default function OverflowWorkflow() {
                       aria-hidden="true"
                     ></span>
                     <span
-                      className={`text-[0.78rem] font-semibold text-[#1a2e35] ${step.active ? 'italic' : ''}`}
+                      className={`text-sm font-semibold text-[#1a2e35] ${step.active ? 'italic' : ''}`}
                     >
                       {step.active ? `“${step.pill}”` : step.pill}
                     </span>
@@ -243,19 +243,19 @@ export default function OverflowWorkflow() {
           className="mx-auto mt-10 flex max-w-3xl flex-col items-center gap-x-5 gap-y-2 rounded-xl border border-white/10 bg-[#0b2419]/60 px-6 py-3.5 text-center sm:flex-row sm:justify-center"
           aria-live="polite"
         >
-          <p className="flex items-center gap-2.5 text-[0.85rem] font-semibold text-white">
+          <p className="flex items-center gap-2.5 text-base font-semibold text-white">
             <span className="h-2.5 w-2.5 flex-shrink-0 rounded-full bg-[#a8c47d]" aria-hidden="true"></span>
             Selected: {flow.label}
           </p>
           <span className="hidden h-4 w-px bg-white/15 sm:block" aria-hidden="true"></span>
-          <p className="text-[0.82rem] text-white/60">{flow.summary}</p>
+          <p className="text-base text-white/60">{flow.summary}</p>
         </div>
 
         <div className="mt-8 text-center">
           <Link
             prefetch={false}
             href="/contact-us"
-            className="icon-mask icon-arrow-right [--icon-size:0.95rem] inline-flex flex-row-reverse items-center gap-3 rounded-lg bg-[#8CA365] px-7 py-3 text-[0.9rem] font-bold text-white transition-all hover:-translate-y-0.5 hover:bg-[#9cb374]"
+            className="icon-mask icon-arrow-right [--icon-size:0.95rem] inline-flex flex-row-reverse items-center gap-3 rounded-lg bg-[#8CA365] px-7 py-3 text-lg font-bold text-white transition-all hover:-translate-y-0.5 hover:bg-[#9cb374]"
           >
             Discuss My Call Flow
           </Link>

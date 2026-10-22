@@ -15,28 +15,24 @@ const STEPS = [
     icon: 'icon-phone-ring',
     title: 'Answer the Call',
     body: 'A live receptionist greets the caller in your business name and finds out how they can help.',
-    tag: 'Your business greeting',
   },
   {
     number: '02',
     icon: 'icon-intake-list',
     title: 'Capture the Details',
     body: 'We collect contact details, service needs, location, and the answers to your approved intake questions.',
-    tag: 'Useful caller information',
   },
   {
     number: '03',
     icon: 'icon-check-search',
     title: 'Apply Your Criteria',
     body: 'Where included in your plan, we check the enquiry against your agreed qualification and priority rules.',
-    tag: 'Your qualification rules',
   },
   {
     number: '04',
     icon: 'icon-doc-arrow',
     title: 'Deliver or Route',
     body: 'We send a clear lead summary or transfer the caller when your team is available. Otherwise, we follow your agreed callback process.',
-    tag: 'A clear next step',
   },
 ]
 
@@ -45,11 +41,11 @@ const RULES = ['Intake questions', 'Service areas', 'Priority enquiries', 'Trans
 export default function LeadCaptureHowItWorks() {
   return (
     <section
-      className="relative w-full overflow-hidden px-4 py-14 md:py-16 lg:px-[5%]"
+      className="relative w-full overflow-hidden py-14 md:py-16"
       style={SECTION_BACKGROUND}
       aria-labelledby="lead-capture-how-heading"
     >
-      <div className="mx-auto max-w-6xl">
+      <div className="site-container">
         <div className="mx-auto max-w-3xl text-center">
           <p className="icon-mask icon-bolt [--icon-size:1rem] inline-flex items-center gap-2 bg-white/10 text-[#a8c47d] rounded-full text-sm font-semibold px-4 py-1.5">
             From first call to follow-up
@@ -62,7 +58,7 @@ export default function LeadCaptureHowItWorks() {
             <br />
             Answering Service Works
           </h2>
-          <p className="mt-3 text-[0.95rem] leading-relaxed text-white/65">
+          <p className="mt-3 text-lg leading-relaxed text-white/65">
             We agree your greeting, intake questions, and routing instructions before calls begin. Then each enquiry
             follows a clear process.
           </p>
@@ -73,7 +69,7 @@ export default function LeadCaptureHowItWorks() {
             <li key={step.number} className="relative">
               <div className="relative flex h-full flex-col items-center rounded-xl bg-[#f7f7f0] px-5 pb-6 pt-12 text-center">
                 <span
-                  className="absolute -top-5 left-1/2 flex h-11 w-11 -translate-x-1/2 items-center border-2 border-white justify-center rounded-full bg-[#8CA365] text-[0.85rem] font-bold text-white"
+                  className="absolute -top-5 left-1/2 flex h-11 w-11 -translate-x-1/2 items-center border-2 border-white justify-center rounded-full bg-[#8CA365] text-base font-bold text-white"
                   aria-hidden="true"
                 >
                   {step.number}
@@ -82,11 +78,8 @@ export default function LeadCaptureHowItWorks() {
                 <span className={`icon-mask ${step.icon} [--icon-size:3.2rem] text-[#4f6630]`} aria-hidden="true"></span>
 
                 <h3 className="mt-4 text-[1.1rem] font-bold text-[#1b4332]">{step.title}</h3>
-                <p className="mt-2.5 flex-grow text-[0.86rem] leading-relaxed text-gray-600">{step.body}</p>
+                <p className="mt-2.5 flex-grow text-base leading-relaxed text-gray-600">{step.body}</p>
 
-                <p className="mt-5 w-full rounded-full bg-[#e9efdd] px-3 py-2.5 text-[0.8rem] text-gray-700">
-                  {step.tag}
-                </p>
               </div>
 
               {index < STEPS.length - 1 && (
@@ -111,7 +104,7 @@ export default function LeadCaptureHowItWorks() {
                 <p className="text-[1.15rem] font-extrabold text-white">
                   You set the rules. We follow your process.
                 </p>
-                <ul className="mt-2 flex list-none flex-wrap items-center gap-x-2 gap-y-1 text-[0.86rem] text-white/70">
+                <ul className="mt-2 flex list-none flex-wrap items-center gap-x-2 gap-y-1 text-base text-white/70">
                   {RULES.map((rule, index) => (
                     <li key={rule} className="flex items-center gap-2">
                       {rule}
@@ -126,7 +119,7 @@ export default function LeadCaptureHowItWorks() {
               </div>
             </div>
 
-            <p className="text-[0.86rem] leading-relaxed text-white/70 lg:border-l lg:border-white/15 lg:pl-8">
+            <p className="text-base leading-relaxed text-white/70 lg:border-l lg:border-white/15 lg:pl-8">
               If a transfer is unavailable, your team receives the enquiry for follow-up.
             </p>
           </div>
@@ -136,11 +129,11 @@ export default function LeadCaptureHowItWorks() {
           <Link
             prefetch={false}
             href="/contact-us"
-            className="icon-mask icon-arrow-right [--icon-size:0.95rem] inline-flex flex-row-reverse items-center gap-3 rounded-lg bg-[#8CA365] px-8 py-3.5 text-[0.95rem] font-bold text-white transition-all hover:-translate-y-0.5 hover:bg-[#9cb374]"
+            className="icon-mask icon-arrow-right [--icon-size:0.95rem] inline-flex flex-row-reverse items-center gap-3 rounded-lg bg-[#8CA365] px-8 py-3.5 text-lg font-bold text-white transition-all hover:-translate-y-0.5 hover:bg-[#9cb374]"
           >
             Plan My Lead Capture Setup
           </Link>
-          <p className="mt-3 text-[0.78rem] text-white/50">
+          <p className="mt-3 text-sm text-white/50">
             Tell us what a useful lead looks like for your business.
           </p>
         </div>

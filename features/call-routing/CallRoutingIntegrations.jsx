@@ -46,10 +46,10 @@ function Bracket({ side }) {
 export default function CallRoutingIntegrations() {
   return (
     <section
-      className="w-full bg-[#f8f7f2] px-4 py-14 md:py-16 lg:px-[5%]"
+      className="w-full bg-[#f8f7f2] py-14 md:py-16"
       aria-labelledby="call-routing-integrations-heading"
     >
-      <div className="mx-auto max-w-6xl">
+      <div className="site-container">
         <div className="grid grid-cols-1 items-start gap-7 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] lg:gap-12">
           <div>
             <p className="icon-mask icon-share [--icon-size:1rem] inline-flex items-center gap-2 bg-[#8CA365]/10 text-[#5f7a3a] rounded-full text-sm font-semibold px-4 py-1.5">
@@ -72,7 +72,7 @@ export default function CallRoutingIntegrations() {
               Bring your existing setup. We&rsquo;ll confirm how call forwarding, staff transfers, and message delivery
               can work for your business.
             </p>
-            <p className="mt-5 inline-flex items-center rounded-lg border border-[#8CA365]/60 px-5 py-2.5 text-[0.9rem] font-bold text-[#1b4332]">
+            <p className="mt-5 inline-flex items-center rounded-lg border border-[#8CA365]/60 px-5 py-2.5 text-lg font-bold text-[#1b4332]">
               Compatibility checked before setup
             </p>
           </div>
@@ -95,7 +95,7 @@ export default function CallRoutingIntegrations() {
                   className={CARD}
                 >
                   <span className="text-[1.05rem] font-bold tracking-tight text-gray-700">{tool.name}</span>
-                  <span className="mt-1 text-[0.8rem] text-gray-600">{tool.detail}</span>
+                  <span className="mt-1 text-base text-gray-600">{tool.detail}</span>
                 </li>
               ))}
             </ul>
@@ -111,11 +111,11 @@ export default function CallRoutingIntegrations() {
               <br />
               Answering
             </p>
-            <p className="mt-2 text-[0.95rem] font-bold text-[#a8c47d]">Call Routing &amp; Transfers</p>
+            <p className="mt-2 text-lg font-bold text-[#a8c47d]">Call Routing &amp; Transfers</p>
 
             <ul className="mt-4 list-none space-y-1.5 border-t border-white/20 pt-4">
               {FLOW.map((step) => (
-                <li key={step} className="text-[0.86rem] text-white/80">
+                <li key={step} className="text-base text-white/80">
                   {step}
                 </li>
               ))}
@@ -134,7 +134,7 @@ export default function CallRoutingIntegrations() {
                   className={CARD}
                 >
                   <span className="text-[1.05rem] font-bold tracking-tight text-gray-700">{tool.name}</span>
-                  <span className="mt-1 text-[0.8rem] text-gray-600">{tool.detail}</span>
+                  <span className="mt-1 text-base text-gray-600">{tool.detail}</span>
                 </li>
               ))}
             </ul>
@@ -143,27 +143,27 @@ export default function CallRoutingIntegrations() {
 
         {/* Keeps the tool list honest: naming a product is not a promise that a
             direct integration exists. */}
-        <p className="mt-8 rounded-lg bg-[#eef0e6] px-5 py-3.5 text-center text-[0.84rem] text-gray-600">
+        <p className="mt-8 rounded-lg bg-[#eef0e6] px-5 py-3.5 text-center text-base text-gray-600">
           Tools shown are examples for compatibility review, not confirmed integrations.
         </p>
 
         <div className="mt-5 flex flex-col items-start gap-5 rounded-xl bg-[#1d4b37] px-6 py-5 sm:flex-row sm:items-center sm:justify-between">
           <p>
             <span className="block text-[1.2rem] font-extrabold text-white">Tell us which tools you use.</span>
-            <span className="mt-1 block text-[0.86rem] text-white/70">
+            <span className="mt-1 block text-base text-white/70">
               We&rsquo;ll review your provider, transfer destinations, and connection requirements.
             </span>
           </p>
           <Link
             prefetch={false}
             href="/contact-us"
-            className="icon-mask icon-arrow-right [--icon-size:0.95rem] inline-flex flex-shrink-0 flex-row-reverse items-center gap-3 rounded-lg bg-[#8CA365] px-7 py-3.5 text-[0.92rem] font-bold text-white transition-all hover:-translate-y-0.5 hover:bg-[#9cb374]"
+            className="icon-mask icon-arrow-right [--icon-size:0.95rem] inline-flex flex-shrink-0 flex-row-reverse items-center gap-3 rounded-lg bg-[#8CA365] px-7 py-3.5 text-lg font-bold text-white transition-all hover:-translate-y-0.5 hover:bg-[#9cb374]"
           >
             Check My Setup
           </Link>
         </div>
 
-        <p className="mt-4 text-center text-[0.78rem] text-gray-600">
+        <p className="mt-4 text-center text-sm text-gray-600">
           Phone plans, permissions, and third-party charges may affect available options.
         </p>
       </div>
