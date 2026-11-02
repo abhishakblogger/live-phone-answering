@@ -12,7 +12,6 @@ import IndustriesTabs from '@/components/IndustriesTabs'
 import SchedulingReceptionists from '@/features/appointment-scheduling/SchedulingReceptionists'
 import SchedulingWhyChooseUs from '@/features/appointment-scheduling/SchedulingWhyChooseUs'
 import PlanPricing from '@/components/PlanPricing'
-import Testimonials from '@/components/Testimonials'
 import FaqSection from '@/components/FaqSection'
 import ContactFormSection from '@/components/ContactFormSection'
 import { appointmentSchedulingFaq } from '@/components/faq-content'
@@ -156,6 +155,8 @@ export default function AppointmentSchedulingPage() {
         <SchedulingIndustries />
         <SchedulingWhyChooseUs />
         <SchedulingReceptionists />
+        <SchedulingWhyChooseUs />
+
         <SchedulingNoShows />
         <PlanPricing
           headingId='scheduling-pricing-heading'
@@ -171,7 +172,6 @@ export default function AppointmentSchedulingPage() {
           customBody='Discuss direct booking, calendar compatibility, and scheduling requirements with our team.'
           footnote='Appointment request handling captures booking requests for your team. Direct calendar booking and integrations are confirmed separately.'
         />
-        <Testimonials />
         <FaqSection {...appointmentSchedulingFaq} />
         <ContactFormSection theme="dark" />
       </main>

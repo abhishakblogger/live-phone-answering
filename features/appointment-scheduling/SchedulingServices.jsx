@@ -58,9 +58,9 @@ export default function SchedulingServices() {
             id="scheduling-services-heading"
             className="mt-4 text-3xl sm:text-4xl md:text-5xl font-bold leading-[1.14] tracking-tight text-[#1d4b37]"
           >
-            What Can Our Appointment Scheduling
+            What Can Our Appointment 
             <br />
-            Answering Service Do for You?
+            Scheduling Answering Service Do for You?
           </h2>
           <p className="mt-3 text-lg leading-relaxed text-gray-600">
             We take care of your schedule so you never have to worry about missing an appointment.

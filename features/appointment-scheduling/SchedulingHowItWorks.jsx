@@ -34,9 +34,9 @@ export default function SchedulingHowItWorks() {
       badge="From picking the call to booking an appointment"
       heading={
         <>
-          How Does Our Appointment Scheduling
+          How Does Our Appointment 
           <br />
-          Answering Service Work?
+         Scheduling Answering Service Work?
         </>
       }
       intro="No waiting for ages. We answer your calls and book the meeting while the caller is still on the line."
