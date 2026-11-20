@@ -26,6 +26,10 @@ export const metadata = {
   description:
     'Professional live phone answering services for US businesses. Real human receptionists available 24/7.',
   robots: { index: true, follow: true },
+  // Google Search Console site verification. Next renders this as
+  // <meta name="google-site-verification" content="..."> in <head> on every
+  // page, which is what the HTML-tag verification method checks for.
+  verification: { google: 'f5Vj17_nrGi6jGG8SU3Ym-MLe6jn7WkJtelPYqbIqgg' },
   openGraph: {
     type: 'website',
     siteName: 'LivePhoneAnswering',
