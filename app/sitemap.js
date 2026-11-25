@@ -25,9 +25,11 @@ const ROUTES = [
   { path: '/industries-served', changeFrequency: 'monthly', priority: 0.8 },
   { path: '/how-it-works', changeFrequency: 'monthly', priority: 0.8 },
   { path: '/contact-us', changeFrequency: 'monthly', priority: 0.8 },
-  { path: '/blog', changeFrequency: 'weekly', priority: 0.8 },
-  ...BLOG_POSTS.map((post) => ({ path: `/blog/${post.slug}`, changeFrequency: 'monthly', priority: 0.7 })),
-  { path: '/privacy-policy', changeFrequency: 'yearly', priority: 0.3 },
+  // Noindexed for now, so they are left out of the sitemap as well — a sitemap
+  // should only list pages that are meant to be indexed.
+  // { path: '/blog', changeFrequency: 'weekly', priority: 0.8 },
+  // ...BLOG_POSTS.map((post) => ({ path: `/blog/${post.slug}`, changeFrequency: 'monthly', priority: 0.7 })),
+  // { path: '/privacy-policy', changeFrequency: 'yearly', priority: 0.3 },
 ]
 
 export default function sitemap() {
